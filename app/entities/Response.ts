@@ -3,7 +3,7 @@ import { ResponseStatus } from '../configs/Constant';
 import IResponse from '../contracts/interface/Response';
 import IResponseError from '../contracts/interface/ResponseError';
 
-export default class Response<D, E>
+export default class Response<D>
 {
 
   public status: ResponseStatus = ResponseStatus.SUCCESS;

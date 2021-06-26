@@ -38,7 +38,7 @@ export default class Route implements IProvider
         method: HttpMethod.GET,
         path: "/v1/test",
         handler: new TestController
-      }
+      },      
     ];
   }
 

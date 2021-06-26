@@ -1,7 +1,5 @@
 
-/** @ts-ignore */
-import { Date } from 'arjuna';
-
+import moment from 'moment';
 import morgan, { FormatFn } from 'morgan';
 import path from 'path';
 import { createStream } from 'rotating-file-stream';
@@ -30,7 +28,7 @@ export default class AccessLog
     };
 
     return morgan(logFormats, { 
-      stream: createStream(Date.getOnlyDate() + '.log', {
+      stream: createStream(moment().format('YYYY-MM-DD') + '.log', {
         interval: setting.interval,
         path: path.join(`${__basedir}`, setting.path)
       })

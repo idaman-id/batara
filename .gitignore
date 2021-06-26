@@ -6,8 +6,6 @@ app/.env
 app/.env.test
 app/storages/*
 
-dist/app/.env
-dist/app/.env.test
-dist/app/storages/*
+dist
 
 ## Utility ##

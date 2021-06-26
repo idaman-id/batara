@@ -1,3 +1,4 @@
+
 import { LanguageCode as LANGUAGE_CODE } from '../configs/Constant';
 
 export default class LanguageCode

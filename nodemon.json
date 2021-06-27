@@ -1,11 +1,11 @@
 {
   "watch": [
-    "app"
+    "src"
   ],
   "ext": "ts,json",
   "ignore": [
-    "app/**/*.spec.ts",
-    "app/storages/*"
+    "src/**/*.spec.ts",
+    "src/storages/*"
   ],
-  "exec": "npx ts-node ./index.ts"
+  "exec": "npx ts-node ./src/Index.ts"
 }

@@ -1,30 +1,49 @@
 # Batara 😇
 Javascript framework for laravel users
 
-
 ❓ Motivations
 ---
 1. Provide easy to use laravel like pattern on javascript
+2. Provide boilerplate for my internal works and jobs
+3. 
 
 🖖 Usage
 ---
-1. How to use
-- Install packages: `npm install`
-- Setup `.env` from `.env.example`
-- Run: `npm run build`
-- Enjoy
+## How to use
+1. Install packages: `npm install batara`
+2. Import package
+```ts
 
-2. How to develop
-- Install packages: `npm install`
-- Setup `.env` from `.env.example`
-- Run: `npm run dev`
-- Enjoy
+import { Application, Interface } from 'batara';
 
-3. How to test
-- Install packages: `npm install`
-- Setup `.env.test` from `.env.example`
-- Run: `npm run test`
-- Enjoy
+const setting: Interface.Application = {
+  name: "service",
+  version: "1.0",
+  debug: true,
+  environment: "local",
+  timezone: "+07:00",
+  host: "localhost",
+  port: 3000,
+};
+const providers = [];
+const app = new Application(setting, providers);
+
+app.start();
+
+```
+3. Enjoy
+
+## How to develop
+1. Install packages: `npm install`
+2. Setup `.env` from `.env.example`
+3. Run: `npm run dev`
+4. Enjoy
+
+## How to test
+1. Install packages: `npm install`
+2. Setup `.env.test` from `.env.example`
+3. Run: `npm run test`
+4. Enjoy
 
 ✔️ Test & Coverages
 ---
@@ -42,20 +61,30 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 | Status | Feature   | Description |
 | --- | ------      | ------ |
-| <td colspan="3"> **Core Module** </td> |
+| <td> **Core Module** </td> |
 | ⚠️ | Controller   |  |
+| ⚠️ | Entity   |  |
+| ⚠️ | Error   |  |
+| ⚠️ | Middleware   |  |
+| ❌ | Model   |  |
+| ⚠️ | Provider   |  |
+| ❌ | Repository   |  |
 | --- | ------      | ------ |
 
 👀 Issues
 ---
 1. Check object hrus pake factory yg return enum nya dulu bru bisa
+2. When to use `Union type: object | array` and `Generic type: <T, S>`
+3. When to use `Litera type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
+4. 
 
 🚀 Roadmaps
 ---
 1. learn the differents of: declare, interface, type, enum
-2. error handling (try catch, error classess)
+2. model, repository, error handling (try catch, error classess)
 3. middleware: authenticate, logger
 4. view-model or entity?
+5. write unit and integration tests
 
 🤩 Contributor
 ---

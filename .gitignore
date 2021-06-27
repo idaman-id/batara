@@ -2,9 +2,9 @@
 node_modules
 
 ## Application ##
-app/.env
-app/.env.test
-app/storages/*
+src/.env
+src/.env.test
+src/storages/*
 
 dist
 

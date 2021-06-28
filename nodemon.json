@@ -7,5 +7,5 @@
     "src/**/*.spec.ts",
     "src/storages/*"
   ],
-  "exec": "npx ts-node ./src/Index.ts"
+  "exec": "npx ts-node ./src/index.ts"
 }

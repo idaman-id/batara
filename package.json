@@ -2,7 +2,7 @@
   "name": "batara",
   "version": "0.0.2",
   "description": "Javascript framework for laravel users",
-  "main": "src/Index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "node node_modules/nodemon/bin/nodemon.js",
     "build": "tsc --project ./",

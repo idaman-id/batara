@@ -61,7 +61,6 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 | Status | Feature   | Description |
 | --- | ------      | ------ |
-| <td> **Core Module** </td> |
 | ⚠️ | Controller   |  |
 | ⚠️ | Entity   |  |
 | ⚠️ | Error   |  |
@@ -75,7 +74,7 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 ---
 1. Check object hrus pake factory yg return enum nya dulu bru bisa
 2. When to use `Union type: object | array` and `Generic type: <T, S>`
-3. When to use `Litera type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
+3. When to use `Literal type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
 4. Should we define `view-model` or just `entity`?
 
 🚀 Roadmaps

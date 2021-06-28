@@ -1,5 +1,5 @@
 
-export { default as Application } from './Application';
+export * as Application from './Application';
 export * as Constant from './contracts/constant';
 export * as Interface from './contracts/interface';
 export * as Type from './contracts/type';

@@ -1,6 +1,6 @@
 {
   "name": "batara",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Javascript framework for laravel users",
   "main": "src/index.ts",
   "scripts": {

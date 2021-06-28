@@ -76,16 +76,14 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 1. Check object hrus pake factory yg return enum nya dulu bru bisa
 2. When to use `Union type: object | array` and `Generic type: <T, S>`
 3. When to use `Litera type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
-4. 
+4. Should we define `view-model` or just `entity`?
 
 🚀 Roadmaps
 ---
 1. refactor `LanguageCode` into object containing `id, name`
-2. learn the differents of: declare, interface, type, enum
-3. model, repository, error handling (try catch, error classess)
-4. middleware: authenticate, logger
-5. view-model or entity?
-6. write unit and integration tests
+2. implementation of: model database, model messaging, repository pattern
+3. implementation of middleware: authenticate, logger
+4. write unit and integration tests
 
 🤩 Contributor
 ---

@@ -23,3 +23,14 @@ export const enum ResponseStatus
   REQUEST_TIMEOUT = "REQUEST_TIMEOUT"
 }
 
+export const enum ResponseMessage
+{
+  SUCCESS = "ok",
+  ERROR = "error occured",
+  INVALID_DATA = "invalid data",
+  FORBIDDEN = "forbidden access",
+  NOT_FOUND = "resource notfound",
+  UNAUTHENTICATE = "unauthenticate access",
+  BAD_GATEWAY = "bad gateway",
+  REQUEST_TIMEOUT = "request timeout"
+}

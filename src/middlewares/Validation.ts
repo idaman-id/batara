@@ -7,12 +7,13 @@ import {
   Response as IResponse, 
   NextFunction as INextFunction 
 } from '../contracts/interface/Http';
-import { ResponseStatus } from '../contracts/constant/Communication';
 import HashMap from '../contracts/interface/Hash';
 import IResponseError from '../contracts/interface/ResponseError';
 
-import Response from '../entities/Response';
+import VError from '../errors/ValidationError';
+
 import Middleware from "./Middleware";
+import { ResponseMessage } from '../contracts/constant/Communication';
 
 export default class Validation extends Middleware
 {
@@ -23,19 +24,13 @@ export default class Validation extends Middleware
     if (!errors.isEmpty()) {
       const translatedErrors = Validation.translate(req, errors.array());
       const formatedErrors = Validation.formatErrors(translatedErrors);
-  
-      const response = new Response({
-        status: ResponseStatus.INVALID_DATA,
-        message: "invalid data",
-        error: formatedErrors
-      });
-      return res.status(422).json(response);   
+      next(new VError(ResponseMessage.INVALID_DATA, formatedErrors)); 
     }
     next();  
     
   }
 
-  static formatErrors(errors: Array<ValidationError>): Array<IResponseError>
+  private static formatErrors(errors: Array<ValidationError>): Array<IResponseError>
   {
     return errors.map(error => {
       return {
@@ -45,7 +40,7 @@ export default class Validation extends Middleware
     });
   }
 
-  static translate(req: IRequest, errors: Array<ValidationError>): Array<ValidationError>
+  private static translate(req: IRequest, errors: Array<ValidationError>): Array<ValidationError>
   {
     errors.forEach(error => {
       const maps = error.msg.split(":");
@@ -90,7 +85,7 @@ export default class Validation extends Middleware
     return errors;
   }
 
-  static replaceAttribute(
+  private static replaceAttribute(
     req: IRequest, 
     field: string, message: string, 
     map: HashMap, values: Array<string>

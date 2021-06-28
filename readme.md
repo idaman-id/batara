@@ -80,11 +80,12 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 🚀 Roadmaps
 ---
-1. learn the differents of: declare, interface, type, enum
-2. model, repository, error handling (try catch, error classess)
-3. middleware: authenticate, logger
-4. view-model or entity?
-5. write unit and integration tests
+1. refactor `LanguageCode` into object containing `id, name`
+2. learn the differents of: declare, interface, type, enum
+3. model, repository, error handling (try catch, error classess)
+4. middleware: authenticate, logger
+5. view-model or entity?
+6. write unit and integration tests
 
 🤩 Contributor
 ---

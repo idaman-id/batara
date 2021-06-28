@@ -1,5 +1,5 @@
 
-import { ResponseStatus } from '../contracts/constant/Communication';
+import { ResponseMessage, ResponseStatus } from '../contracts/constant/Communication';
 import IResponse from '../contracts/interface/Response';
 import IResponseError from '../contracts/interface/ResponseError';
 import Entity from './Entity';
@@ -44,49 +44,49 @@ export default class Response<D> extends Entity
   success(): void
   {
     this.status = ResponseStatus.SUCCESS;
-    this.message = "ok";
+    this.message = ResponseMessage.SUCCESS;
   }
 
   unexpected(): void
   {
     this.status = ResponseStatus.ERROR;
-    this.message = "error occured";
+    this.message = ResponseMessage.ERROR;
   }
 
   invalid(): void
   {
     this.status = ResponseStatus.INVALID_DATA;
-    this.message = "invalid data";
+    this.message = ResponseMessage.INVALID_DATA;
   }
 
   forbidden(): void
   {
     this.status = ResponseStatus.FORBIDDEN;
-    this.message = "forbidden access";
+    this.message = ResponseMessage.FORBIDDEN;
   }
 
   notFound(): void
   {
     this.status = ResponseStatus.NOT_FOUND;
-    this.message = "resource notfound";
+    this.message = ResponseMessage.NOT_FOUND;
   }
 
   unauthenticate(): void
   {
     this.status = ResponseStatus.UNAUTHENTICATE;
-    this.message = "unauthenticate access";
+    this.message = ResponseMessage.UNAUTHENTICATE;
   }
 
   badGateway(): void
   {
     this.status = ResponseStatus.BAD_GATEWAY;
-    this.message = "bad gateway";
+    this.message = ResponseMessage.BAD_GATEWAY;
   }
 
   requestTimeout(): void
   {
     this.status = ResponseStatus.REQUEST_TIMEOUT;
-    this.message = "request timeout";
+    this.message = ResponseMessage.REQUEST_TIMEOUT;
   }
 
 }

@@ -25,8 +25,7 @@ const setting: Interface.Application = {
   host: "localhost",
   port: 3000,
 };
-const providers = [];
-const app = new Application(setting, providers);
+const app = new Application(setting);
 
 app.start();
 
@@ -61,6 +60,7 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 | Status | Feature   | Description |
 | --- | ------      | ------ |
+| ⚠️ | Contract   | Constant, Interface, Type |
 | ⚠️ | Controller   |  |
 | ⚠️ | Entity   |  |
 | ⚠️ | Error   |  |
@@ -74,15 +74,16 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 ---
 1. Check object hrus pake factory yg return enum nya dulu bru bisa
 2. When to use `Union type: object | array` and `Generic type: <T, S>`
+- Answer: With union type we get mixed type (object or array or both), with generic we get one of them (object or array)
 3. When to use `Literal type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
 4. Should we define `view-model` or just `entity`?
 
 🚀 Roadmaps
 ---
-1. refactor `LanguageCode` into object containing `id, name`
-2. implementation of: model database, model messaging, repository pattern
+1. write declaration `d.ts` for usage as library
+2. write unit and integration tests
 3. implementation of middleware: authenticate, logger
-4. write unit and integration tests
+4. implementation of: model database, model messaging, repository pattern
 
 🤩 Contributor
 ---

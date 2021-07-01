@@ -2,9 +2,10 @@
 import { ResponseMessage, ResponseStatus } from '../contracts/constant/Communication';
 import IResponse from '../contracts/interface/Response';
 import IResponseError from '../contracts/interface/ResponseError';
+import { ResponseData } from '../contracts/type/ResponseData';
 import Entity from './Entity';
 
-export default class Response<D> extends Entity
+export default class ResponseBody<D extends ResponseData> extends Entity
 {
 
   public status: ResponseStatus = ResponseStatus.SUCCESS;

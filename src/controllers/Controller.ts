@@ -2,14 +2,12 @@
 import { 
   Request as IRequest, 
   Response as IResponse, 
-  NextFunction as INextFunction 
+  NextFunction as INextFunction,
+  ValidationChain 
 } from '../contracts/interface/Http';
 
-import { ValidationChain } from "express-validator";
-import CodeLanguage from "../contracts/interface/CodeLanguage";
 import IController from '../contracts/interface/Controller';
-
-import LanguageCode from '../factories/LanguageCode';
+import IMap from "../contracts/interface/Map";
 
 import Language from '../middlewares/Language';
 import Validation from "../middlewares/Validation";
@@ -17,7 +15,7 @@ import Validation from "../middlewares/Validation";
 export default abstract class Controller implements IController
 {
 
-  abstract handle(req: IRequest, res: IResponse, next: INextFunction): void;
+  abstract handle(req: IRequest, res: IResponse, next: INextFunction): any;
 
   authorize(req: IRequest, res: IResponse, next: INextFunction): void
   {
@@ -29,20 +27,14 @@ export default abstract class Controller implements IController
     return [];
   }
 
-  attributes(): CodeLanguage
+  attributes(): IMap
   {
-    return {
-      id: {},
-      en: {}
-    };
+    return {};
   }
 
-  messages(): CodeLanguage
+  messages(): IMap
   {
-    return {
-      id: {},
-      en: {}
-    };
+    return {};
   }
 
   run(): Array<any>
@@ -50,9 +42,33 @@ export default abstract class Controller implements IController
     return [
       new Language().handle,
       (req: IRequest, res: IResponse, next: INextFunction) => {
-        const locale = new LanguageCode().make(req.locale.language);
-        req._language.attributes = this.attributes()[locale];
-        req._language.messages = this.messages()[locale];
+        const locale = req.locale.language;
+        /**
+         * CHOOSE TRANSLATION START WITH LOCALE
+         * E.G: 
+         * "id.custom_field": "Bidang isian kustom"
+         * "en.custom_field": "Custom field"
+         * 
+         * When locale is "id" we choose "id.custom_field", etc
+         * When there is no translation then we set to empty object
+         */
+
+        let attributes = this.attributes();
+        for (let attributeKey in attributes) { 
+          if (!attributeKey.startsWith(locale)) {
+            delete attributes[attributeKey];
+          }
+        }
+
+        let messages = this.messages();
+        for (let attributeKey in messages) { 
+          if (!attributeKey.startsWith(locale)) {
+            delete messages[attributeKey];
+          }
+        }
+
+        req._language.attributes = attributes;
+        req._language.messages = messages;
         next();
       },
       this.authorize,

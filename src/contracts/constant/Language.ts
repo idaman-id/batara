@@ -1,141 +1,149 @@
 
-import CodeLanguage from "../interface/CodeLanguage";
+export const attributes = {
+  /** 
+   * ==========================
+   * | INDONESIAN TRANSLATION |
+   * ==========================
+   */
 
-export const enum LanguageCode
-{
-  INDONESIAN = "id",
-  ENGLISH = "en",
+  /** SYSTEM (DO NOT DELETE) */
+  "id.attribute": "Atribut",
+  "id.value": "Nilai",
+
+  /** APPLICATION */
+  "id.limit": "Limit",
+  "id.offset": "Offset",
+  "id.q": "Kata kunci",
+  "id.token": "Token",
+  "id.device": "Perangkat",
+  "id.document": "Dokumen",
+  "id.description": "Deskripsi",
+  "id.type": "Jenis",
+  "id.category": "Kategori",
+  "id.features": "Fitur",
+  "id.google_token": "Token",
+  "id.message": "Pesan",
+
+  /** IDENTIFIER */
+  "id.app_id": "Aplikasi",
+  "id.user_id": "Pengguna",
+  "id.modifier_id": "Pengubah",
+  "id.photo_id": "Foto",
+  "id.attachment_id": "Lampiran",
+  "id.file_id": "File",
+
+  /** ADDRESS */
+  "id.country_id": "Negara",
+  "id.province_id": "Provinsi",
+  "id.regency_id": "Kota / kabupaten",
+  "id.district_id": "Kecamatan",
+  "id.village_id": "Kelurahan / desa",
+  "id.postal_code": "Kode pos",
+  "id.latitude": "Garis lintang",
+  "id.longitude": "Garis bujur",
+  "id.hamlet_number": "RT",
+  "id.neighbourhood_number": "RW",
+  "id.street": "Jalan",
+
+  /** PERSONAL */
+  "id.name": "Nama",
+  "id.gender": "Jenis Kelamin",
+  "id.birth_place": "Tempat lahir",
+  "id.birth_at": "Tanggal lahir",
+  "id.phone": "Telepon",
+  "id.email": "Email",
+  "id.identifier": "Pengenal",
+
+  /** 
+   * =======================
+   * | ENGLISH TRANSLATION |
+   * =======================
+   */
+
+  /** SYSTEM (DO NOT DELETE) */
+  "en.attribute": "Attribute",
+  "en.value": "Value",
+  
+  /** APPLICATION */
+
+  "en.limit": "Limit",
+  "en.offset": "Offset",
+  "en.q": "Keyword",
+  "en.token": "Token",
+  "en.device": "Device",
+  "en.document": "Document",
+  "en.description": "Description",
+  "en.type": "Type",
+  "en.category": "Category",
+  "en.features": "Feature",
+  "en.google_token": "Token",
+  "en.message": "Message",
+
+  /** IDENTIFIER */
+  "en.app_id": "Application",
+  "en.user_id": "User",
+  "en.modifier_id": "Modifier",
+  "en.photo_id": "Photo",
+  "en.attachment_id": "Attachment",
+  "en.file_id": "File",
+
+  /** ADDRESS */
+  "en.country_id": "Country",
+  "en.province_id": "Province",
+  "en.regency_id": "Regency",
+  "en.district_id": "District",
+  "en.village_id": "Village",
+  "en.postal_code": "Postal Code",
+  "en.latitude": "Latitude",
+  "en.longitude": "Longitude",
+  "en.hamlet_number": "Hamlet Number",
+  "en.neighbourhood_number": "Neighbourhood Number",
+  "en.street": "Street",
+
+  /** PERSONAL */
+  "en.name": "Name",
+  "en.gender": "Gender",
+  "en.birth_place": "Birth place",
+  "en.birth_at": "Birth date",
+  "en.phone": "Phone",
+  "en.email": "Email",
+  "en.identifier": "Identifier",
 }
 
-export const attributes: CodeLanguage = {
-  id: {
-    /** SYSTEM (DO NOT DELETE) */
-    "attribute": "Atribut",
-    "value": "Nilai",
+export const messages = {
+  /** 
+   * ==========================
+   * | INDONESIAN TRANSLATION |
+   * ==========================
+   */
+  "id.required": ":attribute wajib diisi",
+  "id.invalid_value": ":attribute tidak valid",
+  "id.not_found": ":attribute tidak ditemukan",
+  "id.not_used": ":attribute tidak digunakan",
+  "id.forbidden": ":attribute tidak diperbolehkan",
+  "id.number": ":attribute harus berupa angka yang valid",
+  "id.min": ":attribute harus lebih dari :value",
+  "id.max": ":attribute harus kurang dari :value",
+  "id.lt": ":attribute harus kurang dari :value",
+  "id.gt": ":attribute harus lebih dari :value",
+  "id.between": ":attribute harus diantara :value dan :value",
+  "id.has_used": ":attribute telah digunakan",
 
-    /** APPLICATION */
-    "limit": "Limit",
-    "offset": "Offset",
-    "q": "Kata kunci",
-    "token": "Token",
-    "device": "Perangkat",
-    "document": "Dokumen",
-    "description": "Deskripsi",
-    "type": "Jenis",
-    "category": "Kategori",
-    "features": "Fitur",
-    "google_token": "Token",
-    "message": "Pesan",
-
-    /** IDENTIFIER */
-    "app_id": "Aplikasi",
-    "user_id": "Pengguna",
-    "modifier_id": "Pengubah",
-    "photo_id": "Foto",
-    "attachment_id": "Lampiran",
-    "file_id": "File",
-
-    /** ADDRESS */
-    "country_id": "Negara",
-    "province_id": "Provinsi",
-    "regency_id": "Kota / kabupaten",
-    "district_id": "Kecamatan",
-    "village_id": "Kelurahan / desa",
-    "postal_code": "Kode pos",
-    "latitude": "Garis lintang",
-    "longitude": "Garis bujur",
-    "hamlet_number": "RT",
-    "neighbourhood_number": "RW",
-    "street": "Jalan",
-
-    /** PERSONAL */
-    "name": "Nama",
-    "gender": "Jenis Kelamin",
-    "birth_place": "Tempat lahir",
-    "birth_at": "Tanggal lahir",
-    "phone": "Telepon",
-    "email": "Email",
-    "identifier": "Pengenal",
-  },
-  en: {
-    /** SYSTEM (DO NOT DELETE) */
-    "attribute": "Attribute",
-    "value": "Value",
-    
-    /** APPLICATION */
-
-    "limit": "Limit",
-    "offset": "Offset",
-    "q": "Keyword",
-    "token": "Token",
-    "device": "Device",
-    "document": "Document",
-    "description": "Description",
-    "type": "Type",
-    "category": "Category",
-    "features": "Feature",
-    "google_token": "Token",
-    "message": "Message",
-
-    /** IDENTIFIER */
-    "app_id": "Application",
-    "user_id": "User",
-    "modifier_id": "Modifier",
-    "photo_id": "Photo",
-    "attachment_id": "Attachment",
-    "file_id": "File",
-
-    /** ADDRESS */
-    "country_id": "Country",
-    "province_id": "Province",
-    "regency_id": "Regency",
-    "district_id": "District",
-    "village_id": "Village",
-    "postal_code": "Postal Code",
-    "latitude": "Latitude",
-    "longitude": "Longitude",
-    "hamlet_number": "Hamlet Number",
-    "neighbourhood_number": "Neighbourhood Number",
-    "street": "Street",
-
-    /** PERSONAL */
-    "name": "Name",
-    "gender": "Gender",
-    "birth_place": "Birth place",
-    "birth_at": "Birth date",
-    "phone": "Phone",
-    "email": "Email",
-    "identifier": "Identifier",    
-  }
-}
-
-export const messages: CodeLanguage = {
-  id: {
-    "required": ":attribute wajib diisi",
-    "invalid_value": ":attribute tidak valid",
-    "not_found": ":attribute tidak ditemukan",
-    "not_used": ":attribute tidak digunakan",
-    "forbidden": ":attribute tidak diperbolehkan",
-    "number": ":attribute harus berupa angka yang valid",
-    "min": ":attribute harus lebih dari :value",
-    "max": ":attribute harus kurang dari :value",
-    "lt": ":attribute harus kurang dari :value",
-    "gt": ":attribute harus lebih dari :value",
-    "between": ":attribute harus diantara :value dan :value",
-    "has_used": ":attribute telah digunakan"
-  },
-  en: {
-    "required": ":attribute is required",
-    "invalid_value": ":attribute is not valid",
-    "not_found": ":attribute is not found",
-    "not_used": ":attribute is not used",
-    "forbidden": ":attribute is not allowed",
-    "number": ":attribute should be a valid number",
-    "min": ":attribute must greater than :value",
-    "max": ":attribute must less than :value",
-    "lt": ":attribute must less than :value",
-    "gt": ":attribute must greater than :value",
-    "between": ":attribute shoudl between :value and :value",
-    "has_used": ":attribute has been used"
-  }
+  /** 
+   * =======================
+   * | ENGLISH TRANSLATION |
+   * =======================
+   */
+  "en.required": ":attribute is required",
+  "en.invalid_value": ":attribute is not valid",
+  "en.not_found": ":attribute is not found",
+  "en.not_used": ":attribute is not used",
+  "en.forbidden": ":attribute is not allowed",
+  "en.number": ":attribute should be a valid number",
+  "en.min": ":attribute must greater than :value",
+  "en.max": ":attribute must less than :value",
+  "en.lt": ":attribute must less than :value",
+  "en.gt": ":attribute must greater than :value",
+  "en.between": ":attribute shoudl between :value and :value",
+  "en.has_used": ":attribute has been used"
 }

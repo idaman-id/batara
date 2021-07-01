@@ -22,8 +22,8 @@ declare global
 export default class Application
 {
 
-  instance: express.Application;
-  setting: IApplication;
+  public instance: express.Application;
+  private setting: IApplication;
 
   constructor(setting: IApplication)
   {

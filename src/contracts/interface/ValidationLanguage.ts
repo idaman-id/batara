@@ -1,21 +1,19 @@
 
-import { LanguageCode } from '../constant/Language';
-import CodeLanguage from './CodeLanguage';
-import Hash from './Hash';
+import IMap from './Map';
 import Polyglot from "node-polyglot";
 
 export default interface ValidationLanguage
 {
 
-  locale: LanguageCode,
+  locale: string,
 
   polyglot: Polyglot,
-  original_attributes: CodeLanguage, //original attribute from language config
-  setting_attributes: Hash, //global attribute
-  attributes?: Hash,//custom attribute from specific feature
+  original_attributes: IMap, //original attribute from language config
+  setting_attributes: IMap, //global attribute
+  attributes?: IMap,//custom attribute from specific feature
 
-  original_messages: CodeLanguage, //original message from language config
-  setting_messages: Hash, //global message
-  messages?: Hash,//custom message from specific feature
+  original_messages: IMap, //original message from language config
+  setting_messages: IMap, //global message
+  messages?: IMap,//custom message from specific feature
 
 }

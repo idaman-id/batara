@@ -1,3 +1,7 @@
+### v0.0.12: Jul 1, 2021
+ * Add `ErrorType` constant
+ * Middleware returning `next();`
+
 ### v0.0.11: Jul 1, 2021
  * Change Authorized and Validation Error type: `any`
 

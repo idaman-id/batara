@@ -23,7 +23,7 @@ var UnauthenticateError = /** @class */ (function (_super) {
     __extends(UnauthenticateError, _super);
     function UnauthenticateError(message) {
         var _this = _super.call(this, message) || this;
-        _this.type = "unauthenticate";
+        _this.type = "unauthenticate" /* UNAUTHENTICATE */;
         return _this;
     }
     return UnauthenticateError;

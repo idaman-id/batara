@@ -19,7 +19,7 @@ var SystemError = /** @class */ (function (_super) {
     __extends(SystemError, _super);
     function SystemError(message) {
         var _this = _super.call(this, message) || this;
-        _this.type = "system";
+        _this.type = "system" /* SYSTEM */;
         return _this;
     }
     return SystemError;

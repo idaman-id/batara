@@ -23,7 +23,7 @@ var UnexpectedError = /** @class */ (function (_super) {
     __extends(UnexpectedError, _super);
     function UnexpectedError(message) {
         var _this = _super.call(this, message) || this;
-        _this.type = "unexpected";
+        _this.type = "unexpected" /* UNEXPECTED */;
         return _this;
     }
     return UnexpectedError;

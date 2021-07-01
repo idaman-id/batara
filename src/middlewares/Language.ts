@@ -43,7 +43,7 @@ export default class Language extends Middleware
       setting_attributes: choosenAttributes,
       attributes: undefined,
     };
-    next();
+    return next();
   }
 
 }

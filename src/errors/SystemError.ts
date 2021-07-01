@@ -1,4 +1,6 @@
 
+import { ErrorType } from "../contracts/constant";
+
 export default abstract class SystemError extends Error
 {
   
@@ -7,7 +9,7 @@ export default abstract class SystemError extends Error
   constructor(message: string)
   {
     super(message);
-    this.type = "system";
+    this.type = ErrorType.SYSTEM;
   }
 
 }

@@ -38,9 +38,9 @@ var Validation = /** @class */ (function (_super) {
         if (!errors.isEmpty()) {
             var translatedErrors = Validation.translateErrors(req, errors.array());
             var formatedErrors = Validation.formatErrors(translatedErrors);
-            next(new ValidationError_1.default("invalid data" /* INVALID_DATA */, formatedErrors));
+            return next(new ValidationError_1.default("invalid data" /* INVALID_DATA */, formatedErrors));
         }
-        next();
+        return next();
     };
     Validation.formatErrors = function (errors) {
         return errors.map(function (error) {

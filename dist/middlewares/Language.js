@@ -55,7 +55,7 @@ var Language = /** @class */ (function (_super) {
             setting_attributes: choosenAttributes,
             attributes: undefined,
         };
-        next();
+        return next();
     };
     return Language;
 }(Middleware_1.default));

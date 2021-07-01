@@ -23,7 +23,7 @@ var NotfoundError = /** @class */ (function (_super) {
     __extends(NotfoundError, _super);
     function NotfoundError(message) {
         var _this = _super.call(this, message) || this;
-        _this.type = "notfound";
+        _this.type = "notfound" /* NOTFOUND */;
         return _this;
     }
     return NotfoundError;

@@ -31,9 +31,9 @@ export default class Validation extends Middleware
     if (!errors.isEmpty()) {
       const translatedErrors = Validation.translateErrors(req, errors.array());
       const formatedErrors = Validation.formatErrors(translatedErrors);
-      next(new ValidationError(ResponseMessage.INVALID_DATA, formatedErrors)); 
+      return next(new ValidationError(ResponseMessage.INVALID_DATA, formatedErrors)); 
     }
-    next();  
+    return next();
   }
 
   private static formatErrors(errors: Array<IValidationError>): Array<IResponseError>

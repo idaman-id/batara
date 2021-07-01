@@ -3,6 +3,7 @@ import {
   Request as IRequest, 
   Response as IResponse, 
   NextFunction as INextFunction,
+  ErrorRequestHandler as IErrorRequestHandler,
   ValidationChain 
 } from '../contracts/interface/Http';
 
@@ -16,12 +17,14 @@ export default abstract class Controller implements IController
 {
 
   abstract handle(req: IRequest, res: IResponse, next: INextFunction): any;
+  abstract authorizeHandler(err: IErrorRequestHandler, req: IRequest, res: IResponse, next: INextFunction): any;
+  abstract validationHandler(err: IErrorRequestHandler, req: IRequest, res: IResponse, next: INextFunction): any;
 
   authorize(req: IRequest, res: IResponse, next: INextFunction): void
   {
     next();
   }
-
+  
   rules(): Array<ValidationChain>
   {
     return [];
@@ -72,8 +75,10 @@ export default abstract class Controller implements IController
         next();
       },
       this.authorize,
+      this.authorizeHandler,
       this.rules(),
       new Validation().handle,
+      this.validationHandler,
       this.handle
     ];
   }

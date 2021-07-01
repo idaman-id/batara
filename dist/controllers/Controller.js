@@ -52,8 +52,10 @@ var Controller = /** @class */ (function () {
                 next();
             },
             this.authorize,
+            this.authorizeHandler,
             this.rules(),
             new Validation_1.default().handle,
+            this.validationHandler,
             this.handle
         ];
     };

@@ -21,8 +21,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var SystemError_1 = __importDefault(require("./SystemError"));
 var UnexpectedError = /** @class */ (function (_super) {
     __extends(UnexpectedError, _super);
-    function UnexpectedError() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function UnexpectedError(message) {
+        var _this = _super.call(this, message) || this;
+        _this.type = "unexpected";
+        return _this;
     }
     return UnexpectedError;
 }(SystemError_1.default));

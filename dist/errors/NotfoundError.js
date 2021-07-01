@@ -21,8 +21,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var SystemError_1 = __importDefault(require("./SystemError"));
 var NotfoundError = /** @class */ (function (_super) {
     __extends(NotfoundError, _super);
-    function NotfoundError() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function NotfoundError(message) {
+        var _this = _super.call(this, message) || this;
+        _this.type = "notfound";
+        return _this;
     }
     return NotfoundError;
 }(SystemError_1.default));

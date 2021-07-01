@@ -10,6 +10,7 @@ export default class ValidationError extends SystemError
   constructor(message: string, errors: Array<ResponseError>)
   {
     super(message);
+    this.type = "validation";
     this.errors = errors;
   }
 

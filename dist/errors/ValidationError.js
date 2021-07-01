@@ -23,6 +23,7 @@ var ValidationError = /** @class */ (function (_super) {
     __extends(ValidationError, _super);
     function ValidationError(message, errors) {
         var _this = _super.call(this, message) || this;
+        _this.type = "validation";
         _this.errors = errors;
         return _this;
     }

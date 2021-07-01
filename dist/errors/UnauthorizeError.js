@@ -21,8 +21,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var SystemError_1 = __importDefault(require("./SystemError"));
 var UnauthorizeError = /** @class */ (function (_super) {
     __extends(UnauthorizeError, _super);
-    function UnauthorizeError() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function UnauthorizeError(message) {
+        var _this = _super.call(this, message) || this;
+        _this.type = "unauthorize";
+        return _this;
     }
     return UnauthorizeError;
 }(SystemError_1.default));

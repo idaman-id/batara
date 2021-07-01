@@ -18,7 +18,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var SystemError = /** @class */ (function (_super) {
     __extends(SystemError, _super);
     function SystemError(message) {
-        return _super.call(this, message) || this;
+        var _this = _super.call(this, message) || this;
+        _this.type = "system";
+        return _this;
     }
     return SystemError;
 }(Error));

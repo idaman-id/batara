@@ -2,7 +2,7 @@
   "name": "batara",
   "version": "0.0.6",
   "description": "Javascript framework for laravel users",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "node node_modules/nodemon/bin/nodemon.js",
     "build": "tsc --project ./",
@@ -12,9 +12,9 @@
   "author": "Raka Suryaardi Widjaja <raka.suryadi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/idaman/"
+    "url": "https://github.com/gurisa/batara"
   },
-  "homepage": "https://gitlab.com/idaman/",
+  "homepage": "https://github.com/gurisa/batara",
   "engines": {
     "node": ">= 6.0.0"
   },

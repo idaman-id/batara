@@ -1,7 +1,7 @@
 # Batara 😇
 Javascript framework for laravel users
 
-❓ Motivations
+🤩 Motivations
 ---
 1. Provide easy to use laravel like pattern on javascript
 2. Provide boilerplate for my internal works and jobs
@@ -77,7 +77,7 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 👀 Issues
 ---
-1. write declaration `d.ts` for usage as library
+1. write declaration `d.ts` for usage as library (if necessary)
 2. write unit and integration tests
 
 🚀 Roadmaps

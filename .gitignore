@@ -2,10 +2,7 @@
 node_modules
 
 ## Application ##
-src/.env
-src/.env.test
-src/storages/*
-
-dist
+src/examples/.env
+src/examples/.env.test
 
 ## Utility ##

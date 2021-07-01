@@ -3,7 +3,6 @@ import {
   Request as IRequest, 
   Response as IResponse, 
   NextFunction as INextFunction,
-  ErrorRequestHandler as IErrorRequestHandler,
   ValidationChain 
 } from '../contracts/interface/Http';
 
@@ -17,8 +16,8 @@ export default abstract class Controller implements IController
 {
 
   abstract handle(req: IRequest, res: IResponse, next: INextFunction): any;
-  abstract authorizeHandler(err: IErrorRequestHandler, req: IRequest, res: IResponse, next: INextFunction): any;
-  abstract validationHandler(err: IErrorRequestHandler, req: IRequest, res: IResponse, next: INextFunction): any;
+  abstract authorizeHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
+  abstract validationHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
 
   authorize(req: IRequest, res: IResponse, next: INextFunction): void
   {

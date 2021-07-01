@@ -1,3 +1,6 @@
+### v0.0.11: Jul 1, 2021
+ * Change Authorized and Validation Error type: `any`
+
 ### v0.0.10: Jul 1, 2021
  * Add `type` guard for `SystemError` class
 

@@ -16,6 +16,7 @@ declare global
     {
       _language: ILanguage
     }
+
   }
 }
 

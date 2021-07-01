@@ -14,9 +14,9 @@ Javascript framework for laravel users
 2. Import package
 ```ts
 
-import { Application, Interface } from 'batara';
+import { Application } from 'batara';
 
-const setting: Interface.Application = {
+const app = new Application({
   name: "service",
   version: "1.0",
   debug: true,
@@ -24,8 +24,7 @@ const setting: Interface.Application = {
   timezone: "+07:00",
   host: "localhost",
   port: 3000,
-};
-const app = new Application(setting);
+});
 
 app.start();
 
@@ -59,31 +58,32 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 - ❓ Ideation/request
 
 | Status | Feature   | Description |
-| --- | ------      | ------ |
-| ⚠️ | Contract   | Constant, Interface, Type |
-| ⚠️ | Controller   |  |
-| ⚠️ | Entity   |  |
-| ⚠️ | Error   |  |
-| ⚠️ | Middleware   |  |
-| ❌ | Model   |  |
-| ⚠️ | Provider   |  |
-| ❌ | Repository   |  |
-| --- | ------      | ------ |
+| --- | ------       | ------      |
+| ⚠️ | Contract      | Constant, Interface, Type |
+| ⚠️ | Controller    |  |
+| ⚠️ | Entity        |  |
+| ⚠️ | Error         |  |
+| ⚠️ | Middleware    |  |
+| ❌ | Model         |  |
+| ⚠️ | Provider      |  |
+| ❌ | Repository    |  |
+| --- | ------       | ------ |
+
+❓ Questions
+---
+1. When to use `Union type: object | array` and `Generic type: <T, S>`
+- Answer: With union type we get mixed type (object or array or both), with generic we get one of them (object or array)
+2. When to use `Literal type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
 
 👀 Issues
 ---
-1. Check object hrus pake factory yg return enum nya dulu bru bisa
-2. When to use `Union type: object | array` and `Generic type: <T, S>`
-- Answer: With union type we get mixed type (object or array or both), with generic we get one of them (object or array)
-3. When to use `Literal type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
-4. Should we define `view-model` or just `entity`?
+1. write declaration `d.ts` for usage as library
+2. write unit and integration tests
 
 🚀 Roadmaps
 ---
-1. write declaration `d.ts` for usage as library
-2. write unit and integration tests
-3. implementation of middleware: authenticate, logger
-4. implementation of: model database, model messaging, repository pattern
+1. implementation of middleware: authenticate, logger
+2. implementation of: model database, model messaging, repository pattern
 
 🤩 Contributor
 ---

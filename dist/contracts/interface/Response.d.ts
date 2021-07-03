@@ -1,7 +1,6 @@
-import { ResponseStatus } from "../constant/Communication";
 import IResponseError from './ResponseError';
 export default interface Response<D> {
-    status: ResponseStatus;
+    status: string;
     message: string;
     data?: (D);
     error?: Array<IResponseError>;

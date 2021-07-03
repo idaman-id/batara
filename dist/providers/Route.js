@@ -29,6 +29,7 @@ var Route = /** @class */ (function (_super) {
         this.routes().forEach(function (route) {
             _this.app.instance[route.method](route.path, route.handler.run());
         });
+        this.app.instance.use(this.errorHandler().handle);
     };
     return Route;
 }(Provider_1.default));

@@ -24,7 +24,7 @@ export default class Language extends Middleware
       }
     }
 
-    let choosenMessages = JSON.parse(JSON.stringify(attributes));
+    let choosenMessages = JSON.parse(JSON.stringify(messages));
     for (let attributeKey in choosenMessages) { 
       if (!attributeKey.startsWith(locale)) {
         delete choosenMessages[attributeKey];

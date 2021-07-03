@@ -39,7 +39,7 @@ var Language = /** @class */ (function (_super) {
                 delete choosenAttributes[attributeKey];
             }
         }
-        var choosenMessages = JSON.parse(JSON.stringify(Language_1.attributes));
+        var choosenMessages = JSON.parse(JSON.stringify(Language_1.messages));
         for (var attributeKey in choosenMessages) {
             if (!attributeKey.startsWith(locale)) {
                 delete choosenMessages[attributeKey];

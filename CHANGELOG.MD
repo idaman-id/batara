@@ -1,3 +1,7 @@
+### v0.0.13: Jul 3, 2021
+ * Add `errorHandler` abstract method in `RouteProvider`
+ * Fix message valiadation not replacing default translation
+
 ### v0.0.12: Jul 1, 2021
  * Add `ErrorType` constant
  * Middleware returning `next();`

@@ -1,15 +1,15 @@
 
-import { ResponseMessage, ResponseStatus } from '../contracts/constant/Communication';
 import IResponse from '../contracts/interface/Response';
 import IResponseError from '../contracts/interface/ResponseError';
 import { ResponseData } from '../contracts/type/ResponseData';
+import { ResponseMessage, ResponseStatus } from '../contracts/constant/Communication';
 import Entity from './Entity';
 
 export default class ResponseBody<D extends ResponseData> extends Entity
 {
 
-  public status: ResponseStatus = ResponseStatus.SUCCESS;
-  public message: string = "ok";
+  public status: string = ResponseStatus.SUCCESS;
+  public message: string = ResponseMessage.SUCCESS;
   public data?: (D);
   public error?: Array<IResponseError>;
   
@@ -22,7 +22,7 @@ export default class ResponseBody<D extends ResponseData> extends Entity
     this.error = error;
   }
 
-  setStatus(status: ResponseStatus): void
+  setStatus(status: string): void
   {
     this.status = status;
   }

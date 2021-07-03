@@ -74,16 +74,19 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 1. When to use `Union type: object | array` and `Generic type: <T, S>`
 - Answer: With union type we get mixed type (object or array or both), with generic we get one of them (object or array)
 2. When to use `Literal type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
+3. Should we use generic response or not in `ResponseBody` Entity, e.g:
+- Field `data` sometime may contain `Array<T>` or `Object`
+- Field `error` contain `Array<Error>` but if we look at the property name it singular name.
 
 👀 Issues
 ---
-1. write declaration `d.ts` for usage as library (if necessary)
-2. write unit and integration tests
+1. There's issue with `nodemon ^2.0.9`, so we downgrade to the previous version `nodemon v2.0.7`. Hope they fix it in the future so we can enjoy using nodemon newer version again. 
 
 🚀 Roadmaps
 ---
-1. implementation of middleware: authenticate, logger
-2. implementation of: model database, model messaging, repository pattern
+1. write unit and integration tests
+2. implementation of middleware: authenticate, logger
+3. implementation of: model database, model messaging, repository pattern
 
 🤩 Contributor
 ---

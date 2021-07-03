@@ -25,7 +25,7 @@ var ResponseBody = /** @class */ (function (_super) {
         var status = _a.status, message = _a.message, data = _a.data, error = _a.error;
         var _this = _super.call(this) || this;
         _this.status = "SUCCESS" /* SUCCESS */;
-        _this.message = "ok";
+        _this.message = "ok" /* SUCCESS */;
         _this.status = status;
         _this.message = message;
         _this.data = data;

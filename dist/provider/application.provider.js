@@ -23,10 +23,12 @@ var express_locale_1 = __importDefault(require("express-locale"));
 var provider_1 = __importDefault(require("./provider"));
 var Application = /** @class */ (function (_super) {
     __extends(Application, _super);
-    function Application() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Application(app) {
+        var _this = _super.call(this, app) || this;
+        _this.doRegister();
+        return _this;
     }
-    Application.prototype.register = function () {
+    Application.prototype.doRegister = function () {
         this.app.instance.use(body_parser_1.default.urlencoded({ extended: false }));
         this.app.instance.use(body_parser_1.default.json());
         this.app.instance.use(express_locale_1.default({

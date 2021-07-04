@@ -2,6 +2,7 @@
 export type AccessLogSetting = {
 
   interval: string,
-  path: string
+  path: string,
+  fileName?: string,
 
 }

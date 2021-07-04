@@ -1,3 +1,7 @@
+### v0.0.17: Jul 4, 2021
+ * Refactor `AccessLog` factory
+ * Fix validation and authorization not working
+
 ### v0.0.16: Jul 4, 2021
  * Change `ApplicationProvider` as abstract
 

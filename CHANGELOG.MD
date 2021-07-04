@@ -1,3 +1,6 @@
+### v0.0.15: Jul 3, 2021
+ * Remove `AccessLog` factory usage in `ApplicationProvider`
+
 ### v0.0.14: Jul 4, 2021
  * Add `Command` and `Factory` interface
  * Change `AccessLog` factory to implement `Factory` interface

@@ -20,7 +20,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var body_parser_1 = __importDefault(require("body-parser"));
 var express_locale_1 = __importDefault(require("express-locale"));
-var access_log_factory_1 = __importDefault(require("../factory/access-log.factory"));
 var provider_1 = __importDefault(require("./provider"));
 var Application = /** @class */ (function (_super) {
     __extends(Application, _super);
@@ -38,11 +37,6 @@ var Application = /** @class */ (function (_super) {
             },
             requestProperty: "locale"
         }));
-        var accessLog = new access_log_factory_1.default().make({
-            interval: '1d',
-            path: '/storages/log/access'
-        });
-        this.app.instance.use(accessLog);
     };
     return Application;
 }(provider_1.default));

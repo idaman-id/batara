@@ -65,7 +65,6 @@ export const attributes = {
   "en.value": "Value",
   
   /** APPLICATION */
-
   "en.limit": "Limit",
   "en.offset": "Offset",
   "en.q": "Keyword",

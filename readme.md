@@ -5,7 +5,6 @@ Javascript framework for laravel users
 ---
 1. Provide easy to use laravel like pattern on javascript
 2. Provide boilerplate for my internal works and jobs
-3. 
 
 🖖 Usage
 ---
@@ -59,7 +58,9 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 | Status | Feature   | Description |
 | --- | ------       | ------      |
-| ⚠️ | Contract      | Constant, Interface, Type |
+| ⚠️ | Constant      |  |
+| ⚠️ | Interface     |  |
+| ⚠️ | Type          |  |
 | ⚠️ | Controller    |  |
 | ⚠️ | Entity        |  |
 | ⚠️ | Error         |  |
@@ -77,7 +78,6 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 3. Should we use generic response or not in `ResponseBody` Entity, e.g:
 - Field `data` sometime may contain `Array<T>` or `Object`
 - Field `error` contain `Array<Error>` but if we look at the property name it singular name.
-4. 
 
 👀 Issues
 ---
@@ -85,12 +85,12 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 🚀 Roadmaps
 ---
-To understand more about our progress please see [changelog](https://github.com/gurisa/batara/CHANGELOG.md)
+To understand more about our progress please see [changelog](https://github.com/gurisa/batara/blob/master/CHANGELOG.MD)
 
 1. write unit and integration tests
-2. implementation of middleware: authenticate, logger
-3. implementation of: model database, model messaging, repository pattern
-
+2. replace `express-validator` with [`validator.js`, `joi`, `indicative(adonis)`] and custom `declarative-validator`
+3. implementation of: model database, model messaging
+4. implementation of: repository (data access layer)
 
 🤩 Contributor
 ---

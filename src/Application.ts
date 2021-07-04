@@ -2,8 +2,8 @@
 global.__basedir = __dirname;
 
 import express from 'express';
-import IApplication from './contracts/interface/Application';
-import ILanguage from './contracts/interface/ValidationLanguage';
+import IApplication from './interface/application.interface';
+import ILanguage from './interface/validation-language.interface';
 
 declare global 
 {

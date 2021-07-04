@@ -45,7 +45,7 @@ app.start();
 
 ✔️ Test & Coverages
 ---
-![Test coverages](https://github.com/gurisa/batara/blob/master/assets/image/coverage.png?raw=true)
+![Test coverages](https://github.com/gurisa/batara/blob/master/asset/image/coverage.png?raw=true)
 
 📋 Docs
 ---
@@ -77,6 +77,7 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 3. Should we use generic response or not in `ResponseBody` Entity, e.g:
 - Field `data` sometime may contain `Array<T>` or `Object`
 - Field `error` contain `Array<Error>` but if we look at the property name it singular name.
+4. 
 
 👀 Issues
 ---
@@ -84,9 +85,12 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 🚀 Roadmaps
 ---
+To understand more about our progress please see [changelog](https://github.com/gurisa/batara/CHANGELOG.md)
+
 1. write unit and integration tests
 2. implementation of middleware: authenticate, logger
 3. implementation of: model database, model messaging, repository pattern
+
 
 🤩 Contributor
 ---

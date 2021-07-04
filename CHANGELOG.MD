@@ -1,3 +1,9 @@
+### v0.0.14: Jul 4, 2021
+ * Add `Command` and `Factory` interface
+ * Change `AccessLog` factory to implement `Factory` interface
+ * Remove `lodash` depedency
+ * Change `Folder structure` to `lowercase` and `File name` to `kebap-case` followed by it's type, e.g: `ValidationError.ts` to `validation.error.ts`, `AccessLog.ts` to `access-log.factory.ts`
+
 ### v0.0.13: Jul 3, 2021
  * Add `errorHandler` abstract method in `RouteProvider`
  * Fix message valiadation not replacing default translation

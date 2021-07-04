@@ -1,6 +1,6 @@
 {
   "name": "batara",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Javascript framework for laravel users",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "Raka Suryaardi Widjaja <raka.suryadi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gurisa/batara"
+    "url": "https://github.com/gurisa/batara/issues"
   },
   "homepage": "https://github.com/gurisa/batara",
   "engines": {
@@ -22,7 +22,6 @@
     "express": "^4.17.1",
     "express-locale": "^2.0.0",
     "express-validator": "^6.10.0",
-    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "morgan": "^1.10.0",
     "node-polyglot": "^2.4.0",
@@ -46,7 +45,7 @@
     "typescript": "^4.3.4"
   },
   "directories": {
-    "doc": "docs"
+    "doc": "doc"
   },
   "repository": {
     "type": "git",

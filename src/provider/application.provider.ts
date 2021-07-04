@@ -2,13 +2,20 @@
 import bodyParser from 'body-parser'; 
 import createLocaleMiddleware from 'express-locale';
 
+import App from '../application';
 import IProvider from '../interface/provider.interface';
 import Provider from './provider';
 
-export default class Application extends Provider implements IProvider
+export default abstract class Application extends Provider implements IProvider
 {
 
-  register()
+  constructor(app: App)
+  {
+    super(app);
+    this.doRegister();
+  }
+
+  doRegister()
   {    
     this.app.instance.use(bodyParser.urlencoded({ extended: false }));
     this.app.instance.use(bodyParser.json());

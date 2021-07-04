@@ -1,6 +1,6 @@
 {
   "name": "batara",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Javascript framework for laravel users",
   "main": "dist/index.js",
   "scripts": {

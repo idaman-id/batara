@@ -2,7 +2,5 @@
 node_modules
 
 ## Application ##
-src/examples/.env
-src/examples/.env.test
 
 ## Utility ##

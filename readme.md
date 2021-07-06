@@ -59,14 +59,14 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 | Status | Feature   | Description |
 | --- | ------       | ------      |
 | ⚠️ | Constant      |  |
-| ⚠️ | Interface     |  |
-| ⚠️ | Type          |  |
 | ⚠️ | Controller    |  |
 | ⚠️ | Entity        |  |
 | ⚠️ | Error         |  |
+| ⚠️ | Interface     |  |
 | ⚠️ | Middleware    |  |
-| ❌ | Model         |  |
 | ⚠️ | Provider      |  |
+| ⚠️ | Type          |  |
+| ❌ | Model         |  |
 | ❌ | Repository    |  |
 | --- | ------       | ------ |
 
@@ -78,10 +78,11 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 3. Should we use generic response or not in `ResponseBody` Entity, e.g:
 - Field `data` sometime may contain `Array<T>` or `Object`
 - Field `error` contain `Array<Error>` but if we look at the property name it singular name.
+4. Consider to implement `authenticate` and `authenticateHandler`
 
 👀 Issues
 ---
-1. There's issue with `nodemon ^2.0.9`, so we downgrade to the previous version `nodemon v2.0.7`. Hope they fix it in the future so we can enjoy using nodemon newer version again. 
+1. There's issue with `nodemon ^2.0.9` when restarting app causing port is already in use, so we downgrade to the previous version `nodemon v2.0.7`. Hope they fix it in the future so we can enjoy using nodemon newer version again. 
 
 🚀 Roadmaps
 ---

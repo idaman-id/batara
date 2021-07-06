@@ -1,2 +1,2 @@
 
-export type ResponseData = Array<Object> | Object;
+export type ResponseData = Array<Object> | Object | undefined;

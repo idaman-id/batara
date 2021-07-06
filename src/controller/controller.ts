@@ -19,9 +19,9 @@ export default abstract class Controller implements IController
   abstract authorizeHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
   abstract validationHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
 
-  authorize(req: IRequest, res: IResponse, next: INextFunction): void
+  authorize(req: IRequest, res: IResponse, next: INextFunction): any
   {
-    next();
+    return next();
   }
   
   rules(): Array<ValidationChain>

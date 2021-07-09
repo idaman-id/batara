@@ -1,18 +1,13 @@
 
-import chai, { expect } from "chai";
-// import * as chaiLike from "chai-like";
-// import * as chaiThings from "chai-things";
-
 import { HttpMethod } from "../../src/constant/communication.constant";
 
-describe('HttpMethod enum', () => {
+describe('HttpMethod constant', () => {
   
-  before(() => {
-    // chai.use(chaiLike);
-    // chai.use(chaiThings);
+  beforeAll(() => {
+    
   });
 
-  after(() => {
+  afterAll(() => {
     
   });
 
@@ -24,21 +19,36 @@ describe('HttpMethod enum', () => {
     
   });
 
-  it('should fail when trying to create new instance from abstract class', () => {
-
-    expect(() => { 
-      
-    }).to.throw('Cannot construct abstract instances directly');
+  test('COPY constant shoule be a copy', () => {
+    expect(HttpMethod.COPY).toBe("copy");
   });
-  it('should success when creating instance from child class', () => {
 
-    // class User extends ViewModel { }
-    
-    // const user = new User();
-    // const equalInstance = user instanceof ViewModel;
+  test('DELETE constant shoule be a delete', () => {
+    expect(HttpMethod.DELETE).toBe("delete");
+  });
 
-    expect(false).to.equal(true);
+  test('GET constant shoule be a get', () => {
+    expect(HttpMethod.GET).toBe("get");
+  });
 
+  test('HEAD constant shoule be a head', () => {
+    expect(HttpMethod.HEAD).toBe("head");
+  });
+
+  test('OPTIONS constant shoule be a options', () => {
+    expect(HttpMethod.OPTIONS).toBe("options");
+  });
+
+  test('PATCH constant shoule be a patch', () => {
+    expect(HttpMethod.PATCH).toBe("patch");
+  });
+
+  test('POST constant shoule be a post', () => {
+    expect(HttpMethod.POST).toBe("post");
+  });
+
+  test('PUT constant shoule be a put', () => {
+    expect(HttpMethod.PUT).toBe("put");
   });
 
 });

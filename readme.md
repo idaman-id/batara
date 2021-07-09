@@ -58,7 +58,7 @@ Complete documentations are available [here](https://github.com/idaman-id/batara
 
 | Status | Feature   | Description |
 | --- | ------       | ------      |
-| ⚠️ | Constant      |  |
+| ✔️ | Constant      |  |
 | ⚠️ | Controller    |  |
 | ⚠️ | Entity        |  |
 | ⚠️ | Error         |  |
@@ -92,6 +92,7 @@ Complete documentations are available [here](https://github.com/idaman-id/batara
 To understand more about our progress please see [changelog](https://github.com/idaman-id/batara/blob/master/CHANGELOG.MD)
 
 1. write unit and integration tests
+2. write complete documentation
 3. replace `express-validator` with [`validator.js`, `joi`, `indicative(adonis)`] and custom `declarative-validator`
 4. implementation of: model database, model messaging
 

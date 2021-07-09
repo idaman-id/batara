@@ -1,7 +1,7 @@
 
 global.__basedir = __dirname;
 
-import express from 'express';
+import express, { Handler } from 'express';
 import IApplicationSetting from './interface/application-setting.interface';
 import ILanguage from './interface/validation-language.interface';
 
@@ -36,6 +36,11 @@ export default class Application
     this.instance.listen(this.setting.port, this.setting.host, () => {
       console.info(`[${this.setting.environment.toUpperCase()}] ${this.setting.name} is running on ${this.setting.host}:${this.setting.port}`);
     });
+  }
+
+  public use(handler: Handler): any
+  {
+    this.instance.use(handler);
   }
 
 }

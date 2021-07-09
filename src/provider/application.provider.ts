@@ -3,10 +3,9 @@ import bodyParser from 'body-parser';
 import createLocaleMiddleware from 'express-locale';
 
 import App from '../application';
-import IProvider from '../interface/provider.interface';
 import Provider from './provider';
 
-export default abstract class Application extends Provider implements IProvider
+export default abstract class Application extends Provider
 {
 
   constructor(app: App)
@@ -17,9 +16,9 @@ export default abstract class Application extends Provider implements IProvider
 
   private doRegister()
   {    
-    this.app.instance.use(bodyParser.urlencoded({ extended: false }));
-    this.app.instance.use(bodyParser.json());
-    this.app.instance.use(createLocaleMiddleware({
+    this.app.use(bodyParser.urlencoded({ extended: false }));
+    this.app.use(bodyParser.json());
+    this.app.use(createLocaleMiddleware({
       priority: ["query", "accept-language", "default"],
       default: "id-ID",
       query: {

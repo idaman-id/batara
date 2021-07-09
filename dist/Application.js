@@ -16,6 +16,9 @@ var Application = /** @class */ (function () {
             console.info("[" + _this.setting.environment.toUpperCase() + "] " + _this.setting.name + " is running on " + _this.setting.host + ":" + _this.setting.port);
         });
     };
+    Application.prototype.use = function (handler) {
+        this.instance.use(handler);
+    };
     return Application;
 }());
 exports.default = Application;

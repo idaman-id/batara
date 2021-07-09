@@ -1,7 +1,7 @@
-import ResponseError from "../interface/response-error.interface";
+import IValidationError from "../interface/validation-error.interface";
 import SystemError from "./system.error";
 export default class ValidationError extends SystemError {
-    errors: Array<ResponseError>;
-    constructor(message: string, errors: Array<ResponseError>);
-    getErrors(): Array<ResponseError>;
+    errors: Array<IValidationError>;
+    constructor(message: string, errors: Array<IValidationError>);
+    getErrors(): Array<IValidationError>;
 }

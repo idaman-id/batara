@@ -29,9 +29,9 @@ var Application = /** @class */ (function (_super) {
         return _this;
     }
     Application.prototype.doRegister = function () {
-        this.app.instance.use(body_parser_1.default.urlencoded({ extended: false }));
-        this.app.instance.use(body_parser_1.default.json());
-        this.app.instance.use(express_locale_1.default({
+        this.app.use(body_parser_1.default.urlencoded({ extended: false }));
+        this.app.use(body_parser_1.default.json());
+        this.app.use(express_locale_1.default({
             priority: ["query", "accept-language", "default"],
             default: "id-ID",
             query: {

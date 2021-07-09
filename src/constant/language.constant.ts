@@ -81,6 +81,6 @@ export const messages = {
   "en.max": ":attribute must less than :value",
   "en.lt": ":attribute must less than :value",
   "en.gt": ":attribute must greater than :value",
-  "en.between": ":attribute shoudl between :value and :value",
+  "en.between": ":attribute should between :value and :value",
   "en.has_used": ":attribute has been used"
 }

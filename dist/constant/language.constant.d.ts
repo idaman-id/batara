@@ -17,36 +17,8 @@ export declare const attributes: {
     "id.description": string;
     "id.type": string;
     "id.category": string;
-    "id.features": string;
-    "id.google_token": string;
+    "id.feature": string;
     "id.message": string;
-    /** IDENTIFIER */
-    "id.app_id": string;
-    "id.user_id": string;
-    "id.modifier_id": string;
-    "id.photo_id": string;
-    "id.attachment_id": string;
-    "id.file_id": string;
-    /** ADDRESS */
-    "id.country_id": string;
-    "id.province_id": string;
-    "id.regency_id": string;
-    "id.district_id": string;
-    "id.village_id": string;
-    "id.postal_code": string;
-    "id.latitude": string;
-    "id.longitude": string;
-    "id.hamlet_number": string;
-    "id.neighbourhood_number": string;
-    "id.street": string;
-    /** PERSONAL */
-    "id.name": string;
-    "id.gender": string;
-    "id.birth_place": string;
-    "id.birth_at": string;
-    "id.phone": string;
-    "id.email": string;
-    "id.identifier": string;
     /**
      * =======================
      * | ENGLISH TRANSLATION |
@@ -65,36 +37,8 @@ export declare const attributes: {
     "en.description": string;
     "en.type": string;
     "en.category": string;
-    "en.features": string;
-    "en.google_token": string;
+    "en.feature": string;
     "en.message": string;
-    /** IDENTIFIER */
-    "en.app_id": string;
-    "en.user_id": string;
-    "en.modifier_id": string;
-    "en.photo_id": string;
-    "en.attachment_id": string;
-    "en.file_id": string;
-    /** ADDRESS */
-    "en.country_id": string;
-    "en.province_id": string;
-    "en.regency_id": string;
-    "en.district_id": string;
-    "en.village_id": string;
-    "en.postal_code": string;
-    "en.latitude": string;
-    "en.longitude": string;
-    "en.hamlet_number": string;
-    "en.neighbourhood_number": string;
-    "en.street": string;
-    /** PERSONAL */
-    "en.name": string;
-    "en.gender": string;
-    "en.birth_place": string;
-    "en.birth_at": string;
-    "en.phone": string;
-    "en.email": string;
-    "en.identifier": string;
 };
 export declare const messages: {
     /**

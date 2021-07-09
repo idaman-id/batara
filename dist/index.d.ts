@@ -9,4 +9,3 @@ export * as Factory from './factory';
 export * as Middleware from './middleware';
 export * as Model from './model';
 export * as Provider from './provider';
-export * as Repository from './repository';

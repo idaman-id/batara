@@ -1,7 +1,6 @@
 import App from '../application';
-import IProvider from '../interface/provider.interface';
 import Provider from './provider';
-export default abstract class Application extends Provider implements IProvider {
+export default abstract class Application extends Provider {
     constructor(app: App);
-    doRegister(): void;
+    private doRegister;
 }

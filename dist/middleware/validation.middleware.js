@@ -25,7 +25,7 @@ var middleware_1 = __importDefault(require("./middleware"));
  * @description
  * Built in Validation middleware so every validation rules
  * specified in Controllers are validated
- * If there is error then this middleware will injection Error object
+ * If there is error then this middleware will inject Error object
  */
 var Validation = /** @class */ (function (_super) {
     __extends(Validation, _super);
@@ -33,13 +33,14 @@ var Validation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Validation.prototype.handle = function (req, res, next) {
+        var error = null;
         var errors = express_validator_1.validationResult(req);
         if (!errors.isEmpty()) {
             var translatedErrors = Validation.translateErrors(req, errors.array());
             var formatedErrors = Validation.formatErrors(translatedErrors);
-            return next(new validation_error_1.default("invalid data" /* INVALID_DATA */, formatedErrors));
+            error = new validation_error_1.default("invalid data", formatedErrors);
         }
-        return next();
+        return next(error);
     };
     Validation.formatErrors = function (errors) {
         return errors.map(function (error) {

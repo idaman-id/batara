@@ -1,20 +1,23 @@
 {
   "name": "batara",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Javascript framework for laravel users",
   "main": "dist/index.js",
   "scripts": {
     "dev": "node node_modules/nodemon/bin/nodemon.js",
     "build": "tsc --project ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha -r ./test/**/*.test.ts --reporter spec --recursive --exit --inspect=0.0.0.0:9229 --timeout 10000",
+    "test-minimal": "mocha --watch -r ./test/**/*.test.ts --timeout 10000",
+    "test-unit": "mocha --watch -r ./test/unit/**/*.test.ts --timeout 10000",
+    "test-integration": "mocha --watch -r ./test/integration/**/*.test.ts --timeout 10000"
   },
   "keywords": [],
   "author": "Raka Suryaardi Widjaja <raka.suryadi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gurisa/batara/issues"
+    "url": "https://github.com/idaman-id/batara/issues"
   },
-  "homepage": "https://github.com/gurisa/batara",
+  "homepage": "https://github.com/idaman-id/batara",
   "engines": {
     "node": ">= 6.0.0"
   },
@@ -28,9 +31,13 @@
     "rotating-file-stream": "^2.1.5"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.19",
+    "@types/chai-like": "^1.1.0",
+    "@types/chai-things": "0.0.34",
     "@types/express": "^4.17.12",
     "@types/express-locale": "^2.0.0",
     "@types/lodash": "^4.14.170",
+    "@types/mocha": "^8.2.2",
     "@types/morgan": "^1.9.2",
     "@types/node": "^15.12.4",
     "@types/node-polyglot": "^2.4.1",
@@ -49,6 +56,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gurisa/batara.git"
+    "url": "git+https://github.com/idaman-id/batara.git"
   }
 }

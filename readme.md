@@ -44,11 +44,11 @@ app.start();
 
 ✔️ Test & Coverages
 ---
-![Test coverages](https://github.com/gurisa/batara/blob/master/asset/image/coverage.png?raw=true)
+![Test coverages](https://github.com/idaman-id/batara/blob/master/asset/image/coverage.png?raw=true)
 
 📋 Docs
 ---
-Complete documentations are available [here](https://github.com/gurisa/batara/tree/master/docs)
+Complete documentations are available [here](https://github.com/idaman-id/batara/tree/master/docs)
 
 **Legends:**
 - ✔️ Available with test
@@ -67,7 +67,6 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 | ⚠️ | Provider      |  |
 | ⚠️ | Type          |  |
 | ❌ | Model         |  |
-| ❌ | Repository    |  |
 | --- | ------       | ------ |
 
 ❓ Questions
@@ -79,6 +78,10 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 - Field `data` sometime may contain `Array<T>` or `Object`
 - Field `error` contain `Array<Error>` but if we look at the property name it singular name.
 4. Consider to implement `authenticate` and `authenticateHandler`
+5. How to set Class property if there are many property to insert. e.g:
+- If we fill within the `constructor`, the constructor then bloated
+- If we use setter, the `setter` caling may be chaining as hell
+- Maybe we can use `factory`?
 
 👀 Issues
 ---
@@ -86,18 +89,17 @@ Complete documentations are available [here](https://github.com/gurisa/batara/tr
 
 🚀 Roadmaps
 ---
-To understand more about our progress please see [changelog](https://github.com/gurisa/batara/blob/master/CHANGELOG.MD)
+To understand more about our progress please see [changelog](https://github.com/idaman-id/batara/blob/master/CHANGELOG.MD)
 
 1. write unit and integration tests
-2. replace `express-validator` with [`validator.js`, `joi`, `indicative(adonis)`] and custom `declarative-validator`
-3. implementation of: model database, model messaging
-4. implementation of: repository (data access layer)
+3. replace `express-validator` with [`validator.js`, `joi`, `indicative(adonis)`] and custom `declarative-validator`
+4. implementation of: model database, model messaging
 
 🤩 Contributor
 ---
 [![](https://github.com/kokoraka.png?size=50)](https://github.com/kokoraka)
 
-Feel free to [contribute](https://github.com/gurisa/batara/pulls)
+Feel free to [contribute](https://github.com/idaman-id/batara/pulls)
 
 💖 Support
 ---

@@ -8,8 +8,7 @@ import {
   ValidationError as IValidationError 
 } from '../interface/http.interface';
 import IMap from '../interface/map.interface';
-import IResponseError from '../interface/response-error.interface';
-import { ResponseMessage } from '../constant/communication.constant';
+import IResponseError from '../interface/validation-error.interface';
 
 import ValidationError from '../error/validation.error';
 
@@ -30,7 +29,7 @@ export default class Validation extends Middleware
     if (!errors.isEmpty()) {
       const translatedErrors = Validation.translateErrors(req, errors.array());
       const formatedErrors = Validation.formatErrors(translatedErrors);
-      return next(new ValidationError(ResponseMessage.INVALID_DATA, formatedErrors)); 
+      return next(new ValidationError("invalid data", formatedErrors)); 
     }
     return next();
   }

@@ -1,0 +1,11 @@
+# These are supported funding model platforms
+
+patreon: idaman
+open_collective: batara
+ko_fi: idaman
+issuehunt: idaman-id/batara
+custom: ['https://idaman.id']
+
+github: # Replace with up to 4 GitHub Sponsors-enabled usernames e.g., [user1, user2]
+tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
+community_bridge: # Replace with a single Community Bridge project-name e.g., cloud-foundry

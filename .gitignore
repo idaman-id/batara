@@ -1,5 +1,6 @@
-## Node ##
+## System ##
 node_modules
+.nyc_output
 
 ## Application ##
 

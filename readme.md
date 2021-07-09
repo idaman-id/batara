@@ -61,7 +61,7 @@ Complete documentations are available [here](https://github.com/idaman-id/batara
 | ✔️ | Constant      |  |
 | ⚠️ | Controller    |  |
 | ✔️ | Entity        |  |
-| ⚠️ | Error         |  |
+| ✔️ | Error         |  |
 | ⚠️ | Interface     |  |
 | ⚠️ | Middleware    |  |
 | ⚠️ | Provider      |  |

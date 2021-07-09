@@ -30,7 +30,7 @@ export default class Validation extends Middleware
     if (!errors.isEmpty()) {
       const translatedErrors = Validation.translateErrors(req, errors.array());
       const formatedErrors = Validation.formatErrors(translatedErrors);
-      error = new ValidationError("invalid data", formatedErrors);
+      error = new ValidationError(formatedErrors, "invalid data");
     }
     return next(error);
   }

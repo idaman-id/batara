@@ -22,9 +22,8 @@ var system_error_1 = __importDefault(require("./system.error"));
 var UnauthenticateError = /** @class */ (function (_super) {
     __extends(UnauthenticateError, _super);
     function UnauthenticateError(message) {
-        var _this = _super.call(this, message) || this;
-        _this.type = "unauthenticate" /* UNAUTHENTICATE */;
-        return _this;
+        if (message === void 0) { message = "unauthenticate error"; }
+        return _super.call(this, message) || this;
     }
     return UnauthenticateError;
 }(system_error_1.default));

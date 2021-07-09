@@ -22,9 +22,8 @@ var system_error_1 = __importDefault(require("./system.error"));
 var UnexpectedError = /** @class */ (function (_super) {
     __extends(UnexpectedError, _super);
     function UnexpectedError(message) {
-        var _this = _super.call(this, message) || this;
-        _this.type = "unexpected" /* UNEXPECTED */;
-        return _this;
+        if (message === void 0) { message = "unexpected error"; }
+        return _super.call(this, message) || this;
     }
     return UnexpectedError;
 }(system_error_1.default));

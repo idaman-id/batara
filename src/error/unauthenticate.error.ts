@@ -1,14 +1,12 @@
 
-import { ErrorType } from "../constant";
 import SystemError from "./system.error";
 
 export default class UnauthenticateError extends SystemError
 {
   
-  constructor(message: string)
+  constructor(message: string = "unauthenticate error")
   {
     super(message);
-    this.type = ErrorType.UNAUTHENTICATE;
   }
 
 }

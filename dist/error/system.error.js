@@ -18,8 +18,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var SystemError = /** @class */ (function (_super) {
     __extends(SystemError, _super);
     function SystemError(message) {
+        var _newTarget = this.constructor;
+        if (message === void 0) { message = "system error"; }
         var _this = _super.call(this, message) || this;
-        _this.type = "system" /* SYSTEM */;
+        /**
+         * There is an issue with custom derrived class in typescript
+         * more info: https://github.com/Microsoft/TypeScript/issues/13965
+         */
+        Object.setPrototypeOf(_this, _newTarget.prototype);
         return _this;
     }
     return SystemError;

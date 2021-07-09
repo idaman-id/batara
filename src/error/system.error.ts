@@ -1,15 +1,15 @@
 
-import { ErrorType } from "../constant";
-
 export default abstract class SystemError extends Error
 {
   
-  public type: string;
-
-  constructor(message: string)
+  constructor(message: string = "system error")
   {
     super(message);
-    this.type = ErrorType.SYSTEM;
+    /** 
+     * There is an issue with custom derrived class in typescript
+     * more info: https://github.com/Microsoft/TypeScript/issues/13965
+     */
+    Object.setPrototypeOf(this, new.target.prototype);
   }
 
 }

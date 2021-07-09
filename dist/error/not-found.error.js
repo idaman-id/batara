@@ -22,9 +22,8 @@ var system_error_1 = __importDefault(require("./system.error"));
 var NotfoundError = /** @class */ (function (_super) {
     __extends(NotfoundError, _super);
     function NotfoundError(message) {
-        var _this = _super.call(this, message) || this;
-        _this.type = "notfound" /* NOTFOUND */;
-        return _this;
+        if (message === void 0) { message = "notfound error"; }
+        return _super.call(this, message) || this;
     }
     return NotfoundError;
 }(system_error_1.default));

@@ -38,7 +38,7 @@ var Validation = /** @class */ (function (_super) {
         if (!errors.isEmpty()) {
             var translatedErrors = Validation.translateErrors(req, errors.array());
             var formatedErrors = Validation.formatErrors(translatedErrors);
-            error = new validation_error_1.default("invalid data", formatedErrors);
+            error = new validation_error_1.default(formatedErrors, "invalid data");
         }
         return next(error);
     };

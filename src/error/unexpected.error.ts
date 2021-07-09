@@ -1,14 +1,12 @@
 
-import { ErrorType } from "../constant";
 import SystemError from "./system.error";
 
 export default class UnexpectedError extends SystemError
 {
   
-  constructor(message: string)
+  constructor(message: string = "unexpected error")
   {
     super(message);
-    this.type = ErrorType.UNEXPECTED;
   }
 
 }

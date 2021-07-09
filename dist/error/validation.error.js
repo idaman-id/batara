@@ -21,9 +21,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var system_error_1 = __importDefault(require("./system.error"));
 var ValidationError = /** @class */ (function (_super) {
     __extends(ValidationError, _super);
-    function ValidationError(message, errors) {
+    function ValidationError(errors, message) {
+        if (message === void 0) { message = "validation error"; }
         var _this = _super.call(this, message) || this;
-        _this.type = "validation" /* VALIDATION */;
         _this.errors = errors;
         return _this;
     }

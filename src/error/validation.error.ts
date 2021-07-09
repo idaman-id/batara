@@ -1,17 +1,18 @@
 
-import { ErrorType } from "../constant";
 import IValidationError from "../interface/validation-error.interface";
 import SystemError from "./system.error";
 
 export default class ValidationError extends SystemError
 {
   
-  public errors: Array<IValidationError>;
+  protected errors: Array<IValidationError>;
 
-  constructor(message: string, errors: Array<IValidationError>)
+  constructor(
+    errors: Array<IValidationError>,
+    message: string = "validation error", 
+  )
   {
     super(message);
-    this.type = ErrorType.VALIDATION;
     this.errors = errors;
   }
 

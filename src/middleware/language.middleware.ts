@@ -13,7 +13,7 @@ import Middleware from "./middleware";
 export default class Language extends Middleware
 {
 
-  handle(req: Request, res: Response, next: NextFunction)
+  public handle(req: Request, res: Response, next: NextFunction)
   {
     const locale = req.locale.language;
 

@@ -11,7 +11,7 @@ import Factory from '../interface/factory.interface';
 export default class AccessLog implements Factory<Handler>
 {
 
-  make(setting: AccessLogSetting)
+  public make(setting: AccessLogSetting)
   {
     const formats = new LogFormat().make();
     const fileName = setting.fileName || `${moment().format('YYYY-MM-DD')}.log`;

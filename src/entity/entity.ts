@@ -2,12 +2,12 @@
 export default abstract class Entity
 {
 
-  toObject(): object
+  public toObject(): object
   {
     return this;
   }
 
-  toJson(): string
+  public toJson(): string
   {
     return JSON.stringify(this.toObject());
   }

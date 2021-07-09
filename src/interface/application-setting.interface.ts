@@ -1,5 +1,5 @@
 
-export default interface Application
+export default interface ApplicationSetting
 {
 
   readonly name: string,

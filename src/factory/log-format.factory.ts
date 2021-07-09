@@ -5,7 +5,7 @@ import Factory from '../interface/factory.interface';
 export default class LogFormat implements Factory<FormatFn>
 {
 
-  make()
+  public make()
   {
     const logFormat: FormatFn = (tokens, req, res) => {
       return [

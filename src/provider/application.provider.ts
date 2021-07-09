@@ -15,7 +15,7 @@ export default abstract class Application extends Provider implements IProvider
     this.doRegister();
   }
 
-  doRegister()
+  private doRegister()
   {    
     this.app.instance.use(bodyParser.urlencoded({ extended: false }));
     this.app.instance.use(bodyParser.json());

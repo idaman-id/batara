@@ -2,6 +2,7 @@
  * Add unit and integration test
  * Add funding account
  * Change git repository from `gurisa` to `idaman-id`
+ * Change access modifier
  * Remove `Repository` pattern since it's use as `facade` pattern is not good on large cases
  * Remove `ResponseStatus` and `ResponseMessage` constant
  * Remove `ResponseBody` entity to scaffolding to provide flexible usecase for client (unopiniated response body)

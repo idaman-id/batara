@@ -2,7 +2,7 @@
 global.__basedir = __dirname;
 
 import express from 'express';
-import IApplication from './interface/application.interface';
+import IApplicationSetting from './interface/application-setting.interface';
 import ILanguage from './interface/validation-language.interface';
 
 declare global 
@@ -16,7 +16,6 @@ declare global
     {
       _language: ILanguage
     }
-
   }
 }
 
@@ -24,15 +23,15 @@ export default class Application
 {
 
   public instance: express.Application;
-  private setting: IApplication;
+  private setting: IApplicationSetting;
 
-  constructor(setting: IApplication)
+  constructor(setting: IApplicationSetting)
   {
     this.instance = express();
     this.setting = setting;
   }
 
-  start(): void
+  public start(): void
   {
     this.instance.listen(this.setting.port, this.setting.host, () => {
       console.info(`[${this.setting.environment.toUpperCase()}] ${this.setting.name} is running on ${this.setting.host}:${this.setting.port}`);

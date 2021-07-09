@@ -1,5 +1,5 @@
 
-import { HttpMethod } from "../../src/constant/communication.constant";
+import { HttpMethod } from "../../../src/constant/communication.constant";
 
 describe('HttpMethod constant', () => {
   

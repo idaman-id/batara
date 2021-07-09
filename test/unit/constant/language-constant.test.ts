@@ -1,5 +1,5 @@
 
-import { attributes, messages } from "../../src/constant/language.constant";
+import { attributes, messages } from "../../../src/constant/language.constant";
 
 describe('language constant', () => {
   

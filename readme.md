@@ -60,7 +60,7 @@ Complete documentations are available [here](https://github.com/idaman-id/batara
 | --- | ------       | ------      |
 | ✔️ | Constant      |  |
 | ⚠️ | Controller    |  |
-| ⚠️ | Entity        |  |
+| ✔️ | Entity        |  |
 | ⚠️ | Error         |  |
 | ⚠️ | Interface     |  |
 | ⚠️ | Middleware    |  |

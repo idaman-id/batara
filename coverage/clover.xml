@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1625826713187" clover="3.2.0">
-  <project timestamp="1625826713187" name="All files">
-    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="2" coveredelements="2" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1"/>
-    <file name="language.constant.ts" path="D:\startup\idaman\library\batara\src\constant\language.constant.ts">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="50" count="1" type="stmt"/>
-    </file>
+<coverage generated="1625827668423" clover="3.2.0">
+  <project timestamp="1625827668423" name="All files">
+    <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2" elements="16" coveredelements="12" complexity="0" loc="12" ncloc="12" packages="2" files="4" classes="4"/>
+    <package name="constant">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="D:\startup\idaman\library\batara\src\constant\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="language.constant.ts" path="D:\startup\idaman\library\batara\src\constant\language.constant.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="entity">
+      <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <file name="entity.ts" path="D:\startup\idaman\library\batara\src\entity\entity.ts">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="D:\startup\idaman\library\batara\src\entity\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

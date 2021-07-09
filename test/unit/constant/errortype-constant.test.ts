@@ -1,5 +1,5 @@
 
-import { ErrorType } from "../../src/constant/error.constant";
+import { ErrorType } from "../../../src/constant/error.constant";
 
 describe('ErrorType constant', () => {
   

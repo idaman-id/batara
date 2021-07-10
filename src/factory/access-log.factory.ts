@@ -4,7 +4,7 @@ import moment from 'moment';
 import morgan from 'morgan';
 import { createStream } from 'rotating-file-stream';
 
-import { AccessLogSetting } from '../type/access-log-setting.type';
+import { AccessLogSetting } from '../type/log.type';
 import LogFormat from './log-format.factory';
 import Factory from '../interface/factory.interface';
 

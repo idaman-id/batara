@@ -1,1 +1,1 @@
-export * from './access-log-setting.type';
+export * from './log.type';

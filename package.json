@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "node node_modules/nodemon/bin/nodemon.js",
-    "build": "tsc --project ./",
-    "test": "jest ."
+    "build": "tsc --project tsconfig.build.json",
+    "test": "jest --coverage --verbose",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "Raka Suryaardi Widjaja <raka.suryadi@gmail.com>",
@@ -47,5 +48,20 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/idaman-id/batara.git"
-  }
+  },
+  "tags": [
+    "framework",
+    "backend",
+    "express",
+    "scaffolding",
+    "boilerplate",
+    "like",
+    "laravel",
+    "structure",
+    "nodejs",
+    "javascript",
+    "typescript",
+    "js",
+    "ts"
+  ]
 }

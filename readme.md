@@ -1,6 +1,9 @@
 # Batara 😇
 Javascript framework for laravel users
 
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
+  
 🤩 Motivations
 ---
 1. Provide easy to use laravel like pattern on javascript
@@ -65,7 +68,7 @@ Complete documentations are available [here](https://github.com/idaman-id/batara
 | ✔️ | Interface     |  |
 | ⚠️ | Middleware    |  |
 | ⚠️ | Provider      |  |
-| ⚠️ | Type          |  |
+| ✔️ | Type          |  |
 | ❌ | Model         |  |
 | --- | ------       | ------ |
 
@@ -110,3 +113,8 @@ This is open source project feel free to contributes and supporting us through: 
 📜 License
 ---
 MIT
+
+[npm-image]: https://img.shields.io/npm/v/batara.svg
+[npm-url]: https://npmjs.org/package/batara
+[downloads-image]: https://img.shields.io/npm/dm/batara.svg
+[downloads-url]: https://npmcharts.com/compare/batara?minimal=true

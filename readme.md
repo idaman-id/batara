@@ -68,7 +68,6 @@ Complete documentations are available [here][document-url]
 | ⚠️ | Provider      |  |
 | ✔️ | Type          |  |
 | ❌ | Model         |  |
-| --- | ------       | ------ |
 
 ❓ Questions
 ---

@@ -62,7 +62,7 @@ Complete documentations are available [here](https://github.com/idaman-id/batara
 | ⚠️ | Controller    |  |
 | ✔️ | Entity        |  |
 | ✔️ | Error         |  |
-| ⚠️ | Interface     |  |
+| ✔️ | Interface     |  |
 | ⚠️ | Middleware    |  |
 | ⚠️ | Provider      |  |
 | ⚠️ | Type          |  |

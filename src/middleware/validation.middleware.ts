@@ -4,9 +4,9 @@ import { validationResult } from 'express-validator';
 import { 
   Request as IRequest, 
   Response as IResponse, 
-  NextFunction as INextFunction,
-  ValidationError as IValidationError 
+  NextFunction as INextFunction
 } from '../interface/http.interface';
+import { ValidationError as IValidationError } from "../type/http.type";
 import IMap from '../interface/map.interface';
 import IResponseError from '../interface/validation-error.interface';
 
@@ -109,7 +109,7 @@ export default class Validation extends Middleware
 
   private static modifyMessage(
     req: IRequest, field: string, message: string, 
-    customAttributes: IMap, messageValues: Array<string>
+    customAttributes: IMap<string>, messageValues: Array<string>
   )
   {
     /** 

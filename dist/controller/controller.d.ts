@@ -1,4 +1,3 @@
-/// <reference types="express" />
 import { Request as IRequest, Response as IResponse, NextFunction as INextFunction, ValidationChain } from '../interface/http.interface';
 import IMap from "../interface/map.interface";
 export default abstract class Controller {
@@ -8,7 +7,7 @@ export default abstract class Controller {
     run(): Array<any>;
     protected authorize(req: IRequest, res: IResponse, next: INextFunction): any;
     protected rules(): Array<ValidationChain>;
-    protected attributes(): IMap;
-    protected messages(): IMap;
+    protected attributes(): IMap<string>;
+    protected messages(): IMap<string>;
     private translate;
 }

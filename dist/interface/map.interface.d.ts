@@ -1,3 +1,3 @@
-export default interface Map {
-    [key: string]: string;
+export default interface Map<type> {
+    [key: string]: type;
 }

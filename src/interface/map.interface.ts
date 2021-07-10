@@ -1,5 +1,5 @@
 
-export default interface Map
+export default interface Map<type>
 {
-  [key: string]: string
+  [key: string]: type
 }

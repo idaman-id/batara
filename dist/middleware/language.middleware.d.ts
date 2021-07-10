@@ -1,4 +1,3 @@
-/// <reference types="express" />
 import { Request, Response, NextFunction } from '../interface/http.interface';
 import Middleware from "./middleware";
 /**

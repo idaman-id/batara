@@ -41,12 +41,12 @@ export default abstract class Controller
     return [];
   }
 
-  protected attributes(): IMap
+  protected attributes(): IMap<string>
   {
     return {};
   }
 
-  protected messages(): IMap
+  protected messages(): IMap<string>
   {
     return {};
   }

@@ -11,47 +11,45 @@ Javascript framework for laravel users
 
 🖖 Usage
 ---
-## How to use
+## Garuda Scaffolding
+1. Coming soon! [garuda][garuda-repository]
+
+## Manual use
 1. Install packages: `npm install batara`
 2. Import package
 ```ts
+  import { Application } from 'batara';
 
-import { Application } from 'batara';
+  const app = new Application({
+    name: "service",
+    version: "1.0",
+    debug: true,
+    environment: "local",
+    timezone: "+07:00",
+    host: "localhost",
+    port: 3000,
+  });
 
-const app = new Application({
-  name: "service",
-  version: "1.0",
-  debug: true,
-  environment: "local",
-  timezone: "+07:00",
-  host: "localhost",
-  port: 3000,
-});
-
-app.start();
-
+  app.start();
 ```
 3. Enjoy
 
-## How to develop
+## Development
 1. Install packages: `npm install`
-2. Setup `.env` from `.env.example`
-3. Run: `npm run dev`
-4. Enjoy
-
-## How to test
-1. Install packages: `npm install`
-2. Setup `.env.test` from `.env.example`
-3. Run: `npm run test`
-4. Enjoy
+2. Available commands
+- Check development: `npm run dev`
+- Test with coverage: `npm run test`
+- Test with watcher: `npm run test:watch`
+- Build: `npm run build`
+3. Enjoy
 
 ✔️ Test & Coverages
 ---
-![Test coverages](https://github.com/idaman-id/batara/blob/master/asset/image/coverage.png?raw=true)
+![Test coverages][coverage-url]
 
 📋 Docs
 ---
-Complete documentations are available [here](https://github.com/idaman-id/batara/tree/master/docs)
+Complete documentations are available [here][document-url]
 
 **Legends:**
 - ✔️ Available with test
@@ -92,7 +90,7 @@ Complete documentations are available [here](https://github.com/idaman-id/batara
 
 🚀 Roadmaps
 ---
-To understand more about our progress please see [changelog](https://github.com/idaman-id/batara/blob/master/CHANGELOG.MD)
+To understand more about our progress please see [changelog][changelog-url]
 
 1. write unit and integration tests
 2. write complete documentation
@@ -103,12 +101,11 @@ To understand more about our progress please see [changelog](https://github.com/
 ---
 [![](https://github.com/kokoraka.png?size=50)](https://github.com/kokoraka)
 
-Feel free to [contribute](https://github.com/idaman-id/batara/pulls)
+Feel free to [contribute][pull-url]
 
 💖 Support
 ---
-This is open source project feel free to contributes and supporting us through: [Idaman](https://idaman.id)
-
+This is open source project feel free to contributes and supporting us through: [Idaman][website-url]
 
 📜 License
 ---
@@ -118,3 +115,9 @@ MIT
 [npm-url]: https://npmjs.org/package/batara
 [downloads-image]: https://img.shields.io/npm/dm/batara.svg
 [downloads-url]: https://npmcharts.com/compare/batara?minimal=true
+[coverage-url]: https://github.com/idaman-id/batara/blob/master/asset/image/coverage.png?raw=true
+[document-url]: https://github.com/idaman-id/batara/tree/master/docs
+[changelog-url]: https://github.com/idaman-id/batara/blob/master/CHANGELOG.MD
+[pull-url]: https://github.com/idaman-id/batara/pulls
+[website-url]: https://idaman.id
+[garuda-repository]: https://github.com/idaman-id/garuda

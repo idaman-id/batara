@@ -1,4 +1,4 @@
-export declare type AccessLogSetting = {
+export declare type LogSetting = {
     interval: string;
     path: string;
     fileName?: string;

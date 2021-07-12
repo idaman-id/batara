@@ -1,5 +1,10 @@
+# Batara Changelog 😇
+
+### v0.0.19: Jul 17, 2021 (soon)
+ * Add integration test
+
 ### v0.0.18: Jul 6, 2021
- * Add unit and integration test
+ * Add unit test
  * Add funding account
  * Change git repository from `gurisa` to `idaman-id`
  * Change access modifier

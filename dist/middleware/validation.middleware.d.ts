@@ -1,4 +1,4 @@
-import { Request as IRequest, Response as IResponse, NextFunction as INextFunction } from '../interface/http.interface';
+import { Request, Response, NextFunction } from '../interface/http.interface';
 import Middleware from "./middleware";
 /**
  * @description
@@ -7,8 +7,5 @@ import Middleware from "./middleware";
  * If there is error then this middleware will inject Error object
  */
 export default class Validation extends Middleware {
-    handle(req: IRequest, res: IResponse, next: INextFunction): void;
-    private static formatErrors;
-    private static translateErrors;
-    private static modifyMessage;
+    handle(req: Request, res: Response, next: NextFunction): void;
 }

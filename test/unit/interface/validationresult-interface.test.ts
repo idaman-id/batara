@@ -1,7 +1,7 @@
 
-import ValidationError from "../../../src/interface/validation-error.interface";
+import ValidationResult from "../../../src/interface/validation-result.interface";
 
-describe('Interface ValidationError', () => {
+describe('Interface ValidationResult', () => {
 
   beforeAll(() => {
 
@@ -19,8 +19,8 @@ describe('Interface ValidationError', () => {
     
   });
 
-  test('ValidationError shape should be valid', () => {
-    const error: ValidationError = {
+  test('ValidationResult shape should be valid', () => {
+    const error: ValidationResult = {
       message: "Invalid value",
       field: "username"
     };

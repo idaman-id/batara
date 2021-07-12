@@ -64,7 +64,7 @@ Complete documentations are available [here][document-url]
 | ✔️ | Entity        |  |
 | ✔️ | Error         |  |
 | ✔️ | Interface     |  |
-| ⚠️ | Middleware    |  |
+| ✔️ | Middleware    |  |
 | ⚠️ | Provider      |  |
 | ✔️ | Type          |  |
 | ❌ | Model         |  |
@@ -77,11 +77,18 @@ Complete documentations are available [here][document-url]
 3. Should we use generic response or not in `ResponseBody` Entity, e.g:
 - Field `data` sometime may contain `Array<T>` or `Object`
 - Field `error` contain `Array<Error>` but if we look at the property name it singular name.
-4. Consider to implement `authenticate` and `authenticateHandler`
-5. How to set Class property if there are many property to insert. e.g:
+4. Should we always return the `data` and `error` property in `ResponseBody` or just half adjusting with it's current state, e.g: `data: {}, error: null `or `data: {}`
+5. Consider to implement `authenticate` and `authenticateHandler`
+6. How to set Class property if there are many property to insert. e.g:
 - If we fill within the `constructor`, the constructor then bloated
 - If we use setter, the `setter` caling may be chaining as hell
 - Maybe we can use `factory`?
+7. Using class method as member property (without invoking method). Is that even possible in another programming language? e.g:
+- `new Controller().handle` instead of `new Controller().handle()`;
+8. Instead of mapping folder structure as a pattern, consider to map folder structure as a `mini-package`, e.g:
+- src/package/translation
+- src/package/router
+- etc
 
 👀 Issues
 ---
@@ -91,16 +98,20 @@ Complete documentations are available [here][document-url]
 ---
 To understand more about our progress please see [changelog][changelog-url]
 
-1. write unit and integration tests
-2. write complete documentation
-3. replace `express-validator` with [`validator.js`, `joi`, `indicative(adonis)`] and custom `declarative-validator`
-4. implementation of: model database, model messaging
+1. write unit tests
+2. write integration tests
+3. write complete documentation
+4. Add static type checking during runtime 
+- https://learning-notes.mistermicheels.com/javascript/typescript/runtime-type-checking/
+- https://medium.com/weekly-webtips/how-to-get-runtime-type-checking-in-typescript-ec06e88046f4
+5. replace `express-validator` with [`validator.js`, `joi`, `indicative(adonis)`] and custom `declarative-validator`
+6. implementation of: model database, model messaging
 
 🤩 Contributor
 ---
 [![](https://github.com/kokoraka.png?size=50)](https://github.com/kokoraka)
 
-Feel free to [contribute][pull-url]
+Feel free to [contribute][contribute-url]
 
 💖 Support
 ---
@@ -115,8 +126,8 @@ MIT
 [downloads-image]: https://img.shields.io/npm/dm/batara.svg
 [downloads-url]: https://npmcharts.com/compare/batara?minimal=true
 [coverage-url]: https://github.com/idaman-id/batara/blob/master/asset/image/coverage.png?raw=true
-[document-url]: https://github.com/idaman-id/batara/tree/master/docs
-[changelog-url]: https://github.com/idaman-id/batara/blob/master/CHANGELOG.MD
-[pull-url]: https://github.com/idaman-id/batara/pulls
+[document-url]: https://github.com/idaman-id/batara/tree/master/doc
+[changelog-url]: https://github.com/idaman-id/batara/blob/master/doc/CHANGELOG.MD
+[contribute-url]: https://github.com/idaman-id/batara/blob/master/doc/CONTRIBUTE.MD
 [website-url]: https://idaman.id
 [garuda-repository]: https://github.com/idaman-id/garuda

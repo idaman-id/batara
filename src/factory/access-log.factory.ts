@@ -1,17 +1,17 @@
 
-import { Handler } from 'express';
 import moment from 'moment';
 import morgan from 'morgan';
 import { createStream } from 'rotating-file-stream';
 
-import { AccessLogSetting } from '../type/log.type';
 import LogFormat from './log-format.factory';
+import { LogSetting } from '../type/log.type';
+import { Handler } from '../interface/http.interface';
 import Factory from '../interface/factory.interface';
 
 export default class AccessLog implements Factory<Handler>
 {
 
-  public make(setting: AccessLogSetting)
+  public make(setting: LogSetting)
   {
     const formats = new LogFormat().make();
     const fileName = setting.fileName || `${moment().format('YYYY-MM-DD')}.log`;

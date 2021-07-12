@@ -21,8 +21,8 @@ describe('Facade Entity', () => {
   });
 
   test('Entity class should be exported in Entity Facade', () => {  
-    const isEntityExported = Facade.Entity === Entity;
-    expect(isEntityExported).toBeTruthy();
+    const isExported = Facade.Entity === Entity;
+    expect(isExported).toBeTruthy();
   });
 
 });

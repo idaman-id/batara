@@ -1,7 +1,7 @@
 /// <reference types="node" />
-import { Handler } from 'express';
-import { AccessLogSetting } from '../type/log.type';
+import { LogSetting } from '../type/log.type';
+import { Handler } from '../interface/http.interface';
 import Factory from '../interface/factory.interface';
 export default class AccessLog implements Factory<Handler> {
-    make(setting: AccessLogSetting): (req: import("http").IncomingMessage, res: import("http").ServerResponse, callback: (err?: Error | undefined) => void) => void;
+    make(setting: LogSetting): (req: import("http").IncomingMessage, res: import("http").ServerResponse, callback: (err?: Error | undefined) => void) => void;
 }

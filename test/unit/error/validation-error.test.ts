@@ -1,13 +1,13 @@
 
 import SystemError from "../../../src/error/system.error";
 import ValidationError from  "../../../src/error/validation.error";
-import IValidationError from "../../../src/interface/validation-error.interface";
+import ValidationResult from "../../../src/interface/validation-result.interface";
 
 describe('Class ValidationError', () => {
 
   let errorMessage: string | undefined;
   let testError: ValidationError;
-  let customErrors: Array<IValidationError>;
+  let customErrors: Array<ValidationResult>;
 
   beforeAll(() => {
 
@@ -31,7 +31,7 @@ describe('Class ValidationError', () => {
   });
 
   const exec = () => {
-    return new ValidationError(customErrors, errorMessage);
+    return new ValidationError(errorMessage, customErrors);
   };
 
   test('ValidationError class should be an instance of Error', () => {
@@ -67,10 +67,10 @@ describe('Class ValidationError', () => {
     }).toThrow(ValidationError);
   });
 
-  test('errors property should be accessible through getErrors method', () => {
+  test('errors property should be accessible through errors getter', () => {
     testError = exec();
 
-    expect(testError.getErrors().sort())
+    expect(testError.errors.sort())
       .toEqual(customErrors.sort());
   });
 
@@ -78,7 +78,7 @@ describe('Class ValidationError', () => {
     customErrors = [];
     testError = exec();
 
-    expect(testError.getErrors().sort()).toEqual(customErrors);
+    expect(testError.errors.sort()).toEqual(customErrors);
   });
 
 });

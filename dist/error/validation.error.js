@@ -21,15 +21,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var system_error_1 = __importDefault(require("./system.error"));
 var ValidationError = /** @class */ (function (_super) {
     __extends(ValidationError, _super);
-    function ValidationError(errors, message) {
+    function ValidationError(message, validationResults) {
         if (message === void 0) { message = "validation error"; }
         var _this = _super.call(this, message) || this;
-        _this.errors = errors;
+        _this.validationResults = [];
+        _this.validationResults = validationResults;
         return _this;
     }
-    ValidationError.prototype.getErrors = function () {
-        return this.errors;
-    };
+    Object.defineProperty(ValidationError.prototype, "errors", {
+        get: function () {
+            return this.validationResults;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return ValidationError;
 }(system_error_1.default));
 exports.default = ValidationError;

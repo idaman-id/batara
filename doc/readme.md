@@ -1,4 +1,3 @@
 
-Batara Documentation
----
+# Batara Documentation 😇
 

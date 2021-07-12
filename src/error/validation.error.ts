@@ -1,24 +1,24 @@
 
-import IValidationError from "../interface/validation-error.interface";
+import ValidationResult from "../interface/validation-result.interface";
 import SystemError from "./system.error";
 
 export default class ValidationError extends SystemError
 {
   
-  protected errors: Array<IValidationError>;
+  protected validationResults: Array<ValidationResult> = [];
 
   constructor(
-    errors: Array<IValidationError>,
-    message: string = "validation error", 
+    message: string = "validation error",
+    validationResults: Array<ValidationResult>
   )
   {
     super(message);
-    this.errors = errors;
+    this.validationResults = validationResults;
   }
 
-  getErrors(): Array<IValidationError>
+  get errors(): Array<ValidationResult>
   {
-    return this.errors;
+    return this.validationResults;
   }
 
 }

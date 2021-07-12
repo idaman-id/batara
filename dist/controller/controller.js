@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var locale_translation_factory_1 = __importDefault(require("../factory/locale-translation.factory"));
 var language_middleware_1 = __importDefault(require("../middleware/language.middleware"));
 var validation_middleware_1 = __importDefault(require("../middleware/validation.middleware"));
 var Controller = /** @class */ (function () {
@@ -33,7 +34,6 @@ var Controller = /** @class */ (function () {
         return {};
     };
     Controller.prototype.translate = function (req, res, next) {
-        var locale = req.locale.language;
         /**
          * CHOOSE TRANSLATION START WITH LOCALE
          * E.G:
@@ -43,20 +43,9 @@ var Controller = /** @class */ (function () {
          * When locale is "id" we choose "id.custom_field", etc
          * When there is no translation then we set to empty object
          */
-        var attributes = this.attributes();
-        for (var attributeKey in attributes) {
-            if (!attributeKey.startsWith(locale)) {
-                delete attributes[attributeKey];
-            }
-        }
-        var messages = this.messages();
-        for (var attributeKey in messages) {
-            if (!attributeKey.startsWith(locale)) {
-                delete messages[attributeKey];
-            }
-        }
-        req._language.attributes = attributes;
-        req._language.messages = messages;
+        var locale = req.locale.language;
+        req._language.attributes = new locale_translation_factory_1.default().make(locale, this.attributes());
+        req._language.messages = new locale_translation_factory_1.default().make(locale, this.messages());
         return next();
     };
     return Controller;

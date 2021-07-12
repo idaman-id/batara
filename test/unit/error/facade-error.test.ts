@@ -25,28 +25,28 @@ describe('Facade Error', () => {
   });
 
   test('NotfoundError class should be exported in Error Facade', () => {  
-    const isErrorExported = Facade.NotfoundError === NotfoundError;
-    expect(isErrorExported).toBeTruthy();
+    const isExported = Facade.NotfoundError === NotfoundError;
+    expect(isExported).toBeTruthy();
   });
 
   test('UnauthenticateError class should be exported in Error Facade', () => {  
-    const isErrorExported = Facade.UnauthenticateError === UnauthenticateError;
-    expect(isErrorExported).toBeTruthy();
+    const isExported = Facade.UnauthenticateError === UnauthenticateError;
+    expect(isExported).toBeTruthy();
   });
 
   test('UnauthorizeError class should be exported in Error Facade', () => {  
-    const isErrorExported = Facade.UnauthorizeError === UnauthorizeError;
-    expect(isErrorExported).toBeTruthy();
+    const isExported = Facade.UnauthorizeError === UnauthorizeError;
+    expect(isExported).toBeTruthy();
   });
 
   test('UnexpectedError class should be exported in Error Facade', () => {  
-    const isErrorExported = Facade.UnexpectedError === UnexpectedError;
-    expect(isErrorExported).toBeTruthy();
+    const isExported = Facade.UnexpectedError === UnexpectedError;
+    expect(isExported).toBeTruthy();
   });
 
   test('ValidationError class should be exported in Error Facade', () => {  
-    const isErrorExported = Facade.ValidationError === ValidationError;
-    expect(isErrorExported).toBeTruthy();
+    const isExported = Facade.ValidationError === ValidationError;
+    expect(isExported).toBeTruthy();
   });
 
 });

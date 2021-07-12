@@ -1,4 +1,5 @@
 
+import LocaleTranslation from '../factory/locale-translation.factory';
 import { 
   Request as IRequest, 
   Response as IResponse, 
@@ -53,7 +54,6 @@ export default abstract class Controller
 
   private translate(req: IRequest, res: IResponse, next: INextFunction): any
   {
-    const locale = req.locale.language;
     /**
      * CHOOSE TRANSLATION START WITH LOCALE
      * E.G: 
@@ -63,23 +63,13 @@ export default abstract class Controller
      * When locale is "id" we choose "id.custom_field", etc
      * When there is no translation then we set to empty object
      */
-
-    let attributes = this.attributes();
-    for (let attributeKey in attributes) { 
-      if (!attributeKey.startsWith(locale)) {
-        delete attributes[attributeKey];
-      }
-    }
-
-    let messages = this.messages();
-    for (let attributeKey in messages) { 
-      if (!attributeKey.startsWith(locale)) {
-        delete messages[attributeKey];
-      }
-    }
-
-    req._language.attributes = attributes;
-    req._language.messages = messages;
+    const locale = req.locale.language;
+    req._language.attributes = new LocaleTranslation().make(
+      locale, this.attributes()
+    );
+    req._language.messages = new LocaleTranslation().make(
+      locale, this.messages()
+    );
     return next();
   }
 

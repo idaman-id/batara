@@ -1,5 +1,5 @@
 
-export default interface ValidationError
+export default interface ValidationResult
 {
   
   message: string,

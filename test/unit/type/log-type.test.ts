@@ -1,9 +1,9 @@
 
-import { AccessLogSetting } from "../../../src/type/log.type";
+import { LogSetting } from "../../../src/type/log.type";
 
 describe('Type Log', () => {
 
-  let logSetting: AccessLogSetting;
+  let logSetting: LogSetting;
 
   beforeAll(() => {
 

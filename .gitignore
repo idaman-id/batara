@@ -1,6 +1,7 @@
 ## System ##
 node_modules
 coverage
+storage
 
 ## Application ##
 

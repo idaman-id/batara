@@ -1,5 +1,5 @@
 
-export type AccessLogSetting = {
+export type LogSetting = {
 
   interval: string,
   path: string,

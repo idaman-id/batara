@@ -65,7 +65,7 @@ Complete documentations are available [here][document-url]
 | ✔️ | Error         |  |
 | ✔️ | Interface     |  |
 | ✔️ | Middleware    |  |
-| ⚠️ | Provider      |  |
+| ✔️ | Provider      |  |
 | ✔️ | Type          |  |
 | ❌ | Model         |  |
 
@@ -89,6 +89,7 @@ Complete documentations are available [here][document-url]
 - src/package/translation
 - src/package/router
 - etc
+9. Unit and Integration testing boundary?
 
 👀 Issues
 ---

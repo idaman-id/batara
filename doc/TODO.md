@@ -1,14 +1,8 @@
 # Test
 
-1. Adapter
+1. Adapter (probably abusing this pattern)
   - class ValidationResult
 
-2. Controller
+2. Controller (need to refactor first - chain of responsibility)
   - class Controller
   - Facade
-
-3. Middleware
-- class LanguageMiddleware
-  `req._language`
-- class ValidationMiddleware
-  `error` and `not error` case

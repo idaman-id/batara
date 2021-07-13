@@ -24,11 +24,13 @@ var provider_1 = __importDefault(require("./provider"));
 var Application = /** @class */ (function (_super) {
     __extends(Application, _super);
     function Application(app) {
-        var _this = _super.call(this, app) || this;
-        _this.doRegister();
-        return _this;
+        return _super.call(this, app) || this;
     }
-    Application.prototype.doRegister = function () {
+    Application.prototype.register = function () {
+        this.registerTemplate();
+        this.registerApp();
+    };
+    Application.prototype.registerTemplate = function () {
         this.app.use(body_parser_1.default.urlencoded({ extended: false }));
         this.app.use(body_parser_1.default.json());
         this.app.use(express_locale_1.default({

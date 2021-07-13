@@ -25,6 +25,10 @@ var Route = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Route.prototype.register = function () {
+        this.registerTemplate();
+        this.registerRoute();
+    };
+    Route.prototype.registerTemplate = function () {
         var _this = this;
         this.routes().forEach(function (route) {
             _this.app.instance[route.method](route.path, route.handler.run());

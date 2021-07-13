@@ -11,6 +11,7 @@
  * Remove `Repository` pattern since it's use as `facade` pattern is not good on large cases
  * Remove `ResponseStatus` and `ResponseMessage` constant
  * Remove `ResponseBody` entity to scaffolding to provide flexible usecase for client (unopiniated response body)
+ * Breaking changes `Provider` contract, previously all provider using same method name `register`, now it's depend for each provider. We want to provide boilerplate benefit using `Template Method` pattern.
 
 ### v0.0.17: Jul 4, 2021
  * Refactor `AccessLog` factory

@@ -11,11 +11,18 @@ export default abstract class Application extends Provider
   constructor(app: App)
   {
     super(app);
-    this.doRegister();
   }
 
-  private doRegister()
-  {    
+  public register()
+  {
+    this.registerTemplate();
+    this.registerApp();
+  }
+
+  protected abstract registerApp(): void;
+
+  private registerTemplate()
+  {
     this.app.use(bodyParser.urlencoded({ extended: false }));
     this.app.use(bodyParser.json());
     this.app.use(createLocaleMiddleware({

@@ -4,7 +4,7 @@ Javascript framework for laravel users
 Feel free to [contribute][pull-url]
 
 ## Contribution Guidance
-1. Naming convention
-2. Pattern used
+Please refer to [contract][contract-url]
 
 [pull-url]: https://github.com/idaman-id/batara/pulls
+[contract-url]: https://github.com/idaman-id/contract

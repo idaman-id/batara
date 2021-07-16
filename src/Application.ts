@@ -1,6 +1,4 @@
 
-global.__basedir = __dirname;
-
 import express, { Handler } from 'express';
 import IApplicationSetting from './interface/application-setting.interface';
 import ILanguage from './interface/validation-language.interface';
@@ -8,8 +6,6 @@ import ILanguage from './interface/validation-language.interface';
 declare global 
 {
   
-  var __basedir: string;
-
   namespace Express 
   {
     export interface Request 
@@ -38,7 +34,7 @@ export default class Application
     });
   }
 
-  public use(handler: Handler): any
+  public use(handler: Handler): void
   {
     this.instance.use(handler);
   }

@@ -1,6 +1,9 @@
 # Batara Changelog 😇
 
 ### v0.0.19: Jul 17, 2021 (soon)
+ * Refactor into `mini-package`, e.g:
+- src/package/translation
+- src/package/router
  * Add integration test
 
 ### v0.0.18: Jul 6, 2021
@@ -12,6 +15,7 @@
  * Remove `ResponseStatus` and `ResponseMessage` constant
  * Remove `ResponseBody` entity to scaffolding to provide flexible usecase for client (unopiniated response body)
  * Breaking changes `Provider` contract, previously all provider using same method name `register`, now it's depend for each provider. We want to provide boilerplate benefit using `Template Method` pattern.
+ * Breaking changes `Controller` contract, previously we need to implement each abstract handler on by one `authorizeHandler`, `validationHandler`, `authenticateHandler`, etc, and if there is another additional middleware we need to add manually. (violate Open Closed Principle). We want to offer handler flexibility using `Chain of Responsibility` pattern.
 
 ### v0.0.17: Jul 4, 2021
  * Refactor `AccessLog` factory

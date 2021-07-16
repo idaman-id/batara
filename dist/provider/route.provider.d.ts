@@ -4,7 +4,7 @@ import Provider from './provider';
 export default abstract class Route extends Provider {
     abstract routes(): Array<IRoute>;
     abstract errorHandler(): Controller;
-    register(): void;
     protected abstract registerRoute(): void;
+    register(): void;
     private registerTemplate;
 }

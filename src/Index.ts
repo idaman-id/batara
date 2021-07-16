@@ -8,5 +8,4 @@ export * as Entity from './entity';
 export * as Error from './error';
 export * as Factory from './factory';
 export * as Middleware from './middleware';
-export * as Model from './model';
 export * as Provider from './provider';

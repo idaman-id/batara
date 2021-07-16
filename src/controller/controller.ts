@@ -1,5 +1,4 @@
 
-import LocaleTranslation from '../factory/locale-translation.factory';
 import { 
   Request as IRequest, 
   Response as IResponse, 
@@ -8,35 +7,29 @@ import {
 } from '../interface/http.interface';
 import IMap from "../interface/map.interface";
 
-import Language from '../middleware/language.middleware';
-import Validation from "../middleware/validation.middleware";
+// import LocaleTranslation from '../factory/locale-translation.factory';
+// import Language from '../middleware/language.middleware';
+// import Validation from "../middleware/validation.middleware";
 
 export default abstract class Controller
 {
 
-  public abstract handle(req: IRequest, res: IResponse, next: INextFunction): any;
-  protected abstract authorizeHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
-  protected abstract validationHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
+  public abstract handle(req: IRequest, res: IResponse, next: INextFunction): any;  
 
   public run(): Array<any>
   {
     return [
-      new Language().handle,
-      this.translate,
-      this.authorize,
-      this.authorizeHandler,
+      // new Language().handle,
+      // this.translate,
+      // this.authorize,
+      // this.authorizeHandler,
       this.rules(),
-      new Validation().handle,
-      this.validationHandler,
+      // new Validation().handle,
+      // this.validationHandler,
       this.handle
     ];
   }
 
-  protected authorize(req: IRequest, res: IResponse, next: INextFunction): any
-  {
-    return next();
-  }
-  
   protected rules(): Array<ValidationChain>
   {
     return [];
@@ -52,25 +45,33 @@ export default abstract class Controller
     return {};
   }
 
-  private translate(req: IRequest, res: IResponse, next: INextFunction): any
-  {
-    /**
-     * CHOOSE TRANSLATION START WITH LOCALE
-     * E.G: 
-     * "id.custom_field": "Bidang isian kustom"
-     * "en.custom_field": "Custom field"
-     * 
-     * When locale is "id" we choose "id.custom_field", etc
-     * When there is no translation then we set to empty object
-     */
-    const locale = req.locale.language;
-    req._language.attributes = new LocaleTranslation().make(
-      locale, this.attributes()
-    );
-    req._language.messages = new LocaleTranslation().make(
-      locale, this.messages()
-    );
-    return next();
-  }
+  // protected abstract authorizeHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
+  // protected abstract validationHandler(err: any, req: IRequest, res: IResponse, next: INextFunction): any;
+
+  // protected authorize(req: IRequest, res: IResponse, next: INextFunction): any
+  // {
+  //   return next();
+  // }
+
+  // private translate(req: IRequest, res: IResponse, next: INextFunction): any
+  // {
+  //   /**
+  //    * CHOOSE TRANSLATION START WITH LOCALE
+  //    * E.G: 
+  //    * "id.custom_field": "Bidang isian kustom"
+  //    * "en.custom_field": "Custom field"
+  //    * 
+  //    * When locale is "id" we choose "id.custom_field", etc
+  //    * When there is no translation then we set to empty object
+  //    */
+  //   const locale = req.locale.language;
+  //   req._language.attributes = new LocaleTranslation().make(
+  //     locale, this.attributes()
+  //   );
+  //   req._language.messages = new LocaleTranslation().make(
+  //     locale, this.messages()
+  //   );
+  //   return next();
+  // }
 
 }

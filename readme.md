@@ -3,11 +3,12 @@ Javascript framework for laravel users
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
-  
+  [![Quality gate][quality-image]][quality-url]
+
 🤩 Motivations
 ---
 1. Provide easy to use laravel like pattern on javascript
-2. Provide boilerplate for my internal works and jobs
+2. Provide boilerplate for my internal works
 
 🖖 Usage
 ---
@@ -43,6 +44,34 @@ Javascript framework for laravel users
 - Build: `npm run build`
 3. Enjoy
 
+🧾 Structure
+---
+```text
+|-- Workspace
+    |-- jest.config.js
+    |-- nodemon.json
+    |-- package.json
+    |-- README.md
+    |-- tsconfig.build.json
+    |-- tsconfig.json
+    |-- tsconfig.test.json
+    |-- .github
+    |-- asset
+    |-- dist
+    |-- doc
+    |-- example
+    |-- src
+    |   |-- controller
+    |   |-- entity
+    |   |-- error
+    |   |-- middleware
+    |   |-- provider
+    |   |-- application.ts
+    |-- test
+    |   |-- unit
+    |   |-- integration
+```
+
 ✔️ Test & Coverages
 ---
 ![Test coverages][coverage-url]
@@ -60,36 +89,23 @@ Complete documentations are available [here][document-url]
 | Status | Feature   | Description |
 | --- | ------       | ------      |
 | ✔️ | Constant      |  |
-| ⚠️ | Controller    |  |
+| ✔️ | Interface     |  |
+| ✔️ | Type          |  |
 | ✔️ | Entity        |  |
 | ✔️ | Error         |  |
-| ✔️ | Interface     |  |
 | ✔️ | Middleware    |  |
 | ✔️ | Provider      |  |
-| ✔️ | Type          |  |
-| ❌ | Model         |  |
+| ⚠️ | Controller    |  |
 
 ❓ Questions
 ---
-1. When to use `Union type: object | array` and `Generic type: <T, S>`
-- Answer: With union type we get mixed type (object or array or both), with generic we get one of them (object or array)
-2. When to use `Literal type: ADMIN | AUTHOR` and `Enum type: enum { ADMIN = "ADMIN", AUTHOR = "AUTHOR" }`
-3. Should we use generic response or not in `ResponseBody` Entity, e.g:
-- Field `data` sometime may contain `Array<T>` or `Object`
-- Field `error` contain `Array<Error>` but if we look at the property name it singular name.
-4. Should we always return the `data` and `error` property in `ResponseBody` or just half adjusting with it's current state, e.g: `data: {}, error: null `or `data: {}`
-5. Consider to implement `authenticate` and `authenticateHandler`
-6. How to set Class property if there are many property to insert. e.g:
+1. How to set Class property if there are many property to insert. e.g:
 - If we fill within the `constructor`, the constructor then bloated
 - If we use setter, the `setter` caling may be chaining as hell
-- Maybe we can use `factory`?
-7. Using class method as member property (without invoking method). Is that even possible in another programming language? e.g:
+Maybe we can use `factory`? but factory parameter also might be bloated as well
+2. Using class method as member property (without invoking method). Is that even possible in another programming language? e.g:
 - `new Controller().handle` instead of `new Controller().handle()`;
-8. Instead of mapping folder structure as a pattern, consider to map folder structure as a `mini-package`, e.g:
-- src/package/translation
-- src/package/router
-- etc
-9. Unit and Integration testing boundary?
+3. Unit and Integration testing boundary?
 
 👀 Issues
 ---
@@ -105,8 +121,8 @@ To understand more about our progress please see [changelog][changelog-url]
 4. Add static type checking during runtime 
 - https://learning-notes.mistermicheels.com/javascript/typescript/runtime-type-checking/
 - https://medium.com/weekly-webtips/how-to-get-runtime-type-checking-in-typescript-ec06e88046f4
-5. replace `express-validator` with [`validator.js`, `joi`, `indicative(adonis)`] and custom `declarative-validator`
-6. implementation of: model database, model messaging
+5. replace `express-validator` with custom `declarative-validator`
+- implementation one of: `validator.js`, `joi`, `indicative(adonis)`
 
 🤩 Contributor
 ---
@@ -116,7 +132,7 @@ Feel free to [contribute][contribute-url]
 
 💖 Support
 ---
-This is open source project feel free to contributes and supporting us through: [Idaman][website-url]
+Feel free to contributes and supporting us through: [Idaman][website-url]
 
 📜 License
 ---
@@ -132,3 +148,5 @@ MIT
 [contribute-url]: https://github.com/idaman-id/batara/blob/master/doc/CONTRIBUTE.MD
 [website-url]: https://idaman.id
 [garuda-repository]: https://github.com/idaman-id/garuda
+[quality-image]: https://sonarcloud.io/api/project_badges/quality_gate?project=idaman-id_batara
+[quality-url]: https://sonarcloud.io/dashboard?id=idaman-id_batara

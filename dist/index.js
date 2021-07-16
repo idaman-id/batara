@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Provider = exports.Model = exports.Middleware = exports.Factory = exports.Error = exports.Entity = exports.Controller = exports.Type = exports.Interface = exports.Constant = exports.Application = void 0;
+exports.Provider = exports.Middleware = exports.Factory = exports.Error = exports.Entity = exports.Controller = exports.Type = exports.Interface = exports.Constant = exports.Application = void 0;
 exports.Application = __importStar(require("./application"));
 exports.Constant = __importStar(require("./constant"));
 exports.Interface = __importStar(require("./interface"));
@@ -29,5 +29,4 @@ exports.Entity = __importStar(require("./entity"));
 exports.Error = __importStar(require("./error"));
 exports.Factory = __importStar(require("./factory"));
 exports.Middleware = __importStar(require("./middleware"));
-exports.Model = __importStar(require("./model"));
 exports.Provider = __importStar(require("./provider"));

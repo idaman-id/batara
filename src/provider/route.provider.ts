@@ -7,16 +7,15 @@ import Provider from './provider';
 export default abstract class Route extends Provider
 {
 
-  abstract routes(): Array<IRoute>;
-  abstract errorHandler(): Controller;
+  public abstract routes(): Array<IRoute>;
+  public abstract errorHandler(): Controller;
+  protected abstract registerRoute(): void;
   
   public register()
   {
     this.registerTemplate();
     this.registerRoute();
   }
-
-  protected abstract registerRoute(): void;
 
   private registerTemplate(): void
   {

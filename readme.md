@@ -8,15 +8,24 @@ Javascript framework for laravel users
 
 🤩 Motivations
 ---
-1. Provide easy to use laravel like pattern on express application
+1. Provide easy to use laravel like pattern on top of express application
 2. Provide boilerplate for my internal works
 
 🖖 Usage
 ---
-## Development 
-1. Coming soon! [garuda scaffolding][garuda-repository]
+### Development 
+It's should be something like:
+```md
+1. npm install -g garuda
+2. garuda batara new [project-name]
+3. cd [project-name]
+4. npm install
+5. npm run dev
+6. enjoy!
+```
+Coming soon, our scaffolding tools: [garuda][garuda-repository]
 
-## Contribution
+### Contribution
 1. Install packages: `npm install`
 2. Available commands
 - Check development: `npm run dev`
@@ -76,7 +85,7 @@ Complete documentations are available [here][document-url]
 
 ❓ Questions
 ---
-1. Unit and Integration testing boundary?
+Any question related to this library please refer to [discussion][discussion-url]
 
 👀 Issues
 ---
@@ -86,13 +95,16 @@ Complete documentations are available [here][document-url]
 ---
 To understand more about our progress please see [changelog][changelog-url]
 
+[v0.0.19] - soon
 1. refactor into `mini-package`
 2. write integration test
 3. write complete documentation
-4. Add static type checking during runtime 
+
+[next] - very very soon
+1. Add static type checking during runtime 
 - https://learning-notes.mistermicheels.com/javascript/typescript/runtime-type-checking/
 - https://medium.com/weekly-webtips/how-to-get-runtime-type-checking-in-typescript-ec06e88046f4
-5. replace `express-validator` with custom `declarative-validator`
+2. replace `express-validator` with custom `declarative-validator`
 - implementation one of: `validator.js`, `joi`, `indicative(adonis)`
 
 🤩 Contributor
@@ -103,7 +115,8 @@ Feel free to [contribute][contribute-url]
 
 💖 Support
 ---
-Feel free to contributes and supporting us through: [Idaman][website-url]
+Feel free to contributes and supporting us through: 
+- [Patreon][patreon-url]
 
 📜 License
 ---
@@ -115,9 +128,10 @@ MIT
 [downloads-url]: https://npmcharts.com/compare/batara?minimal=true
 [coverage-url]: https://github.com/idaman-id/batara/blob/master/asset/image/coverage.png?raw=true
 [document-url]: https://github.com/idaman-id/batara/tree/master/doc
-[changelog-url]: https://github.com/idaman-id/batara/blob/master/doc/CHANGELOG.MD
-[contribute-url]: https://github.com/idaman-id/batara/blob/master/doc/CONTRIBUTE.MD
-[website-url]: https://idaman.id
+[changelog-url]: https://github.com/idaman-id/batara/blob/master/doc/CHANGELOG.md
+[contribute-url]: https://github.com/idaman-id/batara/blob/master/doc/CONTRIBUTE.md
+[discussion-url]: https://github.com/idaman-id/batara/blob/master/doc/DISCUSSION.md
 [garuda-repository]: https://github.com/idaman-id/garuda
 [quality-image]: https://sonarcloud.io/api/project_badges/quality_gate?project=idaman-id_batara
 [quality-url]: https://sonarcloud.io/dashboard?id=idaman-id_batara
+[patreon-url]: https://patreon.com/idaman

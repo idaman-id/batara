@@ -5,6 +5,7 @@
 - src/package/translation
 - src/package/router
  * Add integration test
+ * Documentation
 
 ### v0.0.18: Jul 19, 2021
  * Add unit test

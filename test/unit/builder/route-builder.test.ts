@@ -13,24 +13,12 @@ describe('Route Builder', () => {
   let handler: Handler;
   let storage: MiddlewareStorage;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     builder = exec();
     handler = (req: Request, res: Response, next: NextFunction) => { };
 
     storage = MiddlewareStorage.instance;
     storage.clearMiddlewares();
-  });
-
-  afterEach(() => {
-
   });
 
   const exec = () => {

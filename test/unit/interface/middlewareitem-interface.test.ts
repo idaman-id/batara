@@ -9,22 +9,6 @@ class CustomMiddleware implements IMiddleware
 
 describe('Interface MiddlewareItem', () => {
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('MiddlewareItem shape should be valid', () => {
 
     const middlewareItem: MiddlewareItem = {

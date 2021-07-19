@@ -4,22 +4,6 @@ import ValidationLanguage from "../../../src/interface/validation-language.inter
 
 describe('Interface ValidationLanguage', () => {
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('ValidationLanguage shape should be valid', () => {
     const language: ValidationLanguage = {
       locale: "en-EN",

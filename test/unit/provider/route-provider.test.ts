@@ -47,14 +47,6 @@ describe('Class Provider', () => {
   let app: Application;
   let provider: RouteProvider;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     app = new Application({
       name: "service",

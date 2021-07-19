@@ -7,22 +7,6 @@ describe('Class UnauthenticateError', () => {
   let errorMessage: string | undefined;
   let testError: UnauthenticateError;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-
-  });
-
-  afterEach(() => {
-    
-  });
-
   const exec = () => {
     return new UnauthenticateError(errorMessage);
   };

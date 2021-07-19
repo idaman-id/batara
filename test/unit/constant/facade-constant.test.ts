@@ -5,22 +5,6 @@ import { attributes, messages } from "../../../src/constant/language.constant";
 
 describe('Facade Constant', () => {
   
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('HttpMethod enum should be exported in Constant Facade', () => {    
     expect(HttpMethod.GET).toBe(Facade.HttpMethod.GET);
   });

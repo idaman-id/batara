@@ -3,22 +3,6 @@ import { Environment } from "../../../src/constant/environment.constant";
 
 describe('Environment constant', () => {
   
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('LOCAL constant shoule be a local', () => {
     expect(Environment.LOCAL).toBe("local");
   });

@@ -10,23 +10,11 @@ describe('MiddlewareStorage Singleton', () => {
   let singleton: MiddlewareStorage;
   let middleware: CustomMiddleware;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     singleton = exec();
     singleton.clearMiddlewares();
 
     middleware = new CustomMiddleware();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

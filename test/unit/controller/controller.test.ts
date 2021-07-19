@@ -12,20 +12,8 @@ describe('Class Controller', () => {
 
   let controller: CustomController;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     controller = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

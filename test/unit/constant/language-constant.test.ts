@@ -3,22 +3,6 @@ import { attributes, messages } from "../../../src/constant/language.constant";
 
 describe('language constant', () => {
   
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   describe('attributes constant', () => {
 
     test('attributes should have default system value and key', () => {

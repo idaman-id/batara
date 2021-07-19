@@ -2,30 +2,18 @@
 import express from 'express';
 import Middleware from "../../../src/middleware/middleware";
 
+class CustomMiddleware extends Middleware {
+  handle() {}
+}
+
 describe('Middleware class', () => {
 
   let app: express.Application;
   let middleware: Middleware;
 
-  class CustomMiddleware extends Middleware {
-    handle() {}
-  }
-
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     app = express();
     middleware = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = (): Middleware => {

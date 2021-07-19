@@ -8,14 +8,6 @@ describe('Language Middleware', () => {
   let app: express.Application;
   let middleware: LanguageMiddleware;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     app = express();
     middleware = exec();

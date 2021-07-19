@@ -7,22 +7,6 @@ describe('Class UnexpectedError', () => {
   let errorMessage: string | undefined;
   let testError: UnexpectedError;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   const exec = () => {
     return new UnexpectedError(errorMessage);
   };

@@ -16,20 +16,8 @@ describe('Class SystemError', () => {
   let errorMessage: string | undefined;
   let testError: SystemError;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     errorMessage = "custom error";
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

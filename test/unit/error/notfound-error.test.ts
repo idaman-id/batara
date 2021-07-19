@@ -7,22 +7,6 @@ describe('Class NotfoundError', () => {
   let errorMessage: string | undefined;
   let testError: NotfoundError;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-
-  });
-
-  afterEach(() => {
-    
-  });
-
   const exec = () => {
     return new NotfoundError(errorMessage);
   };

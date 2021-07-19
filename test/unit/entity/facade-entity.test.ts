@@ -4,22 +4,6 @@ import * as Facade from "../../../src/entity";
 
 describe('Facade Entity', () => {
   
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('Entity class should be exported in Entity Facade', () => {  
     const isExported = Facade.Entity === Entity;
     expect(isExported).toBeTruthy();

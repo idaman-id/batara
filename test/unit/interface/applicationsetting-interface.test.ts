@@ -6,20 +6,8 @@ describe('Interface ApplicationSetting', () => {
 
   let appSetting: ApplicationSetting;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     appSetting = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

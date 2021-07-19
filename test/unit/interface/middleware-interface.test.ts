@@ -15,22 +15,6 @@ describe('Interface Middleware', () => {
 
   let middleware: Middleware;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   const exec = () => {
     return new ValidationMiddleware();
   };

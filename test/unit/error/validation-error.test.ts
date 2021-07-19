@@ -9,14 +9,6 @@ describe('Class ValidationError', () => {
   let testError: ValidationError;
   let customErrors: Array<ValidationResult>;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     customErrors = [
       {
@@ -24,10 +16,6 @@ describe('Class ValidationError', () => {
         field: "username"
       }
     ];
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

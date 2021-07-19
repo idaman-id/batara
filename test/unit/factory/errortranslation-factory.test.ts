@@ -11,23 +11,11 @@ describe('Factory ErrorTranslation', () => {
   let errors: Array<ValidationError>;
   let factory: ErrorTranslation;
 
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     locale = "id";
     language = new LanguageDetection().make(locale);
     errors = [];
     factory = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

@@ -9,21 +9,9 @@ describe('Validation Middleware', () => {
   let app: express.Application;
   let middleware: ValidationMiddleware;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     app = express();
     middleware = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

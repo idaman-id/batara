@@ -6,22 +6,6 @@ import * as Facade from "../../../src/provider";
 
 describe('Facade Provider', () => {
   
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('Provider class should be exported in Provider Facade', () => {  
     const isExported = Facade.Provider === Provider;
     expect(isExported).toBeTruthy();

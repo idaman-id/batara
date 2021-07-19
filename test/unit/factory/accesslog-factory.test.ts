@@ -7,20 +7,8 @@ describe('Factory AccessLog', () => {
 
   let factory: Factory<Handler>;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     factory = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

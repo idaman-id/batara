@@ -15,14 +15,6 @@ describe('Class Provider', () => {
   let app: App;
   let provider: CustomProvider;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     app = new App({
       name: "service",
@@ -33,10 +25,6 @@ describe('Class Provider', () => {
       host: "localhost",
       port: 3000,
     });
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

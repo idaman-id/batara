@@ -7,22 +7,6 @@ describe('Class Entity', () => {
   let testEntity: Entity;
   let value: keyDataType = "test";
 
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   const exec = () => {
     class TestEntity extends Entity {
 

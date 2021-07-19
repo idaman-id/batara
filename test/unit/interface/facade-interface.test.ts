@@ -7,20 +7,8 @@ describe('Facade Interface', () => {
   
   let app: express.Application;
 
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     app = express();
-  });
-
-  afterEach(() => {
-    
   });
 
   test('ApplicationSetting interface should be exported in Facade', () => {  

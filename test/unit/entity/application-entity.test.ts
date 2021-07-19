@@ -9,14 +9,6 @@ describe('Application Entity', () => {
   let app: Application;
   let setting: ApplicationSetting;
 
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(async () => {
     setting = {
       name: "service-name",

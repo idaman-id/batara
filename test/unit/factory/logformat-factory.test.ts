@@ -5,20 +5,8 @@ describe('Factory LogFormat', () => {
 
   let factory: LogFormat;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     factory = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

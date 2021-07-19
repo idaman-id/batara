@@ -5,20 +5,8 @@ describe('Type Log', () => {
 
   let logSetting: LogSetting;
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     logSetting = exec();
-  });
-
-  afterEach(() => {
-    
   });
 
   const exec = () => {

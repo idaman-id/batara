@@ -3,22 +3,6 @@ import { HttpMethod } from "../../../src/constant/communication.constant";
 
 describe('HttpMethod constant', () => {
   
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('COPY constant shoule be a copy', () => {
     expect(HttpMethod.COPY).toBe("copy");
   });

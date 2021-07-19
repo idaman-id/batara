@@ -3,22 +3,6 @@ import Map from "../../../src/interface/map.interface";
 
 describe('Interface Map', () => {
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('Map shape should be valid', () => {
     const setting: Map<string> = {
       name: "service-name",

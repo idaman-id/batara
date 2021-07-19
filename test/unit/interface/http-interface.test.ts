@@ -11,20 +11,8 @@ describe('Interface Http', () => {
   
   let app: express.Application;
 
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
   beforeEach(() => {
     app = express();
-  });
-
-  afterEach(() => {
-    
   });
 
   test('Facade Http should be exported in Http Facade', () => {  

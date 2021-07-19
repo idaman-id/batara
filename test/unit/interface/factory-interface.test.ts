@@ -1,35 +1,19 @@
 
 import Factory from "../../../src/interface/factory.interface";
 
+class EmailMessage implements Factory<string> 
+{
+
+  make(email: string, name: string): string
+  {
+    return `Halo, ${name} <${email}>`;
+  }
+
+}
+
 describe('Interface Factory', () => {
 
   let command: Factory<any>;
-
-  class EmailMessage implements Factory<string> 
-  {
-
-    make(email: string, name: string): string
-    {
-      return `Halo, ${name} <${email}>`;
-    }
-
-  }
-
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
 
   const exec = () => {
     return new EmailMessage();

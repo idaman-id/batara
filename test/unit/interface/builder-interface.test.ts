@@ -1,35 +1,19 @@
 
 import Builder from "../../../src/interface/builder.interface";
 
+class EmailBuilder implements Builder<string> 
+{
+
+  getResult(): string
+  {
+    return "email message";
+  }
+
+}
+
 describe('Interface Builder', () => {
 
   let builder: Builder<any>;
-
-  class EmailBuilder implements Builder<string> 
-  {
-
-    getResult(): string
-    {
-      return "email message";
-    }
-
-  }
-
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
 
   const exec = () => {
     return new EmailBuilder();

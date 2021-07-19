@@ -1,35 +1,19 @@
 
 import Command from "../../../src/interface/command.interface";
 
+class SendMessage implements Command<string> 
+{
+
+  execute(email: string, name: string): string
+  {
+    return `This message was sent to: ${name} <${email}>`;
+  }
+
+}
+
 describe('Interface Command', () => {
 
   let command: Command<any>;
-
-  class SendMessage implements Command<string> 
-  {
-
-    execute(email: string, name: string): string
-    {
-      return `This message was sent to: ${name} <${email}>`;
-    }
-
-  }
-
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
 
   const exec = () => {
     return new SendMessage();

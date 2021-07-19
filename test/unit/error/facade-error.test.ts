@@ -8,22 +8,6 @@ import * as Facade from "../../../src/error";
 
 describe('Facade Error', () => {
   
-  beforeAll(() => {
-    
-  });
-
-  afterAll(() => {
-    
-  });
-
-  beforeEach(() => {
-    
-  });
-
-  afterEach(() => {
-    
-  });
-
   test('NotfoundError class should be exported in Error Facade', () => {  
     const isExported = Facade.NotfoundError === NotfoundError;
     expect(isExported).toBeTruthy();

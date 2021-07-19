@@ -1,8 +1,4 @@
-# Test
 
-1. Adapter (probably abusing this pattern)
-  - class ValidationResult
-
-2. Controller (need to refactor first - chain of responsibility)
-  - class Controller
-  - Facade
+# Refactor
+1. Turn into `mini-package`
+2. `ValidationResult` probably is not an adapter

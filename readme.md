@@ -3,39 +3,20 @@ Javascript framework for laravel users
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
-  [![Quality gate][quality-image]][quality-url]
+  
+[![Quality gate][quality-image]][quality-url]
 
 🤩 Motivations
 ---
-1. Provide easy to use laravel like pattern on javascript
+1. Provide easy to use laravel like pattern on express application
 2. Provide boilerplate for my internal works
 
 🖖 Usage
 ---
-## Garuda Scaffolding
-1. Coming soon! [garuda][garuda-repository]
+## Development 
+1. Coming soon! [garuda scaffolding][garuda-repository]
 
-## Manual use
-1. Install packages: `npm install batara`
-2. Import package
-```ts
-  import { Application } from 'batara';
-
-  const app = new Application({
-    name: "service",
-    version: "1.0",
-    debug: true,
-    environment: "local",
-    timezone: "+07:00",
-    host: "localhost",
-    port: 3000,
-  });
-
-  app.start();
-```
-3. Enjoy
-
-## Development
+## Contribution
 1. Install packages: `npm install`
 2. Available commands
 - Check development: `npm run dev`
@@ -66,7 +47,6 @@ Javascript framework for laravel users
     |   |-- error
     |   |-- middleware
     |   |-- provider
-    |   |-- application.ts
     |-- test
     |   |-- unit
     |   |-- integration
@@ -88,9 +68,6 @@ Complete documentations are available [here][document-url]
 
 | Status | Feature   | Description |
 | --- | ------       | ------      |
-| ✔️ | Constant      |  |
-| ✔️ | Interface     |  |
-| ✔️ | Type          |  |
 | ✔️ | Entity        |  |
 | ✔️ | Error         |  |
 | ✔️ | Middleware    |  |
@@ -109,8 +86,8 @@ Complete documentations are available [here][document-url]
 ---
 To understand more about our progress please see [changelog][changelog-url]
 
-1. write unit tests
-2. write integration tests
+1. refactor into `mini-package`
+2. write integration test
 3. write complete documentation
 4. Add static type checking during runtime 
 - https://learning-notes.mistermicheels.com/javascript/typescript/runtime-type-checking/

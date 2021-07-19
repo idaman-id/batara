@@ -1,12 +1,12 @@
 # Batara Changelog 😇
 
-### v0.0.19: Jul 17, 2021 (soon)
+### v0.0.19: Jul 23, 2021 (soon)
  * Refactor into `mini-package`, e.g:
 - src/package/translation
 - src/package/router
  * Add integration test
 
-### v0.0.18: Jul 6, 2021
+### v0.0.18: Jul 19, 2021
  * Add unit test
  * Add funding account
  * Change git repository from `gurisa` to `idaman-id`

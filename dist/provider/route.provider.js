@@ -18,6 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var route_builder_1 = __importDefault(require("../builder/route.builder"));
 var provider_1 = __importDefault(require("./provider"));
 var Route = /** @class */ (function (_super) {
     __extends(Route, _super);
@@ -31,9 +32,15 @@ var Route = /** @class */ (function (_super) {
     Route.prototype.registerTemplate = function () {
         var _this = this;
         this.routes().forEach(function (route) {
-            _this.app.instance[route.method](route.path, route.handler.run());
+            var builder = new route_builder_1.default();
+            if (route.hasOwnProperty("middlewares")) {
+                builder.addMiddlewares(route.middlewares || []);
+            }
+            builder.addHandler(route.handler);
+            var routes = builder.getResult();
+            _this.app[route.method](route.path, routes);
         });
-        this.app.instance.use(this.errorHandler().handle);
+        this.app.use(this.errorHandler());
     };
     return Route;
 }(provider_1.default));

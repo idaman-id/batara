@@ -1,5 +1,6 @@
 
-import { Controller } from '../controller';
+import RouteBuilder from '../builder/route.builder';
+import { Handler } from '../interface/http.interface';
 import IRoute from '../interface/route.interface';
 
 import Provider from './provider';
@@ -8,7 +9,7 @@ export default abstract class Route extends Provider
 {
 
   public abstract routes(): Array<IRoute>;
-  public abstract errorHandler(): Controller;
+  public abstract errorHandler(): Handler;
   protected abstract registerRoute(): void;
   
   public register()
@@ -20,9 +21,17 @@ export default abstract class Route extends Provider
   private registerTemplate(): void
   {
     this.routes().forEach(route => {
-      this.app.instance[route.method](route.path, route.handler.run());
+      const builder = new RouteBuilder();
+      
+      if (route.hasOwnProperty("middlewares")) {
+        builder.addMiddlewares(route.middlewares || []);
+      }
+      builder.addHandler(route.handler);
+      
+      const routes = builder.getResult();
+      this.app[route.method](route.path, routes);
     });
-    this.app.instance.use(this.errorHandler().handle);
+    this.app.use(this.errorHandler());
   }
 
 }

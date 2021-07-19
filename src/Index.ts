@@ -1,5 +1,6 @@
 
-export * as Application from './application';
+export * as Application from './entity/application.entity';
+
 export * as Constant from './constant';
 export * as Interface from './interface';
 export * as Type from './type';

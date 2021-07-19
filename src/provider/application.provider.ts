@@ -2,7 +2,7 @@
 import bodyParser from 'body-parser'; 
 import createLocaleMiddleware from 'express-locale';
 
-import App from '../application';
+import App from '../entity/application.entity';
 import Provider from './provider';
 
 export default abstract class Application extends Provider

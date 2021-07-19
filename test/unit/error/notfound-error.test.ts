@@ -1,6 +1,6 @@
 
 import SystemError from "../../../src/error/system.error";
-import NotfoundError from  "../../../src/error/not-found.error";
+import NotfoundError from  "../../../src/error/notfound.error";
 
 describe('Class NotfoundError', () => {
 

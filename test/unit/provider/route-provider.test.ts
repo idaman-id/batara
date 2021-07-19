@@ -1,26 +1,21 @@
 
-import App from "../../../src/application";
+import Application from "../../../src/entity/application.entity";
 import BaseRouteProvider from  "../../../src/provider/route.provider";
 import BaseController from "../../../src/controller/controller";
 import { HttpMethod } from "../../../src/constant";
+import { Environment } from "../../../src/constant/environment.constant";
 
 class ErrorController extends BaseController
 {
 
-  authorizeHandler() {}
-  validationHandler() {}
-
-  handle() {}
+  static error() {}
 
 }
 
 class CustomController extends BaseController
 {
 
-  authorizeHandler() {}
-  validationHandler() {}
-
-  handle() {}
+  static list() {}
 
 }
 
@@ -35,21 +30,21 @@ class RouteProvider extends BaseRouteProvider
       {
         path: "/v1/home",
         method: HttpMethod.GET,
-        handler: new CustomController()
+        handler: CustomController.list
       }
     ];
   }
 
   errorHandler() 
   {
-    return new ErrorController();
+    return ErrorController.error;
   }
 
 }
 
 describe('Class Provider', () => {
 
-  let app: App;
+  let app: Application;
   let provider: RouteProvider;
 
   beforeAll(() => {
@@ -61,11 +56,11 @@ describe('Class Provider', () => {
   });
 
   beforeEach(() => {
-    app = new App({
+    app = new Application({
       name: "service",
       version: "1.0",
       debug: true,
-      environment: "local",
+      environment: Environment.TEST,
       timezone: "+07:00",
       host: "localhost",
       port: 3000,
@@ -123,7 +118,7 @@ describe('Class Provider', () => {
     provider = exec();
     provider.register();
 
-    const registeredMiddlewares: Array<{name: string}> = app.instance._router.stack;
+    const registeredMiddlewares: Array<{name: string}> = app.routerStacks;
 
     const totalRegisteredMiddlewares = registeredMiddlewares.filter(middleware => {
       return CONTROLLERS.includes(middleware.name);

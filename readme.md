@@ -95,17 +95,11 @@ Complete documentations are available [here][document-url]
 | ✔️ | Error         |  |
 | ✔️ | Middleware    |  |
 | ✔️ | Provider      |  |
-| ⚠️ | Controller    |  |
+| ✔️ | Controller    |  |
 
 ❓ Questions
 ---
-1. How to set Class property if there are many property to insert. e.g:
-- If we fill within the `constructor`, the constructor then bloated
-- If we use setter, the `setter` caling may be chaining as hell
-Maybe we can use `factory`? but factory parameter also might be bloated as well
-2. Using class method as member property (without invoking method). Is that even possible in another programming language? e.g:
-- `new Controller().handle` instead of `new Controller().handle()`;
-3. Unit and Integration testing boundary?
+1. Unit and Integration testing boundary?
 
 👀 Issues
 ---

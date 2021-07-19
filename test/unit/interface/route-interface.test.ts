@@ -24,20 +24,18 @@ describe('Interface Route', () => {
   test('Route shape should be valid', () => {
     class HomeController extends Controller
     {
-      authorizeHandler(){}
-      validationHandler(){}
-      handle(){}
+      static handle() {}
     }
 
     const homeRoute: Route = {
       path: "/home",
       method: HttpMethod.GET,
-      handler: new HomeController(),
+      handler: HomeController.handle,
     };
     expect(homeRoute).toBeTruthy();
     expect(typeof homeRoute.path === "string").toBeTruthy();
     expect(typeof homeRoute.method === "string").toBeTruthy();
-    expect(homeRoute.handler).toBeInstanceOf(Controller);
+    expect(typeof homeRoute.handler === "function").toBeTruthy();
   });
 
 });

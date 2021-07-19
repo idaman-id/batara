@@ -20,7 +20,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Provider = exports.Middleware = exports.Factory = exports.Error = exports.Entity = exports.Controller = exports.Type = exports.Interface = exports.Constant = exports.Application = void 0;
-exports.Application = __importStar(require("./application"));
+exports.Application = __importStar(require("./entity/application.entity"));
 exports.Constant = __importStar(require("./constant"));
 exports.Interface = __importStar(require("./interface"));
 exports.Type = __importStar(require("./type"));

@@ -1,4 +1,5 @@
 
+import { Environment } from "../../../src/constant/environment.constant";
 import ApplicationSetting from "../../../src/interface/application-setting.interface";
 
 describe('Interface ApplicationSetting', () => {
@@ -26,7 +27,7 @@ describe('Interface ApplicationSetting', () => {
       name: "service",
       version: "1.0",
       debug: true,
-      environment: "local",
+      environment: Environment.LOCAL,
       timezone: "+07:00",
       host: "localhost",
       port: 3000,

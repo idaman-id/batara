@@ -1,5 +1,6 @@
 
 import express from "express";
+import { Environment } from "../../../src/constant/environment.constant";
 import * as Facade from "../../../src/interface";
 
 describe('Facade Interface', () => {
@@ -27,7 +28,7 @@ describe('Facade Interface', () => {
       name: "service",
       version: "1.0",
       debug: true,
-      environment: "local",
+      environment: Environment.LOCAL,
       timezone: "+07:00",
       host: "localhost",
       port: 3000,

@@ -1,5 +1,5 @@
 
-import App from '../application';
+import App from '../entity/application.entity';
 import IProvider from '../interface/provider.interface';
 
 export default abstract class Provider implements IProvider

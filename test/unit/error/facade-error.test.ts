@@ -1,5 +1,5 @@
 
-import NotfoundError from  "../../../src/error/not-found.error";
+import NotfoundError from  "../../../src/error/notfound.error";
 import UnauthenticateError from  "../../../src/error/unauthenticate.error";
 import UnauthorizeError from  "../../../src/error/unauthorize.error";
 import UnexpectedError from  "../../../src/error/unexpected.error";

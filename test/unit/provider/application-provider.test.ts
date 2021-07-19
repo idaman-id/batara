@@ -1,5 +1,6 @@
 
-import App from "../../../src/application";
+import { Environment } from "../../../src/constant/environment.constant";
+import App from "../../../src/entity/application.entity";
 import ApplicationProvider from  "../../../src/provider/application.provider";
 
 class AppProvider extends ApplicationProvider 
@@ -27,7 +28,7 @@ describe('Class Provider', () => {
       name: "service",
       version: "1.0",
       debug: true,
-      environment: "local",
+      environment: Environment.LOCAL,
       timezone: "+07:00",
       host: "localhost",
       port: 3000,
@@ -86,7 +87,7 @@ describe('Class Provider', () => {
     provider = exec();
     provider.register();
 
-    const registeredMiddlewares: Array<{name: string}> = app.instance._router.stack;
+    const registeredMiddlewares: Array<{name: string}> = app.routerStacks;
     const totalRegisteredMiddlewares = registeredMiddlewares.filter(middleware => {
       return MIDDLEWARES.includes(middleware.name);
     }).length;

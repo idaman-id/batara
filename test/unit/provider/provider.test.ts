@@ -1,5 +1,6 @@
 
-import App from "../../../src/application";
+import { Environment } from "../../../src/constant/environment.constant";
+import App from "../../../src/entity/application.entity";
 import Provider from  "../../../src/provider/provider";
 
 class CustomProvider extends Provider 
@@ -27,7 +28,7 @@ describe('Class Provider', () => {
       name: "service",
       version: "1.0",
       debug: true,
-      environment: "local",
+      environment: Environment.LOCAL,
       timezone: "+07:00",
       host: "localhost",
       port: 3000,

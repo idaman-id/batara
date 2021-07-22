@@ -1,6 +1,6 @@
 {
   "name": "batara",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Javascript framework for laravel users",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,21 @@
     "test": "jest --coverage --verbose",
     "test:watch": "jest --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "framework",
+    "backend",
+    "express",
+    "scaffolding",
+    "boilerplate",
+    "like",
+    "laravel",
+    "structure",
+    "nodejs",
+    "javascript",
+    "typescript",
+    "js",
+    "ts"
+  ],
   "author": "Raka Suryaardi Widjaja <raka.suryadi@gmail.com>",
   "license": "MIT",
   "bugs": {

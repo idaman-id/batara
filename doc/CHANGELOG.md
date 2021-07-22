@@ -1,11 +1,18 @@
 # Batara Changelog 😇
 
 ### v0.0.19: Jul 23, 2021 (soon)
- * Refactor into `mini-package`, e.g:
-- src/package/translation
-- src/package/router
+ * Refactor code foldering from `pattern-based` into `mini-package`:
+  - src/contract
+  - src/controller
+  - src/entity
+  - src/error
+  - src/middleware
+  - src/provider
+  - src/router
+  - src/validator
+ * Refactor test cases from `test()` into `describe()` and `it()`
  * Add integration test
- * Documentation
+ * Add documentation
 
 ### v0.0.18: Jul 19, 2021
  * Add unit test
@@ -13,10 +20,10 @@
  * Change git repository from `gurisa` to `idaman-id`
  * Change access modifier
  * Remove `Repository` pattern since it's use as `facade` pattern is not good on large cases
- * Remove `ResponseStatus` and `ResponseMessage` constant
  * Remove `ResponseBody` entity to scaffolding to provide flexible usecase for client (unopiniated response body)
+ * Remove `ResponseStatus` and `ResponseMessage` constant
  * Breaking changes `Provider` contract, previously all provider using same method name `register`, now it's depend for each provider. We want to provide boilerplate benefit using `Template Method` pattern.
- * Breaking changes `Controller` contract, previously we need to implement each abstract handler on by one `authorizeHandler`, `validationHandler`, `authenticateHandler`, etc, and if there is another additional middleware we need to add manually. (violate Open Closed Principle). We want to offer handler flexibility using `Chain of Responsibility` pattern.
+ * Breaking changes `Controller` contract, previously we need to implement each abstract handler on by one `authorizeHandler`, `validationHandler`, `authenticateHandler`, etc, and if there is another additional middleware we need to add manually. (violate Open Closed Principle). We want to offer handler flexibility.
 
 ### v0.0.17: Jul 4, 2021
  * Refactor `AccessLog` factory
@@ -56,4 +63,3 @@
  
 ### v0.0.6: Jul 1, 2021
  * Remove `LanguageCode` and add flexibility to extend new language translation
- 

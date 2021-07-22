@@ -8,7 +8,7 @@ Javascript framework for laravel users
 
 🤩 Motivations
 ---
-1. Provide easy to use laravel like pattern on top of express application
+1. Provide easy to use `laravel like` folder architecture on top of express application
 2. Provide boilerplate for my internal works
 
 🖖 Usage
@@ -51,11 +51,14 @@ Coming soon, our scaffolding tools: [garuda][garuda-repository]
     |-- doc
     |-- example
     |-- src
+    |   |-- contract
     |   |-- controller
     |   |-- entity
     |   |-- error
     |   |-- middleware
     |   |-- provider
+    |   |-- router
+    |   |-- validator
     |-- test
     |   |-- unit
     |   |-- integration
@@ -77,11 +80,14 @@ Complete documentations are available [here][document-url]
 
 | Status | Feature   | Description |
 | --- | ------       | ------      |
-| ✔️ | Entity        |  |
-| ✔️ | Error         |  |
-| ✔️ | Middleware    |  |
-| ✔️ | Provider      |  |
-| ✔️ | Controller    |  |
+| ✔️ | Contract      | contains: interface, type, constant |
+| ✔️ | Controller    | last place to retrieve request and returning response |
+| ✔️ | Entity        | class containing business logic |
+| ✔️ | Error         | library defined error, feel free to extend the `SystemError` |
+| ✔️ | Middleware    | intermediary between request and controller |
+| ✔️ | Provider      | class to activate/inactivate certain configuration |
+| ✔️ | Router        | define how and by who certain request will be handled |
+| ✔️ | Validator     | built in request validator, support multi-lingual according to client preferred configuration |
 
 ❓ Questions
 ---
@@ -116,7 +122,7 @@ Feel free to [contribute][contribute-url]
 💖 Support
 ---
 Feel free to contributes and supporting us through: 
-- [Patreon][patreon-url]
+[Patreon][patreon-url]
 
 📜 License
 ---

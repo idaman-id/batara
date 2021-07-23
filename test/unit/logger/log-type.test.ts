@@ -17,7 +17,7 @@ describe('Type Log', () => {
     };
   };
 
-  test('Type shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(logSetting.hasOwnProperty("interval")).toBeTruthy();
     expect(logSetting.hasOwnProperty("path")).toBeTruthy();

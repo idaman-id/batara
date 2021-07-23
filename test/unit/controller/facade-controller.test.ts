@@ -4,7 +4,7 @@ import Controller from "../../../src/controller/controller";
 
 describe('Facade Controller', () => {
   
-  test('Controller should be exported in Constant Controller', () => {    
+  it('should export Controller in Controller Facade', () => {    
     expect(Controller).toBe(Facade.Controller);
   });
 

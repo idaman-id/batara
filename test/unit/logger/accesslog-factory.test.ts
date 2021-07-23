@@ -15,12 +15,12 @@ describe('Factory AccessLog', () => {
     return new AccessLog();
   };
 
-  test('Factory shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(typeof factory.make === "function").toBeTruthy();
   });
 
-  test('Factory should return valid handler if required parameter is specified', () => {
+  it('should return valid handler if required parameter is specified', () => {
     const result = factory.make({
       interval: "1d",
       path: "storage/log/access",
@@ -30,7 +30,7 @@ describe('Factory AccessLog', () => {
     expect(result.name).toBe("logger");
   });
 
-  test('Factory should return valid handler if optional parameter is specified', () => {
+  it('should return valid handler if optional parameter is specified', () => {
     const result = factory.make({
       interval: "1d",
       path: "storage/log/access",
@@ -41,21 +41,21 @@ describe('Factory AccessLog', () => {
     expect(result.name).toBe("logger");
   });
 
-  test('Factory should throw error if parameter is not passed', () => {
+  it('should throw error if parameter is not passed', () => {
 
     expect(() => {
       factory.make();
     }).toThrow("Cannot read property 'fileName' of undefined");
   });
 
-  test('Factory should throw error if parameter data type is not valid', () => {
+  it('should throw error if parameter data type is not valid', () => {
 
     expect(() => {
       factory.make({ interval: 1, path: true });
     }).toThrow("Don't know how to handle 'options.interval' type: number");
   });
 
-  test('Factory should throw error if parameter passed is not valid', () => {
+  it('should throw error if parameter passed is not valid', () => {
     
     expect(() => {
       factory.make({ invalid: "key" });

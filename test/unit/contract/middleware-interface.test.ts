@@ -19,7 +19,7 @@ describe('Interface Middleware', () => {
     return new ValidationMiddleware();
   };
 
-  test('Interface shape should be valid', () => {
+  it('should have valid type', () => {
     middleware = exec();
 
     expect(typeof middleware.handle === "function").toBeTruthy();

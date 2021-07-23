@@ -3,35 +3,35 @@ import { HttpMethod } from "../../../src/router/http.interface";
 
 describe('HttpMethod constant', () => {
   
-  test('COPY constant shoule be a copy', () => {
+  it('should contain COPY constant', () => {
     expect(HttpMethod.COPY).toBe("copy");
   });
 
-  test('DELETE constant shoule be a delete', () => {
+  it('should contain DELETE constant', () => {
     expect(HttpMethod.DELETE).toBe("delete");
   });
 
-  test('GET constant shoule be a get', () => {
+  it('should contain GET constant', () => {
     expect(HttpMethod.GET).toBe("get");
   });
 
-  test('HEAD constant shoule be a head', () => {
+  it('should contain HEAD constant', () => {
     expect(HttpMethod.HEAD).toBe("head");
   });
 
-  test('OPTIONS constant shoule be a options', () => {
+  it('should contain OPTIONS constant', () => {
     expect(HttpMethod.OPTIONS).toBe("options");
   });
 
-  test('PATCH constant shoule be a patch', () => {
+  it('should contain PATCH constant', () => {
     expect(HttpMethod.PATCH).toBe("patch");
   });
 
-  test('POST constant shoule be a post', () => {
+  it('should contain POST constant', () => {
     expect(HttpMethod.POST).toBe("post");
   });
 
-  test('PUT constant shoule be a put', () => {
+  it('should contain PUT constant', () => {
     expect(HttpMethod.PUT).toBe("put");
   });
 

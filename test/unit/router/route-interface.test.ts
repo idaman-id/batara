@@ -5,7 +5,7 @@ import Route from "../../../src/router/route.interface";
 
 describe('Interface Route', () => {
 
-  test('Route shape should be valid', () => {
+  it('should contain valid shape', () => {
     class HomeController extends Controller
     {
       static handle() {}

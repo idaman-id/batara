@@ -16,12 +16,12 @@ describe('Factory LanguageDetection', () => {
     return new LanguageDetection();
   };
 
-  test('Factory shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(typeof factory.make).toBe("function");
   });
 
-  test('Factory should return validation language object', () => {
+  it('should return validation language object', () => {
     const result = factory.make("id");
     
     expect(result.hasOwnProperty("locale")).toBeTruthy();
@@ -35,7 +35,7 @@ describe('Factory LanguageDetection', () => {
     expect(result.hasOwnProperty("messages")).toBeTruthy();
   });
 
-  test('Factory should return validation language object when parameter is invalid', () => {
+  it('should return validation language object when parameter is invalid', () => {
     const result = factory.make("");
     
     expect(result.hasOwnProperty("locale")).toBeTruthy();
@@ -49,7 +49,7 @@ describe('Factory LanguageDetection', () => {
     expect(result.hasOwnProperty("messages")).toBeTruthy();
   });
 
-  test('Factory should return valid attributes', () => {
+  it('should return valid attributes', () => {
     const result = factory.make("id");
     const translation = new LocaleTranslation().make("id", attributes);
 
@@ -58,7 +58,7 @@ describe('Factory LanguageDetection', () => {
     expect(result.attributes === undefined).toBeTruthy();
   });
 
-  test('Factory should return valid messages', () => {
+  it('should return valid messages', () => {
     const result = factory.make("id");
     const translation = new LocaleTranslation().make("id", messages);
 
@@ -67,7 +67,7 @@ describe('Factory LanguageDetection', () => {
     expect(result.messages === undefined).toBeTruthy();
   });
 
-  test('Factory should return valid messages according to translation locale', () => {
+  it('should return valid messages according to translation locale', () => {
     const indonesianTranslation = factory.make("id");
     const englishTranslation = factory.make("en");
     const unavailableTranslation = factory.make("");

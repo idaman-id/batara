@@ -19,10 +19,14 @@ describe('Interface Builder', () => {
     return new EmailBuilder();
   };
 
-  test('Interface shape should be valid', () => {
-    builder = exec();
+  describe('Interface shape should be valid', () => {
 
-    expect(builder.getResult()).toBe("email message");
+    it('should contain valid shape', () => {
+      builder = exec();
+  
+      expect(builder.getResult()).toBe("email message");
+    });
+    
   });
 
 });

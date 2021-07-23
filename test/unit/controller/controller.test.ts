@@ -20,7 +20,7 @@ describe('Class Controller', () => {
     return new CustomController();
   };
 
-  test('Controller class should be an instance of Controller (base)', () => {
+  it('should be an instance of base controller', () => {
 
     expect(controller instanceof Controller).toBeTruthy();
   });

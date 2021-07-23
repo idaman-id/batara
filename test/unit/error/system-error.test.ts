@@ -14,7 +14,7 @@ class CustomError extends SystemError
 describe('Class SystemError', () => {
 
   let errorMessage: string | undefined;
-  let testError: SystemError;
+  let error: SystemError;
 
   beforeEach(() => {
     errorMessage = "custom error";
@@ -24,36 +24,36 @@ describe('Class SystemError', () => {
     return new CustomError(errorMessage);
   };
 
-  test('SystemError class should be an instance of Error (base)', () => {
-    testError = exec();
+  it('should be an instance of Error (base)', () => {
+    error = exec();
 
-    expect(testError instanceof Error).toBeTruthy();
+    expect(error instanceof Error).toBeTruthy();
   });
 
-  test('SystemError class should be extendable', () => {
-    testError = exec();
+  it('should be extendable', () => {
+    error = exec();
 
-    expect(testError instanceof SystemError).toBeTruthy();
+    expect(error instanceof SystemError).toBeTruthy();
   });
 
-  test('SystemError class should have message property', () => {
-    testError = exec();
+  it('should have message property', () => {
+    error = exec();
 
-    expect(testError.message).toBe("custom error");
+    expect(error.message).toBe("custom error");
   });
 
-  test('SystemError class should have default message when it`s not provided', () => {
+  it('should have default message when it`s not provided', () => {
     errorMessage = undefined;
-    testError = exec();
+    error = exec();
 
-    expect(testError.message).toBe("system error");
+    expect(error.message).toBe("system error");
   });
 
-  test('SystemError should be throwable', () => {
-    testError = exec();
+  it('should be throwable', () => {
+    error = exec();
 
     expect(() => {
-      throw testError;
+      throw error;
     }).toThrow(CustomError);
   });
 

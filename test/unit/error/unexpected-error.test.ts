@@ -5,42 +5,42 @@ import UnexpectedError from  "../../../src/error/unexpected.error";
 describe('Class UnexpectedError', () => {
 
   let errorMessage: string | undefined;
-  let testError: UnexpectedError;
+  let error: UnexpectedError;
 
   const exec = () => {
     return new UnexpectedError(errorMessage);
   };
 
-  test('UnexpectedError class should be an instance of Error', () => {
-    testError = exec();
+  it('should be an instance of Error', () => {
+    error = exec();
 
-    expect(testError instanceof Error).toBeTruthy();
+    expect(error instanceof Error).toBeTruthy();
   });
 
-  test('UnexpectedError class should be an instance of SystemError (base)', () => {
-    testError = exec();
+  it('should be an instance of SystemError (base)', () => {
+    error = exec();
 
-    expect(testError instanceof SystemError).toBeTruthy();
+    expect(error instanceof SystemError).toBeTruthy();
   });
 
-  test('UnexpectedError class should have message property', () => {
-    testError = exec();
+  it('should have message property', () => {
+    error = exec();
 
-    expect(testError.message).toBe("unexpected error");
+    expect(error.message).toBe("unexpected error");
   });
 
-  test('UnexpectedError class should have custom message property', () => {
+  it('should have custom message property', () => {
     errorMessage = "Error: Unexpected happened";
-    testError = exec();
+    error = exec();
 
-    expect(testError.message).toBe(errorMessage);
+    expect(error.message).toBe(errorMessage);
   });
 
-  test('UnexpectedError should be throwable', () => {
-    testError = exec();
+  it('should be throwable', () => {
+    error = exec();
 
     expect(() => {
-      throw testError;
+      throw error;
     }).toThrow(UnexpectedError);
   });
 

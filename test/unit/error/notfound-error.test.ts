@@ -5,42 +5,42 @@ import NotfoundError from  "../../../src/error/notfound.error";
 describe('Class NotfoundError', () => {
 
   let errorMessage: string | undefined;
-  let testError: NotfoundError;
+  let error: NotfoundError;
 
   const exec = () => {
     return new NotfoundError(errorMessage);
   };
 
-  test('NotfoundError class should be an instance of Error', () => {
-    testError = exec();
+  it('should be an instance of Error', () => {
+    error = exec();
 
-    expect(testError instanceof Error).toBeTruthy();
+    expect(error instanceof Error).toBeTruthy();
   });
 
-  test('NotfoundError class should be an instance of SystemError (base)', () => {
-    testError = exec();
+  it('should be an instance of SystemError (base)', () => {
+    error = exec();
 
-    expect(testError instanceof SystemError).toBeTruthy();
+    expect(error instanceof SystemError).toBeTruthy();
   });
 
-  test('NotfoundError class should have message property', () => {
-    testError = exec();
+  it('should have message property', () => {
+    error = exec();
 
-    expect(testError.message).toBe("notfound error");
+    expect(error.message).toBe("notfound error");
   });
 
-  test('NotfoundError class should have custom message property', () => {
+  it('should have custom message property', () => {
     errorMessage = "Error: Data notfound";
-    testError = exec();
+    error = exec();
 
-    expect(testError.message).toBe(errorMessage);
+    expect(error.message).toBe(errorMessage);
   });
 
-  test('NotfoundError should be throwable', () => {
-    testError = exec();
+  it('should be throwable', () => {
+    error = exec();
 
     expect(() => {
-      throw testError;
+      throw error;
     }).toThrow(NotfoundError);
   });
 

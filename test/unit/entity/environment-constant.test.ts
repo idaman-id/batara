@@ -3,21 +3,20 @@ import { Environment } from "../../../src/entity/environment.constant";
 
 describe('Environment constant', () => {
   
-  test('LOCAL constant shoule be a local', () => {
+  it('should contain LOCAL constant', () => {
     expect(Environment.LOCAL).toBe("local");
   });
 
-  test('TEST constant shoule be a test', () => {
+  it('should contain TEST constant', () => {
     expect(Environment.TEST).toBe("test");
   });
 
-  test('DEVELOPMENT constant shoule be a development', () => {
+  it('should contain DEVELOPMENT constant', () => {
     expect(Environment.DEVELOPMENT).toBe("development");
   });
 
-  test('PRODUCTION constant shoule be a production', () => {
+  it('should contain PRODUCTION constant', () => {
     expect(Environment.PRODUCTION).toBe("production");
   });
-
 
 });

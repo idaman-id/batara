@@ -31,13 +31,13 @@ describe('Class Provider', () => {
     return new CustomProvider(app);
   };
 
-  test('Provider class should be an instance of Provider (base)', () => {
+  it('should be an instance of Provider (base)', () => {
     provider = exec();
 
     expect(provider instanceof Provider).toBeTruthy();
   });
 
-  test('Provider shape should be valid', () => {
+  it('should contain valid shape', () => {
     provider = exec();
 
     expect(typeof provider.register === "function").toBeTruthy();

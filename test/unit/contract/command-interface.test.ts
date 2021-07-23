@@ -19,42 +19,45 @@ describe('Interface Command', () => {
     return new SendMessage();
   };
 
-  test('Interface shape should be valid', () => {
-    command = exec();
+  describe('Interface shape', () => {
 
-    expect(command.execute("raka.suryadi@gmail.com", "KokoRaka")).toBe("This message was sent to: KokoRaka <raka.suryadi@gmail.com>");
-  });
-
-  test('Interface shape should valid with no parameter passed', () => {
-    class StoreLogMessage implements Command<string> 
-    {
+    it('should return valid return type with parameter passed', () => {
+      command = exec();
   
-      execute(): string
+      expect(command.execute("raka.suryadi@gmail.com", "KokoRaka")).toBe("This message was sent to: KokoRaka <raka.suryadi@gmail.com>");
+    });
+
+    it('should return valid return type with no parameter passed', () => {
+      class StoreLogMessage implements Command<string> 
       {
-        return "ok";
+    
+        execute(): string
+        {
+          return "ok";
+        }
+    
       }
   
-    }
-
-    command = new StoreLogMessage();
-
-    expect(command.execute()).toBe("ok");
-  });
-
-  test('Interface shape should valid with no return type', () => {
-    class SendLogMessage implements Command<void> 
-    {
+      command = new StoreLogMessage();
   
-      execute(): void
+      expect(command.execute()).toBe("ok");
+    });
+
+    it('should return nothing when command return type is void', () => {
+      class SendLogMessage implements Command<void> 
       {
-        
+    
+        execute(): void
+        {
+          
+        }
+    
       }
   
-    }
-
-    command = new SendLogMessage();
-
-    expect(command.execute()).toBe(undefined);
+      command = new SendLogMessage();
+  
+      expect(command.execute()).toBe(undefined);
+    });
   });
 
 });

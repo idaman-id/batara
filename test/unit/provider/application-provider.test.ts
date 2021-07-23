@@ -35,13 +35,13 @@ describe('Class Provider', () => {
     return new AppProvider(app);
   };
 
-  test('Provider class should be an instance of Provider (base)', () => {
+  it('should be an instance of Provider (base)', () => {
     provider = exec();
 
     expect(provider instanceof ApplicationProvider).toBeTruthy();
   });
 
-  test('AppProvider shape should be valid', () => {
+  it('should be valid AppProvider shape', () => {
     provider = exec();
 
     expect(typeof provider.register === "function").toBeTruthy();
@@ -50,7 +50,7 @@ describe('Class Provider', () => {
     expect(provider.registerApp()).toBe(undefined);
   });
 
-  test('AppProvider should calling registerTemplate method when calling register method', () => {
+  it('should calling registerTemplate method when calling register method', () => {
     const registerTemplate = jest.spyOn(ApplicationProvider.prototype as any, 'registerTemplate');
     registerTemplate.mockImplementation(() => {});
 
@@ -60,7 +60,7 @@ describe('Class Provider', () => {
     expect(registerTemplate).toBeCalledTimes(1);
   });
 
-  test('AppProvider should not calling registerTemplate when register method is not called', () => {
+  it('should not calling registerTemplate when register method is not called', () => {
     const registerTemplate = jest.spyOn(ApplicationProvider.prototype as any, 'registerTemplate');
     registerTemplate.mockImplementation(() => {});
 
@@ -69,7 +69,7 @@ describe('Class Provider', () => {
     expect(registerTemplate).not.toHaveBeenCalled();
   });
 
-  test('Template middleware should be registered when register method called', () => {
+  it('should be registered when register method called', () => {
     const MIDDLEWARES = [
       'urlencodedParser',
       'jsonParser',

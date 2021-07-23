@@ -8,27 +8,27 @@ import * as Facade from "../../../src/error";
 
 describe('Facade Error', () => {
   
-  test('NotfoundError class should be exported in Error Facade', () => {  
+  it('should contain NotfoundError class in Error Facade', () => {  
     const isExported = Facade.NotfoundError === NotfoundError;
     expect(isExported).toBeTruthy();
   });
 
-  test('UnauthenticateError class should be exported in Error Facade', () => {  
+  it('should contain UnauthenticateError class in Error Facade', () => {  
     const isExported = Facade.UnauthenticateError === UnauthenticateError;
     expect(isExported).toBeTruthy();
   });
 
-  test('UnauthorizeError class should be exported in Error Facade', () => {  
+  it('should contain UnauthorizeError class in Error Facade', () => {  
     const isExported = Facade.UnauthorizeError === UnauthorizeError;
     expect(isExported).toBeTruthy();
   });
 
-  test('UnexpectedError class should be exported in Error Facade', () => {  
+  it('should contain UnexpectedError class in Error Facade', () => {  
     const isExported = Facade.UnexpectedError === UnexpectedError;
     expect(isExported).toBeTruthy();
   });
 
-  test('ValidationError class should be exported in Error Facade', () => {  
+  it('should contain ValidationError class in Error Facade', () => {  
     const isExported = Facade.ValidationError === ValidationError;
     expect(isExported).toBeTruthy();
   });

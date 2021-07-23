@@ -5,7 +5,7 @@ describe('language constant', () => {
   
   describe('attributes constant', () => {
 
-    test('attributes should have default system value and key', () => {
+    it('should have default system value and key', () => {
       expect(attributes["en.attribute"]).toBe("Attribute");
       expect(attributes["en.value"]).toBe("Value");
 
@@ -13,7 +13,7 @@ describe('language constant', () => {
       expect(attributes["id.value"]).toBe("Nilai");
     });
 
-    test('attributes should have default application value and key', () => {
+    it('should have default application value and key', () => {
       expect(attributes["en.limit"]).toBe("Limit");
       expect(attributes["en.offset"]).toBe("Offset");
       expect(attributes["en.q"]).toBe("Keyword");
@@ -44,7 +44,7 @@ describe('language constant', () => {
   
   describe('messages constant', () => {
 
-    test('messages should have required key', () => {
+    it('should have required key', () => {
       expect(messages["en.required"]).toBe(":attribute is required");
       expect(messages["en.invalid_value"]).toBe(":attribute is not valid");
       expect(messages["en.not_found"]).toBe(":attribute is not found");

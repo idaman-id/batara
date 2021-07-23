@@ -24,7 +24,7 @@ describe('Interface Provider', () => {
     return new AppProvider();
   };
 
-  test('Interface shape should be valid', () => {
+  it('should have valid shape', () => {
     provider = exec();
 
     expect(provider.register()).toBe(undefined);

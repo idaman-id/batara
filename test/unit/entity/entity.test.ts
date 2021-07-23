@@ -23,32 +23,32 @@ describe('Class Entity', () => {
     return new TestEntity(value);
   };
 
-  test('Entity class should be extendable', () => {
+  it('should have valid instance of Entity class', () => {
     testEntity = exec();
 
     expect(testEntity instanceof Entity).toBeTruthy();
   });
 
-  test('Entity class should have toJson method', () => {
+  it('should have toJson method', () => {
     testEntity = exec();
 
     expect(testEntity.toJson()).toMatch("{\"key\":\"test\"}");
   });
 
-  test('Entity class should have toObject method', () => {
+  it('should have toObject method', () => {
     testEntity = exec();
 
     expect(testEntity.toObject()).toMatchObject({ key: "test" });
   });
 
-  test('toObject method should return key with null value', () => {
+  it('toObject method should return key with null value', () => {
     value = null;
     testEntity = exec();
     
     expect(testEntity.toObject()).toMatchObject({ key: null });
   });
 
-  test('toObject method should not return key with undefined value', () => {
+  it('toObject method should not return key with undefined value', () => {
     value = undefined;
     testEntity = exec();
 

@@ -20,7 +20,7 @@ describe('Middleware class', () => {
     return new CustomMiddleware();
   };
 
-  test('Middleware shape should be valid', () => {
+  it('should contain valid shape', () => {
     const customMiddleware = app.use(middleware.handle);
     expect(typeof customMiddleware === "function").toBeTruthy();
   });

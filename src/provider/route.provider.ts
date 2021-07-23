@@ -1,14 +1,14 @@
 
-import RouteBuilder from '../router/route.builder';
 import { Handler } from '../router/http.interface';
-import IRoute from '../router/route.interface';
+import RouteBuilder from '../router/route.builder';
+import RouteItem from '../router/route.interface';
 
 import Provider from './provider';
 
 export default abstract class Route extends Provider
 {
 
-  public abstract routes(): Array<IRoute>;
+  public abstract routes(): Array<RouteItem>;
   public abstract errorHandler(): Handler;
   protected abstract registerRoute(): void;
   

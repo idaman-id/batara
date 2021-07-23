@@ -18,12 +18,12 @@ describe('Validation Middleware', () => {
     return new ValidationMiddleware();
   };
 
-  test('Middleware shape should be valid', () => {
+  it('should contain valid shape', () => {
     const validationMiddleware = app.use(middleware.handle);
     expect(typeof validationMiddleware === "function").toBeTruthy();
   });
 
-  test('error object should be null when there is no validation error', () => {
+  it('should be null when there is no validation error', () => {
     const middleware = exec();
     const request = { locale: { language: "id" } } as Request;
 
@@ -33,7 +33,7 @@ describe('Validation Middleware', () => {
     middleware.handle(request, {} as Response, callback);
   });
 
-  test('error object should contain ValidationError object when there is validation error', () => {
+  it('should contain ValidationError object when there is validation error', () => {
     const request = { locale: { language: "id" }, _language: {} } as Request;
     const middleware = exec();
 

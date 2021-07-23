@@ -102,16 +102,17 @@ Any question related to this library please refer to [discussion][discussion-url
 ---
 To understand more about our progress please see [changelog][changelog-url]
 
-[v0.0.19] - soon
-1. refactor into `mini-package`
-2. write integration test
-3. write complete documentation
+[v0.0.20] - Jul 30, 2021
+1. write integration test
+2. write complete documentation
 
-[next] - very very soon
+[v0.0.21] - TBA
 1. Add static type checking during runtime 
 - https://learning-notes.mistermicheels.com/javascript/typescript/runtime-type-checking/
 - https://medium.com/weekly-webtips/how-to-get-runtime-type-checking-in-typescript-ec06e88046f4
-2. replace `express-validator` with custom `declarative-validator`
+
+[v0.0.22] - TBA
+1. replace `express-validator` with custom `declarative-validator`
 - implementation one of: `validator.js`, `joi`, `indicative(adonis)`
 
 🤩 Contributor

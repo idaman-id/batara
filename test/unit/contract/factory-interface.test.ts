@@ -13,19 +13,19 @@ class EmailMessage implements Factory<string>
 
 describe('Interface Factory', () => {
 
-  let command: Factory<any>;
+  let factory: Factory<any>;
 
   const exec = () => {
     return new EmailMessage();
   };
 
-  test('Interface shape should be valid', () => {
-    command = exec();
+  it('should return valid return type with valid parameter', () => {
+    factory = exec();
 
-    expect(command.make("raka.suryadi@gmail.com", "KokoRaka")).toBe("Halo, KokoRaka <raka.suryadi@gmail.com>");
+    expect(factory.make("raka.suryadi@gmail.com", "KokoRaka")).toBe("Halo, KokoRaka <raka.suryadi@gmail.com>");
   });
 
-  test('Interface shape should valid with no parameter passed', () => {
+  it('should return valid return type with no parameter passed', () => {
     class NotificationMessage implements Factory<string> 
     {
   
@@ -36,12 +36,12 @@ describe('Interface Factory', () => {
   
     }
 
-    command = new NotificationMessage();
+    factory = new NotificationMessage();
 
-    expect(command.make()).toBe("Hi, have a nice day!");
+    expect(factory.make()).toBe("Hi, have a nice day!");
   });
 
-  test('Interface shape should valid with no return type', () => {
+  it('should return nothing when no parameter is passed', () => {
     class SendLogMessage implements Factory<void> 
     {
   
@@ -52,9 +52,9 @@ describe('Interface Factory', () => {
   
     }
 
-    command = new SendLogMessage();
+    factory = new SendLogMessage();
 
-    expect(command.make()).toBe(undefined);
+    expect(factory.make()).toBe(undefined);
   });
 
 });

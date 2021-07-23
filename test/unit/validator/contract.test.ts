@@ -18,7 +18,7 @@ describe('Type Http', () => {
     };
   };
 
-  test('Type shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(validationError.hasOwnProperty("location")).toBeTruthy();
     expect(validationError.hasOwnProperty("param")).toBeTruthy();

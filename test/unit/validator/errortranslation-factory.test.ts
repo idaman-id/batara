@@ -22,19 +22,19 @@ describe('Factory ErrorTranslation', () => {
     return new ErrorTranslation();
   };
 
-  test('Factory shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(typeof factory.make).toBe("function");
   });
 
-  test('Factory result should be empty array when errors is empty', () => {
+  it('should be empty array when errors is empty', () => {
     const result = factory.make(language, errors);
 
     expect(result).toBeInstanceOf(Array);
     expect(result.length).toBe(0);
   });
 
-  test('Factory should return original message when there is no translation available', () => {
+  it('should return original message when there is no translation available', () => {
     errors.push({
       location: "query",
       param: "username",
@@ -46,7 +46,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("custom_message");
   });
 
-  test('Factory should return translated attribute', () => {
+  it('should return translated attribute', () => {
     errors.push({
       location: "query",
       param: "token",//available in attribute translation
@@ -58,7 +58,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("Token wajib diisi");
   });
 
-  test('Factory should return default attribute', () => {
+  it('should return default attribute', () => {
     errors.push({
       location: "query",
       param: "username",//not available in default translation
@@ -70,7 +70,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("Atribut wajib diisi");
   });
 
-  test('Factory should return translated value', () => {
+  it('should return translated value', () => {
     errors.push({
       location: "query",
       param: "gender",
@@ -82,7 +82,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("Atribut harus diantara Laki-Laki dan Perempuan");
   });
 
-  test('Factory should return default missing value', () => {
+  it('should return default missing value', () => {
     errors.push({
       location: "query",
       param: "birthdate",
@@ -94,7 +94,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("Atribut harus diantara 1990 dan Nilai");
   });
 
-  test('Factory should return default value', () => {
+  it('should return default value', () => {
     errors.push({
       location: "query",
       param: "birthdate",
@@ -106,7 +106,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("Atribut harus lebih dari Nilai");
   });
 
-  test('Factory should return converted asterisk for array param', () => {
+  it('should return converted asterisk for array param', () => {
     language.attributes = {
       "id.attachments.*.": "Lampiran"
     };
@@ -121,7 +121,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("Lampiran tidak valid");
   });
 
-  test('Factory should return converted asterisk for nested array of object param', () => {
+  it('should return converted asterisk for nested array of object param', () => {
     language.attributes = {
       "id.users.*.attachments.*.": "Lampiran Pengguna"
     };
@@ -136,7 +136,7 @@ describe('Factory ErrorTranslation', () => {
     expect(result[0].msg).toBe("Lampiran Pengguna tidak valid");
   });
 
-  test('Factory should return converted asterisk for nested array of array param', () => {
+  it('should return converted asterisk for nested array of array param', () => {
     language.attributes = {
       "id.documents.*..*.": "Lampiran Dokumen"
     };

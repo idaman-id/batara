@@ -21,12 +21,12 @@ describe('Language Middleware', () => {
     return new LanguageMiddleware();
   };
 
-  test('Middleware shape should be valid', () => {
+  it('should contain valid shape', () => {
     const languageMiddleware = app.use(middleware.handle);
     expect(typeof languageMiddleware === "function").toBeTruthy();
   });
 
-  test('_language object should be defined when handle method is used', () => {
+  it('_language object should be defined when handle method is used', () => {
     const middleware = exec();
     let request = { locale: { language: "id" } } as Request;
     middleware.handle(request, {} as Response, () => {});

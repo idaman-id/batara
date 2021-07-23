@@ -3,7 +3,7 @@ import Map from "../../../src/contract/map.interface";
 
 describe('Interface Map', () => {
 
-  test('Map shape should be valid', () => {
+  it('should be valid with string data type', () => {
     const setting: Map<string> = {
       name: "service-name",
       type: "service-type"
@@ -13,7 +13,7 @@ describe('Interface Map', () => {
     expect(setting.hasOwnProperty("type")).toBeTruthy();
   });
 
-  test('Map shape should be undefined-able', () => {
+  it('should be undefined-able', () => {
     const setting: Map<undefined> = {
       name: undefined,
       type: undefined
@@ -23,7 +23,7 @@ describe('Interface Map', () => {
     expect(setting.hasOwnProperty("type")).toBeTruthy();
   });
 
-  test('Map shape should be nullable', () => {
+  it('should be nullable', () => {
     const setting: Map<null> = {
       name: null,
       type: null
@@ -33,7 +33,7 @@ describe('Interface Map', () => {
     expect(setting.hasOwnProperty("type")).toBeTruthy();
   });
 
-  test('Map shape should be generic', () => {
+  it('should be generic filled with any type', () => {
     const setting: Map<any> = {
       name: "service-name",
       total_instances: 1

@@ -5,42 +5,42 @@ import UnauthorizeError from  "../../../src/error/unauthorize.error";
 describe('Class UnauthorizeError', () => {
 
   let errorMessage: string | undefined;
-  let testError: UnauthorizeError;
+  let error: UnauthorizeError;
 
   const exec = () => {
     return new UnauthorizeError(errorMessage);
   };
 
-  test('UnauthorizeError class should be an instance of Error', () => {
-    testError = exec();
+  it('should be an instance of Error', () => {
+    error = exec();
 
-    expect(testError instanceof Error).toBeTruthy();
+    expect(error instanceof Error).toBeTruthy();
   });
 
-  test('UnauthorizeError class should be an instance of SystemError (base)', () => {
-    testError = exec();
+  it('should be an instance of SystemError (base)', () => {
+    error = exec();
 
-    expect(testError instanceof SystemError).toBeTruthy();
+    expect(error instanceof SystemError).toBeTruthy();
   });
 
-  test('UnauthorizeError class should have message property', () => {
-    testError = exec();
+  it('should have message property', () => {
+    error = exec();
 
-    expect(testError.message).toBe("unauthorize error");
+    expect(error.message).toBe("unauthorize error");
   });
 
-  test('UnauthorizeError class should have custom message property', () => {
+  it('should have custom message property', () => {
     errorMessage = "Error: Unauthorize access";
-    testError = exec();
+    error = exec();
 
-    expect(testError.message).toBe(errorMessage);
+    expect(error.message).toBe(errorMessage);
   });
 
-  test('UnauthorizeError should be throwable', () => {
-    testError = exec();
+  it('should be throwable', () => {
+    error = exec();
 
     expect(() => {
-      throw testError;
+      throw error;
     }).toThrow(UnauthorizeError);
   });
 

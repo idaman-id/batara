@@ -4,7 +4,7 @@ import ValidationLanguage from "../../../src/validator/validation-language.inter
 
 describe('Interface ValidationLanguage', () => {
 
-  test('ValidationLanguage shape should be valid', () => {
+  it('should contain valid shape', () => {
     const language: ValidationLanguage = {
       locale: "en-EN",
       polyglot: new Polyglot(),

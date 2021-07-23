@@ -6,17 +6,17 @@ import * as Facade from "../../../src/provider";
 
 describe('Facade Provider', () => {
   
-  test('Provider class should be exported in Provider Facade', () => {  
+  it('should be exported in Provider Facade', () => {  
     const isExported = Facade.Provider === Provider;
     expect(isExported).toBeTruthy();
   });
 
-  test('AppProvider class should be exported in Provider Facade', () => {  
+  it('should be exported in AppProvider Facade', () => {  
     const isExported = Facade.Application === AppProvider;
     expect(isExported).toBeTruthy();
   });
 
-  test('RouteProvider class should be exported in Provider Facade', () => {  
+  it('should be exported in RouteProvider Facade', () => {  
     const isExported = Facade.Route === RouteProvider;
     expect(isExported).toBeTruthy();
   });

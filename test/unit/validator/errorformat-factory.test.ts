@@ -15,17 +15,17 @@ describe('Factory ErrorFormat', () => {
     return new ErrorFormat();
   };
 
-  test('Factory shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(typeof factory.make).toBe("function");
   });
 
-  test('Factory should return empty array if parameter supplied is empty', () => {
+  it('should return empty array if parameter supplied is empty', () => {
     
     expect(factory.make([]).length).toBe(0);
   });
 
-  test('Factory should return valid set of result if parameter supplied is valid', () => {
+  it('should return valid set of result if parameter supplied is valid', () => {
     const input = factory.make([
       {
         location: "query",
@@ -41,14 +41,14 @@ describe('Factory ErrorFormat', () => {
     expect(input).toEqual(expectedResult);
   });
 
-  test('Factory should throw error if parameter is not passed', () => {
+  it('should throw error if parameter is not passed', () => {
 
     expect(() => {
       factory.make();
     }).toThrow("Cannot read property 'map' of undefined");
   });
 
-  test('Factory should throw error if parameter data type is not valid', () => {
+  it('should throw error if parameter data type is not valid', () => {
 
     expect(() => {
       factory.make(3);

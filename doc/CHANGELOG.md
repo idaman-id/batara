@@ -1,6 +1,10 @@
 # Batara Changelog 😇
 
-### v0.0.19: Jul 23, 2021 (soon)
+### v0.0.20: Jul 30, 2021 (soon)
+ * Add integration test
+ * Add documentation
+
+### v0.0.19: Jul 23, 2021
  * Breaking changes Factory facade changed into Logger facade
  * Breaking changes Type facade removed
  * Breaking changes Constant languaged removed
@@ -16,8 +20,6 @@
   - src/router
   - src/validator
  * Refactor test cases from `test()` into `describe()` and `it()`
- * Add integration test
- * Add documentation
 
 ### v0.0.18: Jul 19, 2021
  * Add unit test

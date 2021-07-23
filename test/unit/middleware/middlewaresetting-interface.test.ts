@@ -9,7 +9,7 @@ class CustomMiddleware implements IMiddleware
 
 describe('Interface MiddlewareSetting', () => {
 
-  test('MiddlewareSetting shape should be valid', () => {
+  it('should contain valid shape', () => {
 
     const middlewareItem: MiddlewareSetting = {
       name: "custom-name",

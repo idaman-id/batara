@@ -15,7 +15,7 @@ describe('Interface Http', () => {
     app = express();
   });
 
-  test('Facade Http should be exported in Http Facade', () => {  
+  it('should be exported in Http Facade', () => {  
     const route = app.get("/", (req: Request, res: Response, next: NextFunction) => {
       const errors: Array<ValidationChain> = [];
       return res.send(errors);

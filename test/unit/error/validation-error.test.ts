@@ -6,7 +6,7 @@ import ValidationResult from "../../../src/validator/validation-result.interface
 describe('Class ValidationError', () => {
 
   let errorMessage: string | undefined;
-  let testError: ValidationError;
+  let error: ValidationError;
   let customErrors: Array<ValidationResult>;
 
   beforeEach(() => {
@@ -22,51 +22,51 @@ describe('Class ValidationError', () => {
     return new ValidationError(errorMessage, customErrors);
   };
 
-  test('ValidationError class should be an instance of Error', () => {
-    testError = exec();
+  it('should be an instance of Error', () => {
+    error = exec();
 
-    expect(testError instanceof Error).toBeTruthy();
+    expect(error instanceof Error).toBeTruthy();
   });
 
-  test('ValidationError class should be an instance of SystemError (base)', () => {
-    testError = exec();
+  it('should be an instance of SystemError (base)', () => {
+    error = exec();
 
-    expect(testError instanceof SystemError).toBeTruthy();
+    expect(error instanceof SystemError).toBeTruthy();
   });
 
-  test('ValidationError class should have message property', () => {
-    testError = exec();
+  it('should have message property', () => {
+    error = exec();
 
-    expect(testError.message).toBe("validation error");
+    expect(error.message).toBe("validation error");
   });
 
-  test('ValidationError class should have custom message property', () => {
+  it('should have custom message property', () => {
     errorMessage = "Error: Invalid data specified";
-    testError = exec();
+    error = exec();
 
-    expect(testError.message).toBe(errorMessage);
+    expect(error.message).toBe(errorMessage);
   });
 
-  test('ValidationError should be throwable', () => {
-    testError = exec();
+  it('should be throwable', () => {
+    error = exec();
 
     expect(() => {
-      throw testError;
+      throw error;
     }).toThrow(ValidationError);
   });
 
-  test('errors property should be accessible through errors getter', () => {
-    testError = exec();
+  it('errors property should be accessible through errors getter', () => {
+    error = exec();
 
-    expect(testError.errors.sort())
+    expect(error.errors.sort())
       .toEqual(customErrors.sort());
   });
 
-  test('ValidationError should valid if error data is empty', () => {
+  it('should valid if error data is empty', () => {
     customErrors = [];
-    testError = exec();
+    error = exec();
 
-    expect(testError.errors.sort()).toEqual(customErrors);
+    expect(error.errors.sort()).toEqual(customErrors);
   });
 
 });

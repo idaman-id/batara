@@ -13,12 +13,12 @@ describe('Factory LogFormat', () => {
     return new LogFormat();
   };
 
-  test('Factory shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(typeof factory.make).toBe("function");
   });
 
-  test('Factory should return empty object if locale is empty', () => {
+  it('should return empty object if locale is empty', () => {
     const result = factory.make();
 
     expect(typeof result).toBe("function");

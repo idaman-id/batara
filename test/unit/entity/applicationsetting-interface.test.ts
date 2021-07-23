@@ -22,7 +22,7 @@ describe('Interface ApplicationSetting', () => {
     };
   };
 
-  test('Interface shape should be valid', () => {
+  it('should contain valid property', () => {
     
     expect(appSetting.hasOwnProperty("name")).toBeTruthy();
     expect(appSetting.hasOwnProperty("version")).toBeTruthy();

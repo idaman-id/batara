@@ -21,12 +21,12 @@ describe('Factory LocaleTranslation', () => {
     return new LocaleTranslation();
   };
 
-  test('Factory shape should be valid', () => {
+  it('should contain valid shape', () => {
     
     expect(typeof factory.make).toBe("function");
   });
 
-  test('Factory should return valid translation according to locale', () => {
+  it('should return valid translation according to locale', () => {
     const result = factory.make("id", translation);
 
     expect(result).toEqual({
@@ -39,7 +39,7 @@ describe('Factory LocaleTranslation', () => {
     });
   });
 
-  test('Factory should return empty object if locale is empty', () => {
+  it('should return empty object if locale is empty', () => {
     const result = factory.make("", translation);
 
     expect(result).toEqual({ });

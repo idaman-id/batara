@@ -1,4 +1,4 @@
-import ValidationResult from "../interface/validation-result.interface";
+import ValidationResult from "../validator/validation-result.interface";
 import SystemError from "./system.error";
 export default class ValidationError extends SystemError {
     protected validationResults: Array<ValidationResult>;

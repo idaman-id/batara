@@ -1,6 +1,6 @@
 
-import IMiddleware from "../interface/middleware.interface";
-import { Request, Response, NextFunction } from '../interface/http.interface';
+import IMiddleware from "../contract/middleware.interface";
+import { Request, Response, NextFunction } from '../router/http.interface';
 
 export default abstract class Middleware implements IMiddleware
 {

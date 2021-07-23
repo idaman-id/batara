@@ -2,7 +2,7 @@
 import express from 'express';
 import ValidationError from '../../../src/error/validation.error';
 import ValidationMiddleware from "../../../src/middleware/validation.middleware";
-import { Request, Response } from '../../../src/interface/http.interface';
+import { Request, Response } from '../../../src/router/http.interface';
 
 describe('Validation Middleware', () => {
 

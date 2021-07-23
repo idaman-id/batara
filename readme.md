@@ -80,10 +80,11 @@ Complete documentations are available [here][document-url]
 
 | Status | Feature   | Description |
 | --- | ------       | ------      |
-| ✔️ | Contract      | contains: interface, type, constant |
+| ✔️ | Contract      | definition of application shape |
 | ✔️ | Controller    | last place to retrieve request and returning response |
 | ✔️ | Entity        | class containing business logic |
 | ✔️ | Error         | library defined error, feel free to extend the `SystemError` |
+| ✔️ | Logger        | built in logger |
 | ✔️ | Middleware    | intermediary between request and controller |
 | ✔️ | Provider      | class to activate/inactivate certain configuration |
 | ✔️ | Router        | define how and by who certain request will be handled |

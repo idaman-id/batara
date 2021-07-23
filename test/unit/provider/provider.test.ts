@@ -1,5 +1,5 @@
 
-import { Environment } from "../../../src/constant/environment.constant";
+import { Environment } from "../../../src/entity/environment.constant";
 import App from "../../../src/entity/application.entity";
 import Provider from  "../../../src/provider/provider";
 

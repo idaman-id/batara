@@ -2,8 +2,8 @@
 import Application from "../../../src/entity/application.entity";
 import BaseRouteProvider from  "../../../src/provider/route.provider";
 import BaseController from "../../../src/controller/controller";
-import { HttpMethod } from "../../../src/constant";
-import { Environment } from "../../../src/constant/environment.constant";
+import { HttpMethod } from "../../../src/router/http.interface";
+import { Environment } from "../../../src/entity/environment.constant";
 
 class ErrorController extends BaseController
 {

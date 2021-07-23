@@ -1,11 +1,11 @@
-import { Handler } from '../interface/http.interface';
-import IApplicationSetting from '../interface/application-setting.interface';
-import ILanguage from '../interface/validation-language.interface';
+import { Handler } from '../router/http.interface';
+import ApplicationSetting from './application-setting.interface';
+import Language from '../validator/validation-language.interface';
 import Entity from "./entity";
 declare global {
     namespace Express {
         interface Request {
-            _language: ILanguage;
+            _language: Language;
         }
     }
 }
@@ -13,7 +13,7 @@ export default class Application extends Entity {
     private instance;
     private setting;
     private server;
-    constructor(setting: IApplicationSetting);
+    constructor(setting: ApplicationSetting);
     start(): Promise<void>;
     stop(): Promise<void>;
     isStarted(): boolean;

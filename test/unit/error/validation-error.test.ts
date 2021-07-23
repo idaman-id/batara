@@ -1,7 +1,7 @@
 
 import SystemError from "../../../src/error/system.error";
 import ValidationError from  "../../../src/error/validation.error";
-import ValidationResult from "../../../src/interface/validation-result.interface";
+import ValidationResult from "../../../src/validator/validation-result.interface";
 
 describe('Class ValidationError', () => {
 

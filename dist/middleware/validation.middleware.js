@@ -18,9 +18,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var validation_result_adapter_1 = __importDefault(require("../adapter/validation-result.adapter"));
+var express_validator_1 = require("express-validator");
 var validation_error_1 = __importDefault(require("../error/validation.error"));
 var middleware_1 = __importDefault(require("./middleware"));
+var error_translation_factory_1 = __importDefault(require("../validator/error-translation.factory"));
+var error_format_factory_1 = __importDefault(require("../validator/error-format.factory"));
 /**
  * @description
  * Built in Validation middleware so every validation rules
@@ -34,9 +36,11 @@ var Validation = /** @class */ (function (_super) {
     }
     Validation.prototype.handle = function (req, res, next) {
         var error = null;
-        var result = new validation_result_adapter_1.default(req);
-        if (result.isError()) {
-            error = new validation_error_1.default("invalid data", result.formatedErrors);
+        var result = express_validator_1.validationResult(req);
+        if (!result.isEmpty()) {
+            var translatedErrors = new error_translation_factory_1.default().make(req._language, result.array());
+            var formatedErrors = new error_format_factory_1.default().make(translatedErrors);
+            error = new validation_error_1.default("invalid data", formatedErrors);
         }
         return next(error);
     };

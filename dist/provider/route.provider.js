@@ -18,7 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var route_builder_1 = __importDefault(require("../builder/route.builder"));
+var route_builder_1 = __importDefault(require("../router/route.builder"));
 var provider_1 = __importDefault(require("./provider"));
 var Route = /** @class */ (function (_super) {
     __extends(Route, _super);

@@ -1,6 +1,11 @@
 # Batara Changelog 😇
 
 ### v0.0.19: Jul 23, 2021 (soon)
+ * Breaking changes Factory facade changed into Logger facade
+ * Breaking changes Type facade removed
+ * Breaking changes Constant languaged removed
+ * Breaking changes Constant communication removed
+ * Breaking changes facade interface: ValidationResult, ValidationLanguage,* ApplicationSetting, Route
  * Refactor code foldering from `pattern-based` into `mini-package`:
   - src/contract
   - src/controller

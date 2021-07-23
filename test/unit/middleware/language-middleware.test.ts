@@ -1,7 +1,7 @@
 
 import express from 'express';
 import LanguageMiddleware from "../../../src/middleware/language.middleware";
-import { Request, Response } from '../../../src/interface/http.interface';
+import { Request, Response } from '../../../src/router/http.interface';
 
 describe('Language Middleware', () => {
 

@@ -1,7 +1,7 @@
 
-import RouteBuilder from '../builder/route.builder';
-import { Handler } from '../interface/http.interface';
-import IRoute from '../interface/route.interface';
+import RouteBuilder from '../router/route.builder';
+import { Handler } from '../router/http.interface';
+import IRoute from '../router/route.interface';
 
 import Provider from './provider';
 

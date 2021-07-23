@@ -18,7 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var language_detection_factory_1 = __importDefault(require("../factory/language-detection.factory"));
+var language_detection_factory_1 = __importDefault(require("../validator/language-detection.factory"));
 var middleware_1 = __importDefault(require("./middleware"));
 /**
  * @description

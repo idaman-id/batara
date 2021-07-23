@@ -1,8 +1,8 @@
 
 import Application from  "../../../src/entity/application.entity";
-import { Environment } from "../../../src/constant/environment.constant";
-import { ApplicationSetting } from "../../../src/interface";
-import { Handler } from "../../../src/interface/http.interface";
+import { Environment } from "../../../src/entity/environment.constant";
+import ApplicationSetting from "../../../src/entity/application-setting.interface";
+import { Handler } from "../../../src/router/http.interface";
 
 describe('Application Entity', () => {
   

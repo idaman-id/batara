@@ -1,6 +1,6 @@
 
-import LanguageDetection from '../factory/language-detection.factory';
-import { Request, Response, NextFunction } from '../interface/http.interface';
+import LanguageDetection from '../validator/language-detection.factory';
+import { Request, Response, NextFunction } from '../router/http.interface';
 
 import Middleware from "./middleware";
 

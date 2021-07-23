@@ -7,24 +7,25 @@ describe('Class NotfoundError', () => {
   let errorMessage: string | undefined;
   let error: NotfoundError;
 
+  beforeEach(() => {
+    error = exec();
+  });
+
   const exec = () => {
     return new NotfoundError(errorMessage);
   };
 
   it('should be an instance of Error', () => {
-    error = exec();
 
     expect(error instanceof Error).toBeTruthy();
   });
 
   it('should be an instance of SystemError (base)', () => {
-    error = exec();
 
     expect(error instanceof SystemError).toBeTruthy();
   });
 
   it('should have message property', () => {
-    error = exec();
 
     expect(error.message).toBe("notfound error");
   });
@@ -37,7 +38,6 @@ describe('Class NotfoundError', () => {
   });
 
   it('should be throwable', () => {
-    error = exec();
 
     expect(() => {
       throw error;

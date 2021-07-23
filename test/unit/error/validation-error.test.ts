@@ -16,6 +16,7 @@ describe('Class ValidationError', () => {
         field: "username"
       }
     ];
+    error = exec();
   });
 
   const exec = () => {
@@ -23,19 +24,16 @@ describe('Class ValidationError', () => {
   };
 
   it('should be an instance of Error', () => {
-    error = exec();
 
     expect(error instanceof Error).toBeTruthy();
   });
 
   it('should be an instance of SystemError (base)', () => {
-    error = exec();
 
     expect(error instanceof SystemError).toBeTruthy();
   });
 
   it('should have message property', () => {
-    error = exec();
 
     expect(error.message).toBe("validation error");
   });
@@ -48,7 +46,6 @@ describe('Class ValidationError', () => {
   });
 
   it('should be throwable', () => {
-    error = exec();
 
     expect(() => {
       throw error;
@@ -56,10 +53,8 @@ describe('Class ValidationError', () => {
   });
 
   it('errors property should be accessible through errors getter', () => {
-    error = exec();
 
-    expect(error.errors.sort())
-      .toEqual(customErrors.sort());
+    expect(error.errors.sort()).toEqual(customErrors.sort());
   });
 
   it('should valid if error data is empty', () => {

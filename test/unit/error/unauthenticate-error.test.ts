@@ -7,37 +7,37 @@ describe('Class UnauthenticateError', () => {
   let errorMessage: string | undefined;
   let error: UnauthenticateError;
 
+  beforeEach(() => {
+    error = exec();
+  });
+
   const exec = () => {
     return new UnauthenticateError(errorMessage);
   };
 
-  it('should be an instance of Error', () => {
-    error = exec();
+  test('UnauthenticateError class should be an instance of Error', () => {
 
     expect(error instanceof Error).toBeTruthy();
   });
 
-  it('should be an instance of SystemError (base)', () => {
-    error = exec();
+  test('UnauthenticateError class should be an instance of SystemError (base)', () => {
 
     expect(error instanceof SystemError).toBeTruthy();
   });
 
-  it('should have message property', () => {
-    error = exec();
+  test('UnauthenticateError class should have message property', () => {
 
     expect(error.message).toBe("unauthenticate error");
   });
 
-  it('should have custom message property', () => {
+  test('UnauthenticateError class should have custom message property', () => {
     errorMessage = "Error: Unauthenticate access";
     error = exec();
 
     expect(error.message).toBe(errorMessage);
   });
 
-  it('should be throwable', () => {
-    error = exec();
+  test('UnauthenticateError should be throwable', () => {
 
     expect(() => {
       throw error;

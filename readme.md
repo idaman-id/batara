@@ -21,7 +21,7 @@ It's should be something like:
 3. cd [project-name]
 4. npm install
 5. npm run dev
-6. enjoy!
+6. enjoy! 
 ```
 Coming soon, our scaffolding tools: [garuda][garuda-repository]
 
